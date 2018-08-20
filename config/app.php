@@ -15,6 +15,14 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+    'mail_from'           => env('MAIL_FROM_ADDRESS', 'support@support.com'),
+    'request_expire_time' => env('REQUEST_REGISTRATION_LIFETIME',
+        \App\Models\RegistrationRequest::DEFAULT_LIFETIME),
+
+    'telegram' => env('CONTACTS_TELEGRAM', 'Telegram Channel'),
+    'twitter'  => env('CONTACTS_TWITTER', 'Twitter account'),
+
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment

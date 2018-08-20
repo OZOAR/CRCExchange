@@ -4,6 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * App\Models\Role
+ *
+ * @property int $id
+ * @property string $title
+ * @property string $slug
+ * @property-read \App\Models\User $user
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Role whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Role whereSlug($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Role whereTitle($value)
+ * @mixin \Eloquent
+ */
 class Role extends Model
 {
     public $table = 'roles';

@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    You are logged in!<br/>
+                    Your ref: <a href="/">{{ config('app.url') }}?ref={{ Auth::user()->getId() }}</a>
                 </div>
             </div>
         </div>

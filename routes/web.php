@@ -19,4 +19,6 @@ $this->get('locale/reset', 'LocalizationController')->name('locale.reset');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/profile', 'HomeController@index')->name('profile.index');
+Route::get('/register/confirmation/{token}', 'Auth\RegisterController@confirm')
+    ->name('auth.register.confirm');

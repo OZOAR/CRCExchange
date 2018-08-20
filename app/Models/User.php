@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Doctrine\DBAL\Query\QueryBuilder;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -32,6 +33,13 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereRememberToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property int $is_confirmed
+ * @property int $role_id
+ * @property-read \App\Models\Role $role
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User partners()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereIsConfirmed($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereRoleId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User notConfirmed()
  */
 class User extends Authenticatable
 {
@@ -42,7 +50,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = ['name', 'role_id', 'email', 'password'];
+    protected $fillable = ['name', 'role_id', 'is_confirmed', 'email', 'password'];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -94,6 +102,26 @@ class User extends Authenticatable
     }
 
     /**
+     * Check if the user is confirmed.
+     *
+     * @return boolean
+     */
+    public function isConfirmed()
+    {
+        return $this->is_confirmed;
+    }
+
+    /**
+     * Set user's confirmation flag.
+     *
+     * @param boolean|$val
+     */
+    public function setConfirmed($val)
+    {
+        $this->is_confirmed = $val;
+    }
+
+    /**
      * Get id of the user.
      *
      * @return integer
@@ -108,7 +136,7 @@ class User extends Authenticatable
      *
      * @return string
      */
-    public function getName(): string
+    public function getName()
     {
         return $this->name;
     }
@@ -175,7 +203,7 @@ class User extends Authenticatable
     /**
      * Retrieve only partners.
      *
-     * @param $query
+     * @param QueryBuilder $query
      * @return mixed
      */
     public function scopePartners($query)

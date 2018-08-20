@@ -42,6 +42,11 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
+                        <li style="padding-top: 13px;">@include('partials.locale')</li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/program">Affilate program</a></li>
+                        <li><a href="/news">News</a></li>
+                        <li><a href="/contacts">Contacts</a></li>
                         @guest
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
@@ -72,6 +77,10 @@
         </nav>
 
         @yield('content')
+
+        <div class="container">
+            @include('partials.footer')
+        </div>
     </div>
 
     <!-- Scripts -->

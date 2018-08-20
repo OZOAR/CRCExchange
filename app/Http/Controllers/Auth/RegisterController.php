@@ -2,8 +2,14 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Helpers\TokenBroker;
+use App\Models\RegistrationRequest;
+use App\Models\Role;
 use App\Models\User;
 use App\Http\Controllers\Controller;
+use App\Events\Registered;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -27,7 +33,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/profile';
 
     /**
      * Create a new controller instance.
@@ -40,32 +46,149 @@ class RegisterController extends Controller
     }
 
     /**
+     * Handle a registration request for the application.
+     *
+     * @param  \Illuminate\Http\Request $request
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+
+        $userData = $this->performUserData($request->all());
+        $updateUserResult = $this->createOrUpdateUser($userData);
+
+        if ($updateUserResult['success']) {
+            return $this->doRegistration($userData, $updateUserResult);
+        }
+
+        if ($updateUserResult['reasons']['confirmed']) {
+            if (($user = User::whereEmail($userData['email'])->first()) === null) {
+                abort(401, 'Cannot find such user when try to authenticate');
+            }
+
+            Auth::login($user);
+
+            return redirect()->route('profile.index');
+        }
+
+        return redirect()->back()->withErrors(); // TODO
+    }
+
+    /**
+     * Confirm register of the user.
+     *
+     * @param null $token
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Exception
+     */
+    public function confirm($token = null)
+    {
+        if ($token !== null) {
+            $request = RegistrationRequest::whereRequestToken($token)->first();
+
+            if ($request !== null && $request->isValid()) {
+                return $this->authenticate($request); // TODO move to LoginController
+            }
+        }
+
+        abort(404);
+    }
+
+    /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array  $data
+     * @param  array $data
+     *
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'name'     => 'required|string|max:255',
+            'email'    => 'required|string|email|max:255',
             'password' => 'required|string|min:6|confirmed',
         ]);
     }
 
     /**
-     * Create a new user instance after a valid registration.
+     * Authenticate user in system.
      *
-     * @param  array  $data
-     * @return \App\Models\User
+     * @param RegistrationRequest $request
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \RuntimeException
+     * @throws \Exception
      */
-    protected function create(array $data)
+    protected function authenticate(RegistrationRequest $request)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+        $email = $request->getEmail();
+
+        if (($user = User::whereEmail($email)->first()) === null) {
+            abort(401, 'Cannot find such user');
+        }
+
+        $request->delete();
+
+        $user->setConfirmed(true);
+        $user->save();
+
+        Auth::login($user);
+
+        return redirect($this->redirectPath()); // TODO message
+    }
+
+    private function performUserData($requestAttributes)
+    {
+        $data = array_merge($requestAttributes, ['role_id' => Role::PARTNER_ROLE_ID]);
+        $data['password'] = bcrypt($data['password']);
+
+        return $data;
+    }
+
+    private function createOrUpdateUser($userAttributes)
+    {
+        $user = User::partners()->whereEmail($userAttributes['email'])->first();
+
+        if ($user === null) {
+            $user = User::create($userAttributes);
+        } else {
+            if ($user->isConfirmed()) {
+                \Log::warning('User is already confirmed', ['user' => $user]);
+                $response['success'] = false;
+                $response['reasons']['confirmed'] = true;
+
+                return $response;
+            }
+        }
+
+        $response['success'] = true;
+        $response['user'] = $user;
+
+        return $response;
+    }
+
+    private function doRegistration($userData, $updateUserResult)
+    {
+        $registrationData = [
+            'email'         => $userData['email'],
+            'request_token' => TokenBroker::make(),
+        ];
+
+        $registrationRequest = RegistrationRequest::create($registrationData);
+
+        if ($registrationRequest !== null) {
+            event(new Registered($updateUserResult['user'], $registrationRequest));
+
+            \Log::info('User has been registered and RegistrationRequest was created.',
+                ['request' => $registrationRequest]);
+
+            return redirect('/'); // TODO redirect back with success message
+        }
+
+        \Log::error('Error when tried to create RegistrationRequest with data.', $registrationData);
+        return redirect()->back()->withErrors(); // TODO
     }
 }

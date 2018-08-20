@@ -3,7 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\ValidationException;
 
 class LoginController extends Controller
 {
@@ -25,7 +29,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/profile';
 
     /**
      * Create a new controller instance.
@@ -35,5 +39,33 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    /**
+     * Attempt to log the user into the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return bool
+     */
+    public function attemptLogin(Request $request)
+    {
+        $isCredentialsValid = $this->guard()->validate($this->credentials($request));
+        $errorMessageKey = 'auth.failed';
+
+        if($isCredentialsValid) {
+            $user = User::whereEmail($request->input('email'))->first();
+
+            if($user !== null && $user->isConfirmed()) {
+                return $this->guard()->attempt(
+                    $this->credentials($request), $request->filled('remember')
+                );
+            }
+
+            $errorMessageKey = 'auth.not_confirmed';
+        }
+
+        throw ValidationException::withMessages([
+            $this->username() => [trans($errorMessageKey)],
+        ]);
     }
 }

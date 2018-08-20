@@ -14,10 +14,11 @@ class SetUpSuperAdminSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'role_id' => self::ADMIN_ROLE_ID,
-            'name' => env('GLOBAL_ADMIN_USERNAME'),
-            'email' => env('GLOBAL_ADMIN_EMAIL'),
-            'password' => bcrypt(env('GLOBAL_ADMIN_PASSWORD')),
+            'role_id'      => self::ADMIN_ROLE_ID,
+            'name'         => env('GLOBAL_ADMIN_USERNAME'),
+            'is_confirmed' => true,
+            'email'        => env('GLOBAL_ADMIN_EMAIL'),
+            'password'     => bcrypt(env('GLOBAL_ADMIN_PASSWORD')),
         ]);
     }
 }

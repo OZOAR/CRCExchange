@@ -1,7 +1,20 @@
 <?php
 
 return [
-    'from'    => 'CRCExchange Support',
+    'from'       => 'CRCExchange Support',
+    'salutation' => 'Regards',
+
+    'reset_password' => [
+        'subject'      => 'Reset password',
+        'welcome'      => 'Hello,',
+        'warn_welcome' => 'Whoops!',
+
+        'body'   => 'Please click the button below to reset your password:',
+        'button' => 'Reset Password',
+
+        'subcopy' => 'If you’re having trouble clicking the ":actionText" button, copy and paste the URL below into your web browser:',
+    ],
+
     'subject' => 'Email confirmation',
 
     'welcome'     => 'Hello :username,',

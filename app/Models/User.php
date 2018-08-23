@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
+use App\Helpers\CustomResetPassword;
 use Doctrine\DBAL\Query\QueryBuilder;
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
 /**
  * App\Models\User
@@ -33,8 +34,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereRememberToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereUpdatedAt($value)
  * @mixin \Eloquent
- * @property int $is_confirmed
- * @property int $role_id
+ * @property int                   $is_confirmed
+ * @property int                   $role_id
  * @property-read \App\Models\Role $role
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User partners()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereIsConfirmed($value)
@@ -44,6 +45,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use Notifiable;
+    use CustomResetPassword;
 
     /**
      * The attributes that are mass assignable.
@@ -204,6 +206,7 @@ class User extends Authenticatable
      * Retrieve only partners.
      *
      * @param QueryBuilder $query
+     *
      * @return mixed
      */
     public function scopePartners($query)

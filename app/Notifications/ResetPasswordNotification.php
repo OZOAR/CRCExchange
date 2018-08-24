@@ -35,6 +35,7 @@ class ResetPasswordNotification extends ResetPassword
             ->action(
                 trans('mail.reset_password.button'),
                 url(config('app.url') . route('password.reset', $this->token, false)))
-            ->line('Thank you for your support!');
+            ->line(trans('mail.salutation_bottom'))
+            ->markdown('mail.password.reset');
     }
 }

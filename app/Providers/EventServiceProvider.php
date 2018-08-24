@@ -2,8 +2,9 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
+use App\Listeners\SendRegisteredNotificationListener;
+use App\Events\Registered;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -13,8 +14,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\Registered' => [
-            'App\Listeners\SendRegisteredNotification',
+        Registered::class => [
+            SendRegisteredNotificationListener::class,
         ],
     ];
 

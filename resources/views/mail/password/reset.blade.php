@@ -3,11 +3,7 @@
 @if (! empty($greeting))
 # {{ $greeting }}
 @else
-@if ($level == 'error')
-# {{ trans('mail.reset_password.warn_welcome') }}
-@else
-# {{ trans('mail.reset_password.welcome') }}
-@endif
+# @lang('mail.reset_password.welcome')
 @endif
 
 {{-- Intro Lines --}}
@@ -45,13 +41,13 @@
 @if (! empty($salutation))
 {{ $salutation }}
 @else
-{{ trans('mail.salutation') }},<br>{{ config('app.name') }}
+@lang('mail.salutation'),<br>{{ config('app.name') }}
 @endif
 
 {{-- Subcopy --}}
 @isset($actionText)
 @component('mail::subcopy')
-{{ trans('mail.reset_password.subcopy', ['actionText' => $actionText]) }} [{{ $actionUrl }}]({{ $actionUrl }})
+@lang('mail.reset_password.subcopy', ['actionText' => $actionText]) [{{ $actionUrl }}]({{ $actionUrl }})
 @endcomponent
 @endisset
 @endcomponent

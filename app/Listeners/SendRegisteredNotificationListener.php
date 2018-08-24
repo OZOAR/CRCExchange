@@ -3,11 +3,9 @@
 namespace App\Listeners;
 
 use App\Events\Registered;
-use App\Helpers\TokenBroker;
-use App\Mail\RegisterConfirmationMail;
-use Illuminate\Support\Facades\Mail;
+use App\Notifications\RegistrationConfirmRequestedNotification;
 
-class SendRegisteredNotification
+class SendRegisteredNotificationListener
 {
     /**
      * Handle the event.
@@ -22,6 +20,6 @@ class SendRegisteredNotification
         $user = $event->getUser();
         $request = $event->getRequest();
 
-        Mail::to($user)->send(new RegisterConfirmationMail($user, $request));
+        $user->notify(new RegistrationConfirmRequestedNotification($user, $request));
     }
 }

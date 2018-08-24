@@ -52,7 +52,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = ['name', 'role_id', 'is_confirmed', 'email', 'password'];
+    protected $fillable = ['name', 'role_id', 'btc', 'percentage', 'is_confirmed', 'email', 'password'];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -64,13 +64,43 @@ class User extends Authenticatable
     ];
 
     /**
+     * Get id of the user.
+     *
+     * @return integer
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * Get name of the user.
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
      * Set name for user.
      *
-     * @param bool $name
+     * @param string $name
      */
     public function setName($name = null)
     {
         $this->name = $name;
+    }
+
+    /**
+     * Get email of the user.
+     *
+     * @return string
+     */
+    public function getEmail(): string
+    {
+        return $this->email;
     }
 
     /**
@@ -94,13 +124,43 @@ class User extends Authenticatable
     }
 
     /**
-     * Get user's policy.
+     * Get BTC address of the user.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return string
      */
-    public function role()
+    public function getBtc()
     {
-        return $this->belongsTo(Role::class, 'role_id');
+        return $this->btc;
+    }
+
+    /**
+     * Set BTC address for user.
+     *
+     * @param string $btc
+     */
+    public function setBtc($btc = null)
+    {
+        $this->btc = $btc;
+    }
+
+    /**
+     * Get percentage of the user.
+     *
+     * @return double
+     */
+    public function getPercentage()
+    {
+        return $this->percentage;
+    }
+
+    /**
+     * Set percentage for user.
+     *
+     * @param double $percentage
+     */
+    public function setPercentage($percentage = null)
+    {
+        $this->percentage = $percentage;
     }
 
     /**
@@ -121,36 +181,6 @@ class User extends Authenticatable
     public function setConfirmed($val)
     {
         $this->is_confirmed = $val;
-    }
-
-    /**
-     * Get id of the user.
-     *
-     * @return integer
-     */
-    public function getId(): int
-    {
-        return $this->id;
-    }
-
-    /**
-     * Get name of the user.
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * Get email of the user.
-     *
-     * @return string
-     */
-    public function getEmail(): string
-    {
-        return $this->email;
     }
 
     /**
@@ -200,6 +230,16 @@ class User extends Authenticatable
     public function isPartner(): bool
     {
         return $this->role_id === Role::PARTNER_ROLE_ID;
+    }
+
+    /**
+     * Get user's policy.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function role()
+    {
+        return $this->belongsTo(Role::class, 'role_id');
     }
 
     /**

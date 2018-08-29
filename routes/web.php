@@ -11,14 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index')->name('index');
 
 $this->get('locale/reset', 'LocalizationController')->name('locale.reset');
 
 Auth::routes();
 
-Route::get('/profile', 'HomeController@index')->name('profile.index');
+$this->post('do/payment', 'PaymentController@pay')->name('payment.submit');
+
+// dashboard routes
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/profile', 'HomeController@profile')->name('profile.index');
+});
+
 Route::get('/register/confirmation/{token}', 'Auth\RegisterController@confirm')
     ->name('auth.register.confirm');

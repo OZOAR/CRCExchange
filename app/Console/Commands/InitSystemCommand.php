@@ -37,7 +37,7 @@ class InitSystemCommand extends Command
     public function handle()
     {
         $this->info('Starting migration...');
-        $exitMigrateCommandCode = Artisan::call('migrate');
+        $exitMigrateCommandCode = Artisan::call('migrate:refresh');
 
         if ($exitMigrateCommandCode !== 0) {
             $this->error('Error during \'migrate\' command. Error code: ' . $exitMigrateCommandCode);

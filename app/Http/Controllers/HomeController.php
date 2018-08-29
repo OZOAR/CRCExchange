@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Helpers\TemporaryIntegrationHelper;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    use TemporaryIntegrationHelper;
+
+    public function index()
     {
-        $this->middleware('auth');
+        $currencies = $this->getRates();
+
+        return view('welcome')->with(compact('currencies'));
     }
 
     /**
@@ -21,7 +20,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function profile()
     {
         return view('home');
     }

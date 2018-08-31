@@ -53,21 +53,6 @@
                                         </div>
                                         <hr>
                                         <div class="row">
-                                            <div class="col-md-8">
-                                                Fee:
-                                            </div>
-                                            <div class="col-md-4" style="text-align: right">
-                                                10%
-                                            </div>
-                                            <div class="col-md-8">
-                                                Total:
-                                            </div>
-                                            <div class="col-md-4" style="text-align: right">
-                                                200 EUR
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <div class="row">
                                             <div class="col-md-12" style="text-align: center">
                                                 <button type="submit" class="btn btn-primary">
                                                     Continue

@@ -8,6 +8,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+require('bootstrap-cookie-alert/cookiealert-standalone');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

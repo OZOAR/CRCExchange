@@ -116,6 +116,15 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'btc-address' => 'BTC address',
+    ],
 
+    'messages' => [
+        'btcField' => [
+            'error'      => 'Cannot check \':attribute\' at the moment. Try again later.',
+            'success'    => 'Your BTC address successfully updated.',
+            'duplicated' => 'Your new BTC address have not to be duplicated with current.',
+        ],
+    ],
 ];

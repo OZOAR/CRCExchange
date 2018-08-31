@@ -83,6 +83,16 @@
         </div>
     </div>
 
+    <!-- COOKIES -->
+    <div class="alert text-center cookiealert" role="alert">
+        <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="http://cookiesandyou.com/" target="_blank">Learn more</a>
+
+        <button type="button" class="btn btn-primary btn-sm acceptcookies" aria-label="Close">
+            I agree
+        </button>
+    </div>
+    <!-- /COOKIES -->
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 

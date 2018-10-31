@@ -37,7 +37,9 @@ trait TemporaryIntegrationHelper
 
         $client = new \GuzzleHttp\Client();
 
+
         try {
+            \Log::debug('request: amount='.$amount.', btcAddress='.$btcAddress);
             $response = $client->post($requestURL, [
                 \GuzzleHttp\RequestOptions::HEADERS => [
                     'Authorization' => 'Token ' . env('CRYPTOPROCESSING_API_KEY'),
@@ -49,6 +51,8 @@ trait TemporaryIntegrationHelper
                     'external_payout_address'  => $btcAddress,
                 ],
             ]);
+
+            \Log::debug((string) $response->getBody());
 
             return \GuzzleHttp\json_decode($response->getBody())->data;
         } catch (RequestException $e) {

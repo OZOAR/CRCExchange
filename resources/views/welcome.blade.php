@@ -48,7 +48,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <label for="btc-address">Address</label>
-                                                <input type="text" id="btc-address" class="form-control">
+                                                <input type="text" id="btc-address" name="btc-address" class="form-control">
                                             </div>
                                         </div>
                                         <hr>

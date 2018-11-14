@@ -77,7 +77,7 @@
                         <span class="text">
                   Extra charges apply in addition to the rate provided at the checkout  <br>
                   - CRCExchange fee 2% <br>
-                  - Processing fee 10% (min 30 EUR)
+                  - Processing fee 10%
                 </span>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                         <span class="highlights">EASY VERIFICATION</span>
                         <br>
                         <span class="text">
-                  Payment process is pretty simple and takes just a few steps
+                  Payment process is pretty simple and takes just a few steps. No registration is needed.
                 </span>
                     </div>
                 </div>

@@ -112,7 +112,7 @@
             </div>
         </div>
     </section>
-    <section id="reviews-list">
+    {{--<section id="reviews-list">
         <h3>Trusted by 2 million users worldwide</h3>
         <div class="container">
             <div class="row">
@@ -163,13 +163,13 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--}}
     <section id="buy-now">
         <h3>Buy Bitcoin with credit card </h3>
         <p>In a few easy steps</p>
         <a class="btn btn-primary btn-lg" href="#">Buy now!</a>
     </section>
-    <section id="press">
+    {{--<section id="press">
         <h3>Press about us</h3>
         <div class="container">
             <div class="row">
@@ -211,7 +211,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--}}
 @endsection
 
 @section('scripts')

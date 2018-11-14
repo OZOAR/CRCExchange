@@ -10,7 +10,7 @@
                 <h1>Buy Bitcoin<br/>with credit card</h1>
                 <div id="accepted-cards">
                     <span class="visa"></span>
-                    <span class="text">Visa accepted here</span>
+                    <span class="text">accepted here</span>
                 </div>
             </div>
             <div class="col-sm-6 payment">
@@ -22,13 +22,19 @@
                     @include('partials.dashboard.messages')
                     <div class="col-sm-12 input-row">
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 {{ $errors->has('eur-amount') ? ' has-error' : '' }}">
                                 <div class="input-group">
                                     <input type="number" id="eur-field" class="form-control"
                                            required="required" name="eur-amount"
                                            min="30" max="10000" value="{{ old('eur-amount', 30) }}">
                                     <span class="input-group-addon">EUR</span>
                                 </div>
+                                @if ($errors->has('eur-amount'))
+                                    <span class="help-block">
+                                        <small><strong>{{ $errors->first('eur-amount') }}</strong></small>
+                                    </span>
+                                @endif
+                                <small>Minimal transaction amount <b>30 EUR</b>.</small>
                             </div>
                             <div class="col-sm-6">
                                 <div class="input-group">
@@ -43,8 +49,8 @@
                                placeholder="Bitcoin address" required="required"
                                value="{{ old('btc-address') }}">
                         @if ($errors->has('btc-address'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('btc-address') }}</strong>
+                            <span class="help-block">
+                            <small><strong>{{ $errors->first('btc-address') }}</strong></small>
                         </span>
                         @endif
                         <small>BTC address must be <b>yours</b> and <b>under your full control</b>.</small>
@@ -70,8 +76,8 @@
                         <br>
                         <span class="text">
                   Extra charges apply in addition to the rate provided at the checkout  <br>
-                  - CRCExchange fee X% <br>
-                  - CryptoProcessing fee X% (min $30)
+                  - CRCExchange fee 2% <br>
+                  - Processing fee 10% (min 30 EUR)
                 </span>
                     </div>
                 </div>

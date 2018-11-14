@@ -41,6 +41,7 @@
                                     <input id="btc-field" type="number" class="form-control" readonly>
                                     <span class="input-group-addon">BTC</span>
                                 </div>
+                                <small>1 BTC = {{ $currencies->EUR->BTC }} EUR</small>
                             </div>
                         </div>
                     </div>
@@ -75,7 +76,7 @@
                         <span class="highlights">REASONABLE FEES</span>
                         <br>
                         <span class="text">
-                  All charges below are already included in the current exchange rate<br>
+                  All fees below are already included in the current exchange rate<br>
                   - CRCExchange fee 2% <br>
                   - Processing fee 10%
                 </span>

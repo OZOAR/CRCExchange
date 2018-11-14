@@ -75,7 +75,7 @@
                         <span class="highlights">REASONABLE FEES</span>
                         <br>
                         <span class="text">
-                  Extra charges apply in addition to the rate provided at the checkout  <br>
+                  All charges below are already included in the current exchange rate<br>
                   - CRCExchange fee 2% <br>
                   - Processing fee 10%
                 </span>

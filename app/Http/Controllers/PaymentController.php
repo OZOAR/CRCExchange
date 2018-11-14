@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\TemporaryIntegrationHelper;
-use Illuminate\Http\Request;
+use App\Http\Requests\PayRequest;
 
 class PaymentController extends Controller
 {
     use TemporaryIntegrationHelper;
 
-    public function pay(Request $request)
+    public function pay(PayRequest $request)
     {
         $eurAmount = $request->input('eur-amount');
         $btcAddress = $request->input('btc-address');

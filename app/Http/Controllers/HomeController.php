@@ -11,8 +11,7 @@ class HomeController extends Controller
     public function index()
     {
         $currencies = $this->getRates();
-
-        return view('welcome')->with(compact('currencies'));
+        return view('welcome_new')->with(compact('currencies'));
     }
 
     /**

@@ -40,14 +40,6 @@ body {
     color: rgb(179, 180, 180);
 }
 
-#accepted-cards > .mastercard {
-    display: inline-block;
-    width: 32px;
-    height: 20px;
-    vertical-align: middle;
-    background: url(../images/cards/mastercard-logo.svg);
-}
-
 .payment-form-head {
     text-align: center;
     background-color: #383737;

@@ -10,8 +10,7 @@
                 <h1>Buy Bitcoin<br/>with credit card</h1>
                 <div id="accepted-cards">
                     <span class="visa"></span>
-                    <span class="mastercard"></span>
-                    <span class="text">Visa and MasterCard accepted here</span>
+                    <span class="text">Visa accepted here</span>
                 </div>
             </div>
             <div class="col-sm-6 payment">

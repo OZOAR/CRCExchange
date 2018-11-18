@@ -36,7 +36,9 @@ class InitSystemCommand extends Command
      */
     public function handle()
     {
+        $this->info('System initialization has been started!');
         $this->info('Starting migration...');
+
         $exitMigrateCommandCode = Artisan::call('migrate:refresh');
 
         if ($exitMigrateCommandCode !== 0) {

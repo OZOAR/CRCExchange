@@ -8,7 +8,7 @@ trait TemporaryIntegrationHelper
 {
     public function getRates()
     {
-        $endpointURL = '/rates/acquiring?gateway=cryptocard';
+        $endpointURL = '/rates/acquiring?gateway=crypto_card';
         $requestURL = env('CRYPTOPROCESSING_API_URL') . '/' . env('CRYPTOPROCESSING_API_PREFIX') . '/'
             . env('CRYPTOPROCESSING_API_VERSION') . $endpointURL;
 

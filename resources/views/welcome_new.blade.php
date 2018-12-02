@@ -19,7 +19,18 @@
                 </div>
                 <form id="payment-form" action="{{ route('payment.submit') }}" method="post">
                     {{ csrf_field() }}
+
+                    @if(Request::has('ref'))
+                        <input type="hidden" name="referral-id" value="{{ Request::query('ref') }}">
+                    @endif
+
                     @include('partials.dashboard.messages')
+
+                    @if ($errors->has('referral-id'))
+                        <ul class="alert alert-danger">
+                            {{ $errors->first('referral-id') }}
+                        </ul>
+                    @endif
                     <div class="col-sm-12 input-row">
                         <div class="row">
                             <div class="col-sm-6 {{ $errors->has('eur-amount') ? ' has-error' : '' }}">

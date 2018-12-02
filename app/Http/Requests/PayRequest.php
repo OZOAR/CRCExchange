@@ -26,7 +26,8 @@ class PayRequest extends FormRequest
     {
         return [
             'btc-address' => ['required', 'string', new BtcAddressRule],
-            'eur-amount' => 'integer|min:30|max:10000',
+            'eur-amount'  => 'integer|min:30|max:10000',
+            'referral-id' => 'integer|exists:users,id',
         ];
     }
 }

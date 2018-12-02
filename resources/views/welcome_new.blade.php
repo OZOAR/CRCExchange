@@ -17,7 +17,7 @@
                 <div class="payment-form-head">
                     <span class="text">CRCExchange <b>BUY & SELL</b></span>
                 </div>
-                <form id="payment-form" action="{{ route('payment.submit') }}" method="post">
+                <form id="payment-form" action="{{ _route('payment.submit', [], false) }}" method="post">
                     {{ csrf_field() }}
 
                     @if(Request::has('ref'))
@@ -184,7 +184,7 @@
     <section id="buy-now">
         <h3>Buy Bitcoin with credit card </h3>
         <p>In a few easy steps</p>
-        <a class="btn btn-primary btn-lg" href="{{ _route('login') }}">Buy now!</a>
+        <a class="btn btn-primary btn-lg" href="#">Buy now!</a>
     </section>
     {{--<section id="press">
         <h3>Press about us</h3>

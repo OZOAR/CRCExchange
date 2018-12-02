@@ -1,16 +1,17 @@
 <?php
-
 /**
  * Generate the URL to a named route.
  *
- * @param  array|string  $name
- * @param  array  $parameters
- * @param  bool  $absolute
+ * @param  array|string $name
+ * @param  array        $parameters
+ * @param  bool          $saveRef
+ * @param  bool         $absolute
+ *
  * @return string
  */
-function _route($name, array $parameters = [], $absolute = true)
+function _route($name, array $parameters = [], $saveRef = true, $absolute = true)
 {
-    if(Request::has('ref')) {
+    if (Request::has('ref') && $saveRef) {
         $parameters['ref'] = Request::query('ref');
     }
 

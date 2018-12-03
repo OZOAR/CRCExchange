@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Helpers\TemporaryIntegrationHelper;
 use App\Http\Requests\PayRequest;
+use App\Models\Transaction;
 
 class PaymentController extends Controller
 {
@@ -31,11 +32,24 @@ class PaymentController extends Controller
 
         $paymentResponse = $this->executePayment($eurAmount, $btcAddress);
 
-        if ($paymentResponse === null) {
-            return redirect()->back()->with('success', 'Something went wrong during payment processing.');
+        if ($paymentResponse === null) { /*TODO refactor*/
+            return redirect()->back()->with('error', 'Something went wrong during payment processing.');
         }
 
-        dd($paymentResponse);
+        if (!\Auth::guest()) {
+            $attributes = [
+                'btc_address' => $btcAddress,
+                'total_eur'   => $eurAmount,
+                'status'      => $paymentResponse->status,
+            ];
+
+            if($request->has('referral-id')) {
+                $referralId = $request->input('referral-id');
+                $attributes['referral_id'] = $referralId;
+            }
+
+            \Auth::user()->transactions()->save(new Transaction($attributes));
+        }
 
         return redirect($paymentResponse->payment_url);
     }

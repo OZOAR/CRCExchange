@@ -33,7 +33,13 @@
                                     <li role="presentation" class="active">
                                         <a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab"
                                            aria-expanded="true">
-                                            @lang('profile.settings.title')
+                                            @lang('profile.tabs.settings.title')
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#tab_content2" id="request-receive-money-tab" role="tab"
+                                           data-toggle="tab" aria-expanded="false">
+                                            @lang('profile.tabs.receive_money_request.title')
                                         </a>
                                     </li>
                                 </ul>
@@ -41,6 +47,10 @@
                                     <div role="tabpanel" class="tab-pane fade active in" id="tab_content1"
                                          aria-labelledby="home-tab">
                                         @include('partials.profile.btc_address_reset')
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="tab_content2"
+                                         aria-labelledby="request-receive-money-tab">
+                                        @include('partials.profile.receive_money_request')
                                     </div>
                                 </div>
                             </div>

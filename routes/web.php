@@ -33,6 +33,8 @@ Route::group(['prefix' => '/profile', 'middleware' => ['auth.access:partner']], 
         ->name('profile.transactions.index');
     Route::post('/settings/btc/update', 'Profile\ProfileController@updateBtcAddress')
         ->name('profile.btc.update');
+    Route::post('/receive-money/request', 'Profile\ProfileController@sendReceiveMoneyRequest')
+        ->name('profile.receive_money.request');
 });
 
 Route::get('/register/confirmation/{token}', 'Auth\RegisterController@confirm')

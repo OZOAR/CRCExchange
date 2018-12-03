@@ -12,7 +12,7 @@
             @lang('profile.labels.balance')
         </label>
         <div class="col-md-9 col-sm-9 col-xs-12">
-            <input type="text" value="{{ Auth::user()->getBalance() }}"
+            <input type="text" value="{{ Auth::user()->getBalance() . ' BTC'}}"
                    id="balance" class="form-control" readonly>
         </div>
     </div>

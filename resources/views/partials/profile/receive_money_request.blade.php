@@ -4,7 +4,7 @@
     </div>
 </div>
 
-<p>@lang('profile.messages.receive_money_request.description')</p>
+<p>@lang('profile.messages.requests.description')</p>
 
 <form action="{{ route('profile.receive_money.request') }}" method="POST" class="form-horizontal form-label-left">
     {{ csrf_field() }}

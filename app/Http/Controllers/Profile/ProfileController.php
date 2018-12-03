@@ -63,11 +63,11 @@ class ProfileController extends Controller
         if($sent) {
             return redirect()
                 ->back()
-                ->with('success', trans('profile.messages.receive_money_request.success'));
+                ->with('success', trans('profile.messages.requests.success'));
         }
 
         return redirect()
             ->back()
-            ->with('error', trans('profile.messages.receive_money_request.error'));
+            ->with('error', trans('profile.messages.requests.error'));
     }
 }

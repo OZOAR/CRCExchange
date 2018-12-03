@@ -204,6 +204,16 @@ class User extends Authenticatable
     }
 
     /**
+     * Get referral link of the user.
+     *
+     * @return string
+     */
+    public function getReferralLink()
+    {
+        return route('index', ['ref' => $this->getId()]);
+    }
+
+    /**
      * Get registration date of the user.
      *
      * @return mixed

@@ -22,8 +22,7 @@
             @lang('profile.labels.referral.title')
         </label>
         <div class="col-md-9 col-sm-9 col-xs-12">
-            {{--TODO create helper to get link as a format--}}
-            <input type="text" value="{{ config('app.url') . '?ref=' . Auth::user()->getId() }}"
+            <input type="text" value="{{ Auth::user()->getReferralLink() }}"
                    id="referral" class="form-control" readonly>
         </div>
     </div>

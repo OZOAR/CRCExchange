@@ -19,9 +19,7 @@
             <td>{{ round($partner->getPercentage(), 2) }}%</td>
             <td>{{ $partner->getBtc() }}</td>
             <td>
-                <a href="{{ config('app.url') . '?ref=' . $partner->getId() }}" target="_blank">
-                    {{ config('app.url') . '?ref=' . $partner->getId() }}
-                </a>
+                <a href="{{ $partner->getReferralLink() }}" target="_blank">{{ $partner->getReferralLink() }}</a>
             </td>
         </tr>
     @endforeach

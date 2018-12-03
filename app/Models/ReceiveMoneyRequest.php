@@ -21,13 +21,13 @@ class ReceiveMoneyRequest extends Model
     protected $fillable = ['user_id', 'total', 'status'];
 
     /**
-     * Get request user.
+     * Get id of the request.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return double
      */
-    public function user()
+    public function getId()
     {
-        return $this->hasOne(User::class, 'user_id');
+        return $this->id;
     }
 
     /**
@@ -65,8 +65,28 @@ class ReceiveMoneyRequest extends Model
      *
      * @param string $status
      */
-    public function setPercentage($status = 'new')
+    public function setStatus($status = 'new')
     {
         $this->status = $status;
+    }
+
+    /**
+     * Get created datetime of the request.
+     *
+     * @return mixed
+     */
+    public function getCreatedDate()
+    {
+        return $this->created_at;
+    }
+
+    /**
+     * Get request user.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function user()
+    {
+        return $this->hasOne(User::class, 'user_id');
     }
 }

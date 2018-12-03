@@ -35,6 +35,15 @@ return [
                 'date'        => 'Date',
             ],
         ],
+
+        'requests' => [
+            'title' => 'My requests',
+            'model' => [
+                'total'      => 'Total (BTC)',
+                'status'     => 'Status',
+                'created_at' => 'Created at',
+            ],
+        ],
     ],
 
     'tabs' => [

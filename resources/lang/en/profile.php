@@ -21,6 +21,9 @@ return [
         'referral' => [
             'title' => 'Ref. link',
         ],
+
+        'balance' => 'Balance',
+
         'transactions' => [
             'title' => 'My transactions',
             'model' => [

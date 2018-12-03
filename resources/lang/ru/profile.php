@@ -21,6 +21,9 @@ return [
         'referral'     => [
             'title' => 'Реф. ссылка',
         ],
+
+        'balance' => 'Баланс',
+
         'transactions' => [
             'title' => 'Мои транзакции',
             'model' => [

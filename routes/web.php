@@ -28,8 +28,11 @@ $this->post('do/payment', 'PaymentController@pay')->name('payment.submit');
 
 // dashboard routes
 Route::group(['prefix' => '/profile', 'middleware' => ['auth.access:partner']], function () {
-    Route::get('/', 'ProfileController@showProfile')->name('profile.index');
-    Route::post('/settings/btc/update', 'ProfileController@updateBtcAddress')->name('profile.btc.update');
+    Route::get('/', 'Profile\ProfileController@showProfile')->name('profile.index');
+    Route::get('/transactions', 'Profile\TransactionController@showTransactionsListPage')
+        ->name('profile.transactions.index');
+    Route::post('/settings/btc/update', 'Profile\ProfileController@updateBtcAddress')
+        ->name('profile.btc.update');
 });
 
 Route::get('/register/confirmation/{token}', 'Auth\RegisterController@confirm')

@@ -7,6 +7,7 @@ return [
         'title' => 'Profile',
         'menu'  => [
             'home' => 'Home',
+            'transactions' => 'My transactions',
         ],
     ],
 
@@ -20,10 +21,25 @@ return [
         'referral' => [
             'title' => 'Ref. link',
         ],
+        'transactions' => [
+            'title' => 'My transactions',
+            'model' => [
+                'referer' => 'Referer url',
+                'btc_address' => 'BTC address',
+                'total' => 'Total (EUR)',
+                'date' => 'Date',
+            ],
+        ],
     ],
 
     'settings' => [
         'title' => 'Account Settings',
+    ],
+
+    'messages' => [
+        'transactions' => [
+            'empty_collection' => 'You have not any transactions yet.',
+        ],
     ],
 
     'actions' => [

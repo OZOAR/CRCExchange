@@ -6,47 +6,56 @@ return [
     'sidebar' => [
         'title' => 'Profile',
         'menu'  => [
-            'home' => 'Home',
+            'home'         => 'Home',
             'transactions' => 'My transactions',
         ],
     ],
 
     'labels' => [
-        'btc' => [
+        'btc'        => [
             'title' => 'BTC address',
         ],
         'percentage' => [
             'title' => 'Percentage',
         ],
-        'referral' => [
+        'referral'   => [
             'title' => 'Ref. link',
         ],
 
-        'balance' => 'Balance',
+        'balance'       => 'Balance',
+        'request_total' => 'Total',
 
         'transactions' => [
             'title' => 'My transactions',
             'model' => [
-                'referer' => 'Referer url',
+                'referer'     => 'Referer url',
                 'btc_address' => 'BTC address',
-                'total' => 'Total (EUR)',
-                'date' => 'Date',
+                'total'       => 'Total (EUR)',
+                'date'        => 'Date',
             ],
         ],
     ],
 
-    'settings' => [
-        'title' => 'Account Settings',
+    'tabs' => [
+        'settings'              => [
+            'title' => 'Account Settings',
+        ],
+        'receive_money_request' => [
+            'title' => 'Output money',
+        ],
     ],
 
     'messages' => [
-        'transactions' => [
+        'transactions'          => [
             'empty_collection' => 'You have not any transactions yet.',
+        ],
+        'receive_money_request' => [
+            'description' => 'Here you can place request to receive money to your profile BTC address.',
         ],
     ],
 
     'actions' => [
         'profile' => 'Profile',
-        'logout' => 'Logout',
+        'logout'  => 'Logout',
     ],
 ];

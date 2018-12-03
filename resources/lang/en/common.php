@@ -2,7 +2,8 @@
 
 return [
     'buttons' => [
-        'submit' => 'Save',
+        'submit'  => 'Save',
         'update'  => 'Update',
+        'request' => 'Request',
     ],
 ];

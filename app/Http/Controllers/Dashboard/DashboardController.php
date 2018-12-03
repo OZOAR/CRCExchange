@@ -7,13 +7,13 @@ use App\Models\User;
 
 class DashboardController extends Controller
 {
-    const PARTNERS_PER_PAGE = 10;
+    const PARTNERS_PER_PAGE = 15;
 
     public function __invoke()
     {
         $partners = User::partners()->paginate(self::PARTNERS_PER_PAGE);
 
         return view('dashboard.index')
-            ->with(compact(['partners']));
+            ->with('partners', $partners);
     }
 }

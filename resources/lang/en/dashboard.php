@@ -53,7 +53,7 @@ return [
             'empty_collection' => 'Transactions are not found.',
         ],
         'requests' => [
-            'empty_collection' => 'You have not sent any requests to receive money yet.',
+            'empty_collection' => 'Requests to receive money are not sent yet.',
         ],
     ],
 

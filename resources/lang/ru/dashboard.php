@@ -53,7 +53,7 @@ return [
             'empty_collection' => 'Транзакций пока нет.',
         ],
         'requests' => [
-            'empty_collection' => 'Вы пока не оставляли запросы на вывод денег.',
+            'empty_collection' => 'Запросов на вывод денег пока нет.',
         ],
     ],
 

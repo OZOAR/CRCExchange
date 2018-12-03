@@ -19,12 +19,14 @@ class RoleAccessMiddleware
      */
     public function handle($request, Closure $next, $role)
     {
-        if (Auth::guest() || !$request->user()->hasRole($role)) {
+        if(Auth::guest()) {
+            return redirect()->route('index');
+        }
+
+        if (!$request->user()->hasRole($role)) {
             if($request->user()->isAdministrator()) {
                 return redirect()->route('dashboard.index');
             }
-
-            return redirect()->route('index');
         }
 
         return $next($request);

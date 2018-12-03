@@ -52,7 +52,7 @@ return [
         'transactions' => [
             'empty_collection' => 'Transactions are not found.',
         ],
-        'receive_money_request' => [
+        'requests' => [
             'empty_collection' => 'You have not sent any requests to receive money yet.',
             'description'      => 'Here you can place request to receive money to your profile BTC address.',
             'success'          => 'Your request to receive money has been sent.',

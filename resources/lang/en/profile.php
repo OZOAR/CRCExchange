@@ -8,6 +8,7 @@ return [
         'menu'  => [
             'home'         => 'Home',
             'transactions' => 'My transactions',
+            'requests'     => 'My requests',
         ],
     ],
 

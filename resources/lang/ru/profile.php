@@ -8,6 +8,7 @@ return [
         'menu'  => [
             'home'         => 'Главная',
             'transactions' => 'Мои транзакции',
+            'requests'     => 'Запросы на вывод',
         ],
     ],
 

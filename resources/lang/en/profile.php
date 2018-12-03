@@ -60,9 +60,10 @@ return [
             'empty_collection' => 'You have not any transactions yet.',
         ],
         'receive_money_request' => [
-            'description' => 'Here you can place request to receive money to your profile BTC address.',
-            'success'     => 'Your request to receive money has been sent.',
-            'error'       => 'Your request to receive money cannot be sent. Try again later.',
+            'empty_collection' => 'You have not sent any requests to receive money yet.',
+            'description'      => 'Here you can place request to receive money to your profile BTC address.',
+            'success'          => 'Your request to receive money has been sent.',
+            'error'            => 'Your request to receive money cannot be sent. Try again later.',
         ],
     ],
 

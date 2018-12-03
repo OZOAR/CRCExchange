@@ -283,6 +283,16 @@ class User extends Authenticatable
     }
 
     /**
+     * Get user requests to receive money.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function requests()
+    {
+        return $this->hasMany(ReceiveMoneyRequest::class, 'user_id');
+    }
+
+    /**
      * Retrieve only partners.
      *
      * @param QueryBuilder $query

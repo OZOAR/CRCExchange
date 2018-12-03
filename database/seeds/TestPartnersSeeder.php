@@ -11,6 +11,12 @@ class TestPartnersSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\Models\User::class, 50)->create();
+        factory(\App\Models\User::class, 50)
+            ->create()
+            ->each(function($user) {
+                factory(\App\Models\Transaction::class, 2)->create([
+                    'user_id' => $user->getId()
+                ]);
+            });
     }
 }

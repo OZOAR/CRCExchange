@@ -43,7 +43,6 @@
 </div>
 
 <script src="{{ asset('js/dashboard/dashboard.js') }}"></script>
-<script src="{{ asset('js/dashboard/parsleyjs/'.app()->getLocale().'.js') }}"></script>
 <script src="{{ asset('js/dashboard/custom.min.js') }}"></script>
 </body>
 </html>

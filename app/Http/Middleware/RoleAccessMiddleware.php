@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
-class AdminGroup
+class RoleAccessMiddleware
 {
     /**
      * Handle an incoming request.
@@ -13,11 +13,17 @@ class AdminGroup
      * @param  \Illuminate\Http\Request $request
      * @param  \Closure                 $next
      *
+     * @param                           $role
+     *
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next, $role)
     {
-        if (Auth::guest() || !$request->user()->hasRole('admin')) {
+        if (Auth::guest() || !$request->user()->hasRole($role)) {
+            if($request->user()->isAdministrator()) {
+                return redirect()->route('dashboard.index');
+            }
+
             return redirect()->route('index');
         }
 

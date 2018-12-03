@@ -52,14 +52,12 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => \Illuminate\Auth\Middleware\Authenticate::class,
-        'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
-        'can' => \Illuminate\Auth\Middleware\Authorize::class,
-        'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
-        'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-
-        /* Custom middlewares */
-        'admin' => \App\Http\Middleware\AdminGroup::class,
+        'auth'        => \Illuminate\Auth\Middleware\Authenticate::class,
+        'auth.basic'  => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+        'auth.access' => \App\Http\Middleware\RoleAccessMiddleware::class,
+        'bindings'    => \Illuminate\Routing\Middleware\SubstituteBindings::class,
+        'can'         => \Illuminate\Auth\Middleware\Authorize::class,
+        'guest'       => \App\Http\Middleware\RedirectIfAuthenticated::class,
+        'throttle'    => \Illuminate\Routing\Middleware\ThrottleRequests::class,
     ];
 }

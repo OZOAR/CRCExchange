@@ -52,7 +52,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = ['name', 'role_id', 'btc', 'percentage', 'is_confirmed', 'email', 'password'];
+    protected $fillable = ['name', 'role_id', 'btc', 'percentage', 'balance', 'is_confirmed', 'email', 'password'];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -164,6 +164,26 @@ class User extends Authenticatable
     }
 
     /**
+     * Get balance of the user.
+     *
+     * @return double
+     */
+    public function getBalance()
+    {
+        return $this->balance;
+    }
+
+    /**
+     * Set balance for user.
+     *
+     * @param double $balance
+     */
+    public function setBalance($balance = null)
+    {
+        $this->balance = $balance;
+    }
+
+    /**
      * Check if the user is confirmed.
      *
      * @return boolean
@@ -235,11 +255,21 @@ class User extends Authenticatable
     /**
      * Get user's policy.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function role()
     {
-        return $this->belongsTo(Role::class, 'role_id');
+        return $this->hasOne(Role::class, 'role_id');
+    }
+
+    /**
+     * Get user transactions.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class, 'user_id');
     }
 
     /**

@@ -94,6 +94,16 @@ class Transaction extends Model
     }
 
     /**
+     * Get date of the transaction.
+     *
+     * @return mixed
+     */
+    public function getDate()
+    {
+        return $this->created_at;
+    }
+
+    /**
      * Get transaction owner.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

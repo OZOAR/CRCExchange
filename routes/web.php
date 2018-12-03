@@ -18,6 +18,8 @@ $this->get('locale/reset', 'LocalizationController')->name('locale.reset');
 // dashboard routes
 Route::group(['prefix' => '/dashboard', 'middleware' => ['auth.access:admin']], function () {
     $this->get('/', 'Dashboard\DashboardController')->name('dashboard.index');
+    $this->get('/transactions', 'Dashboard\TransactionController@showTransactionsListPage')
+        ->name('dashboard.transactions.index');
 });
 
 Auth::routes();

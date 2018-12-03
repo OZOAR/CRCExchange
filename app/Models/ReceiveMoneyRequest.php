@@ -83,7 +83,7 @@ class ReceiveMoneyRequest extends Model
     /**
      * Get request user.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function user()
     {

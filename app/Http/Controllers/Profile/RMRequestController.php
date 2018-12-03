@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers\Profile;
 
-use App\Models\ReceiveMoneyRequest;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 /**

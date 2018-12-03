@@ -9,4 +9,9 @@
             <i class="fa fa-sellsy"></i> @lang('dashboard.sidebar.menu.transactions')
         </a>
     </li>
+    <li>
+        <a href="{{ route('dashboard.requests.index') }}"> {{-- rm - receive money --}}
+            <i class="fa fa-archive"></i> @lang('dashboard.sidebar.menu.requests')
+        </a>
+    </li>
 </ul>

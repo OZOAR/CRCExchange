@@ -3,6 +3,7 @@
 namespace App\Services\CryptoProcessing;
 
 use App\Builders\CPEndpointBuilder;
+use App\Services\AbstractExchanger;
 use App\Services\CryptoProcessing\Contracts\CPRatesContract;
 
 class CPRatesService extends AbstractExchanger implements CPRatesContract
@@ -20,6 +21,8 @@ class CPRatesService extends AbstractExchanger implements CPRatesContract
             ->make();
 
         $this->setConfiguration($endpoint);
-        return $this->executeGetRequest(); // TODO get 'data'
+        $response = $this->executeGetRequest();
+
+        return $response === null ? null : $response->data;
     }
 }

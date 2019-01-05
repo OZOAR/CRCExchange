@@ -2,15 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Helpers\TemporaryIntegrationHelper;
+use App\Services\CryptoProcessing\Contracts\CPRatesContract;
 
 class HomeController extends Controller
 {
-    use TemporaryIntegrationHelper;
-
-    public function index()
+    public function index(CPRatesContract $ratesService)
     {
-        $currencies = $this->getRates();
+        $currencies = $ratesService->getRates();
         return view('welcome_new')->with(compact('currencies'));
     }
 

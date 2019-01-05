@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Services\CryptoProcessing;
+namespace App\Services;
 
-use App\Services\ExchangerTrait;
 use \GuzzleHttp\RequestOptions;
 
 abstract class AbstractExchanger

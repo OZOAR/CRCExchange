@@ -3,6 +3,7 @@
 namespace App\Services\CryptoProcessing;
 
 use App\Builders\CPEndpointBuilder;
+use App\Services\AbstractExchanger;
 use App\Services\CryptoProcessing\Contracts\CPExchangerContract;
 
 class CPExchangerService extends AbstractExchanger implements CPExchangerContract

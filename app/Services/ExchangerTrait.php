@@ -41,4 +41,14 @@ trait ExchangerTrait
             return null;
         }
     }
+
+    /**
+     * Get integration token.
+     *
+     * @return \Illuminate\Config\Repository|mixed
+     */
+    public function getToken()
+    {
+        return config('exchanger.api.token');
+    }
 }

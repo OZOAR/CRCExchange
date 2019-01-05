@@ -3,11 +3,12 @@
 namespace App\Services\CryptoProcessing;
 
 use App\Services\ExchangerTrait;
+use \GuzzleHttp\RequestOptions;
 
 abstract class AbstractExchanger
 {
     use ExchangerTrait;
-    
+
     const DELIMITER = '/';
 
     /**
@@ -26,9 +27,16 @@ abstract class AbstractExchanger
      * @param $endpoint
      * @param $options
      */
-    public function setConfiguration($endpoint, $options = null)
+    protected function setConfiguration($endpoint, $options = [])
     {
         $this->endpoint = $endpoint;
         $this->options = $options;
+
+        $this->defineHeaders();
+    }
+
+    protected function defineHeaders()
+    {
+        $this->options[RequestOptions::HEADERS]['Authorization'] = 'Token ' . $this->getToken();
     }
 }

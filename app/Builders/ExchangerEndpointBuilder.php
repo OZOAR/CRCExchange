@@ -33,7 +33,7 @@ class ExchangerEndpointBuilder extends AbstractEndpointBuilder
      */
     private function getExchangerUrl()
     {
-        $exchangerUrl = config('api.exchanger.url');
+        $exchangerUrl = config('exchanger.api.url');
 
         if (empty($exchangerUrl)) {
             \Log::error('Exchanger url is not set.');
@@ -45,13 +45,13 @@ class ExchangerEndpointBuilder extends AbstractEndpointBuilder
 
     private function getExchangerPrefix()
     {
-        $exchangerPrefix = config('api.exchanger.prefix');
+        $exchangerPrefix = config('exchanger.api.prefix');
         return empty($exchangerPrefix) ? '' : '/' . $exchangerPrefix;
     }
 
     private function getExchangerVersion()
     {
-        $exchangerVersion = config('api.exchanger.version');
+        $exchangerVersion = config('exchanger.api.version');
         return empty($exchangerVersion) ? '' : '/' . $exchangerVersion;
     }
 }

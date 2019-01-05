@@ -2,7 +2,7 @@
 
 namespace App\Builders\Contracts;
 
-use App\Builders\ExchangerEndpointBuilder;
+use App\Builders\CPEndpointBuilder;
 
 interface EndpointBuilderContract
 {
@@ -14,7 +14,7 @@ interface EndpointBuilderContract
     /**
      * Make initial point with root endpoint.
      *
-     * @return ExchangerEndpointBuilder
+     * @return CPEndpointBuilder
      */
     public static function point();
 
@@ -23,7 +23,7 @@ interface EndpointBuilderContract
      *
      * @param string $to
      *
-     * @return ExchangerEndpointBuilder
+     * @return CPEndpointBuilder
      */
     public function to(string $to);
 

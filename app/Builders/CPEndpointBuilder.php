@@ -4,7 +4,7 @@ namespace App\Builders;
 
 use App\Exceptions\ExchangerConfigurationNotFoundException;
 
-class ExchangerEndpointBuilder extends AbstractEndpointBuilder
+class CPEndpointBuilder extends AbstractEndpointBuilder
 {
     private function __construct()
     {
@@ -22,7 +22,7 @@ class ExchangerEndpointBuilder extends AbstractEndpointBuilder
 
     public static function point()
     {
-        return new ExchangerEndpointBuilder();
+        return new CPEndpointBuilder();
     }
 
     /**

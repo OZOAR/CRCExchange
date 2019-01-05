@@ -6,18 +6,24 @@ use App\Exceptions\ExchangerConfigurationNotFoundException;
 
 class CPEndpointBuilder extends AbstractEndpointBuilder
 {
+    /**
+     * CPEndpointBuilder constructor.
+     *
+     * @throws ExchangerConfigurationNotFoundException
+     */
     private function __construct()
     {
         $this->root();
     }
 
+    /**
+     * Get root of the CryptoProcessing endpoint.
+     *
+     * @throws ExchangerConfigurationNotFoundException
+     */
     public function root()
     {
-        try {
-            $this->endpoint = $this->getExchangerUrl() . $this->getExchangerPrefix() . $this->getExchangerVersion();
-        } catch (ExchangerConfigurationNotFoundException $e) {
-            \Log::error($e->getTraceAsString());
-        }
+        $this->endpoint = $this->getExchangerUrl() . $this->getExchangerPrefix() . $this->getExchangerVersion();
     }
 
     public static function point()

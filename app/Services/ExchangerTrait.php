@@ -19,7 +19,8 @@ trait ExchangerTrait
 
             return \GuzzleHttp\json_decode($response->getBody());
         } catch (RequestException $e) {
-            \Log::error($e->getMessage(), $e->getTraceAsString());
+            \Log::error($e->getMessage());
+            \Log::error($e->getTraceAsString());
             return null;
         }
     }
@@ -37,7 +38,8 @@ trait ExchangerTrait
 
             return \GuzzleHttp\json_decode($response->getBody());
         } catch (RequestException $e) {
-            \Log::error($e->getMessage(), $e->getTraceAsString());
+            \Log::error($e->getMessage());
+            \Log::error($e->getTraceAsString());
             return null;
         }
     }

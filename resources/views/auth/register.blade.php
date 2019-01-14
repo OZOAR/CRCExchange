@@ -66,8 +66,14 @@
 
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4">
+                                    <p>By clicking on sign up, you agree to <b><a href="/terms-and-privacy">terms and
+                                            privacy policy.</a></b></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-6 col-md-offset-4">
                                     <button type="submit" class="btn btn-primary">
-                                        Register
+                                        Sign Up
                                     </button>
                                 </div>
                             </div>

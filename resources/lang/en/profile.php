@@ -66,7 +66,7 @@ return [
             'error'            => 'Your request to receive money cannot be sent. Try again later.',
         ],
         'confirmation' => [
-            'success' => 'You have been registered as Affiliate Partner of our project.<br/>Visit your account to see more details.',
+            'success' => 'You have been registered as Affiliate Partner of our project.',
         ],
     ],
 

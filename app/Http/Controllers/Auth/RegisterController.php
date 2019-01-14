@@ -186,7 +186,7 @@ class RegisterController extends Controller
             \Log::info('User has been registered and RegistrationRequest was created.',
                 ['request' => $registrationRequest]);
 
-            return redirect('/'); // TODO redirect back with success message
+            return redirect()->back()->with('success', __('auth.register.email.sent'));
         }
 
         \Log::error('Error when tried to create RegistrationRequest with data.', $registrationData);

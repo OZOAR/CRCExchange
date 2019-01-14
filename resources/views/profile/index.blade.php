@@ -30,7 +30,6 @@
                         <div class="col-md-9 col-sm-9 col-xs-12">
                             <div class="row">
                                 @if (session('success_confirmation'))
-                                    <br/>
                                     <div class="alert alert-success">
                                         @lang(session('success_confirmation'))
                                     </div>

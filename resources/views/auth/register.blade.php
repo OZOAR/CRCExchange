@@ -8,6 +8,14 @@
                     <div class="panel-heading">Register</div>
 
                     <div class="panel-body">
+                        <div class="row">
+                            @if (session('success'))
+                                <div class="alert alert-success">
+                                    @lang(session('success'))
+                                </div>
+                            @endif
+                        </div>
+
                         <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                             {{ csrf_field() }}
 

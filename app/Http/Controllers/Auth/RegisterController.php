@@ -65,7 +65,7 @@ class RegisterController extends Controller
 
         if ($updateUserResult['reasons']['confirmed']) {
             if (($user = User::whereEmail($userData['email'])->first()) === null) {
-                abort(401, 'Cannot find such user when try to authenticate');
+                abort(401, 'Cannot find such user when try to authenticate.');
             }
 
             Auth::login($user);
@@ -137,7 +137,8 @@ class RegisterController extends Controller
 
         Auth::login($user);
 
-        return redirect($this->redirectPath()); // TODO message
+        return redirect()->route('profile.index')
+            ->with('success_confirmation', __('profile.messages.confirmation.success'));
     }
 
     private function performUserData($requestAttributes)
@@ -185,7 +186,7 @@ class RegisterController extends Controller
             \Log::info('User has been registered and RegistrationRequest was created.',
                 ['request' => $registrationRequest]);
 
-            return redirect('/'); // TODO redirect back with success message
+            return redirect()->back()->with('success', __('auth.register.email.sent'));
         }
 
         \Log::error('Error when tried to create RegistrationRequest with data.', $registrationData);

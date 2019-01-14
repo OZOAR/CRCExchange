@@ -13,8 +13,13 @@ return [
     |
     */
 
-    'failed'   => 'These credentials do not match our records.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-    'not_confirmed'    => 'Your account is not confirmed by email.',
+    'failed'        => 'These credentials do not match our records.',
+    'throttle'      => 'Too many login attempts. Please try again in :seconds seconds.',
+    'not_confirmed' => 'Your account is not confirmed by email.',
+    'register'      => [
+        'email' => [
+            'sent' => 'Email for the registration request confirmation has sent.',
+        ],
+    ],
 
 ];

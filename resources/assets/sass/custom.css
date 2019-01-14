@@ -257,6 +257,7 @@ footer {
     width: 100%;
     background-color: rgb(51, 51, 51);
     display: block;
+    font-family: Tahoma;
 }
 
 footer .footer-link,

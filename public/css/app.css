@@ -35,7 +35,7 @@ body {
     font-family: Roboto, sans-serif;
     font-weight: normal;
     font-style: normal;
-    background-color: #fff;
+    background-color: #10222e !important;
 }
 
 #logo {
@@ -291,6 +291,7 @@ footer {
     width: 100%;
     background-color: rgb(51, 51, 51);
     display: block;
+    font-family: Tahoma;
 }
 
 footer .footer-link,
@@ -305,13 +306,32 @@ footer #footer-copy {
     float: right;
 }
 
-.panel-heading {
+div.panel {
+    background-color: transparent;
+    border: none;
+}
+
+.panel-default > div.panel-heading {
     text-align: center;
     background-color: #383737;
     color: #fff;
     border-radius: 16px 16px 0 0;
     font-size: 20px;
     padding: 28px;
+    font-weight: bold;
+}
+
+.panel-default > div.panel-body {
+    background-color: #f5f5f5;
+    border-radius: 0 0 16px 16px;
+    padding-top: 32px;
+    font-size: 14px;
+}
+
+#login-page,
+#register-page {
+    padding-top: 70px;
+    padding-bottom: 50px;
 }@charset "UTF-8";
 
 /*!

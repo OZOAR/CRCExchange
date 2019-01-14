@@ -329,7 +329,9 @@ div.panel {
 }
 
 #login-page,
-#register-page {
+#register-page,
+#reset-email-page,
+#reset-password-page {
     padding-top: 70px;
     padding-bottom: 50px;
 }@charset "UTF-8";

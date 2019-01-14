@@ -1,7 +1,7 @@
 @extends('layouts.app_new')
 
 @section('content')
-<div class="container">
+<div class="container" id="login-page">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">

@@ -31,7 +31,288 @@
     margin-left: 10px;
     vertical-align: baseline;
 }
-@charset "UTF-8";
+body {
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    background-color: #fff;
+}
+
+#logo {
+    padding-top: 60px;
+    font-size: 32px;
+}
+
+#payment-process {
+    background-color: #10222e;
+    padding-bottom: 60px;
+}
+
+#payment-process h1 {
+    margin-top: 53px;
+    font-size: 56px;
+    line-height: 1.13;
+    max-width: 420px;
+    color: #fff;
+}
+
+#accepted-cards {
+    margin-top: 32px;
+}
+
+#accepted-cards > .visa {
+    display: inline-block;
+    width: 44px;
+    height: 20px;
+    vertical-align: middle;
+    background: url(/images/cards/visa-logo-light.svg);
+}
+
+#accepted-cards > .text {
+    font-size: 14px;
+    color: rgb(179, 180, 180);
+}
+
+.payment-form-head {
+    text-align: center;
+    background-color: #383737;
+    color: #fff;
+    border-radius: 16px 16px 0 0;
+    font-size: 20px;
+    padding: 28px;
+}
+
+#payment-form {
+    background-color: #f5f5f5;
+    border-radius: 0 0 16px 16px;
+    padding-top: 32px;
+    font-size: 14px;
+}
+
+#payment-form .input-row,
+#payment-form button {
+    margin-bottom: 20px;
+}
+
+.payment {
+    margin-top: 36px;
+}
+
+#buy-now {
+    width: 100%;
+    background-color: #10222e;
+    color: #ffffff;
+    text-align: center;
+}
+
+#buy-now h3 {
+    padding-top: 40px;
+    line-height: 1.58;
+    font-size: 40px;
+    margin: 0;
+}
+
+#buy-now p {
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+#buy-now > .btn {
+    margin-bottom: 25px;
+}
+
+#reviews-list {
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 40px;
+    text-align: center;
+}
+
+#reviews-list h3 {
+    margin-bottom: 36px;
+}
+
+#reviews-list .review-item {
+    min-height: 200px;
+    border-radius: 16px;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    padding: 24px;
+    font-size: 14px;
+    line-height: 1.43;
+    text-align: left;
+    color: #333333;
+    position: relative;
+}
+
+#reviews-list a {
+    text-decoration: none;
+    color: black;
+}
+
+#reviews-list h3 {
+    margin-top: 0;
+}
+
+#reviews-list .review-item .photo {
+    width: 40px;
+    height: 40px;
+    background-image: url(/images/default-user-ico.jpg);
+    background-size: contain;
+    border-radius: 20px;
+    display: inline-block;
+    margin-right: 16px;
+}
+
+#reviews-list .review-item .name {
+    font-weight: bold;
+    vertical-align: top;
+    line-height: 3;
+}
+
+#reviews-list .review-item .date {
+    font-size: 10px;
+    line-height: 2;
+    color: #9b9b9b;
+    position: absolute;
+    bottom: 0;
+}
+
+#press {
+    text-align: center;
+    padding: 48px;
+    background-color: #ffffff;
+}
+
+#press h3 {
+    margin: 0;
+}
+
+#press a {
+    color: #333333;
+    font-size: 16px;
+}
+
+#press .container {
+    margin-top: 60px;
+}
+
+#press .news-item {
+    text-align: left;
+}
+
+#press .news-item .date {
+    font-size: 10px;
+    line-height: 1.5;
+    float: left;
+    color: #9b9b9b;
+}
+
+#press .news-item hr {
+    margin-bottom: 10px;
+}
+
+#process-info {
+    background-color: #ffffff;
+    padding-top: 50px;
+}
+
+@media (max-width: 768px) {
+    #process-info .container {
+        width: 100%;
+    }
+}
+
+#process-info .process-item {
+    margin-bottom: 50px;
+}
+
+#process-info .highlights {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 24px;
+    padding-left: 32px;
+    padding-top: 10px;
+}
+
+#process-info .text {
+    font-size: 14px;
+    line-height: 1.71;
+    display: block;
+    padding-left: 105px;
+    margin-top: -20px;
+}
+
+@media (max-width: 768px) {
+    #process-info .highlights {
+        display: inline-block;
+        font-size: 22px;
+    }
+
+    #process-info .text {
+        display: block;
+    }
+}
+
+#process-info .icon {
+    width: 68px;
+    height: 68px;
+    border-radius: 16px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 6px 12px 0 rgba(15, 194, 112, 0.15);
+            box-shadow: 0 6px 12px 0 rgba(15, 194, 112, 0.15);
+    display: inline-block;
+    vertical-align: top;
+}
+
+#process-info .icon-fees {
+    background: url(/images/icons/icon-fees.svg) 50% 50% no-repeat;
+}
+
+#process-info .icon-time {
+    background: url(/images/icons/icon-time.svg) 50% 50% no-repeat;
+}
+
+#process-info .icon-processing {
+    background: url(/images/icons/icon-processing.svg) 50% 50% no-repeat;
+}
+
+#process-info .icon-support {
+    background: url(/images/icons/icon-support.svg) 50% 50% no-repeat;
+}
+
+@media (max-width: 472px) {
+    .process-info br {
+        display: none;
+    }
+}
+
+footer {
+    width: 100%;
+    background-color: rgb(51, 51, 51);
+    display: block;
+}
+
+footer .footer-link,
+footer #footer-copy {
+    font-size: 14px;
+    color: rgb(179, 180, 180);
+    margin: 30px 36px 30px 0;
+    display: inline-block;
+}
+
+footer #footer-copy {
+    float: right;
+}
+
+.panel-heading {
+    text-align: center;
+    background-color: #383737;
+    color: #fff;
+    border-radius: 16px 16px 0 0;
+    font-size: 20px;
+    padding: 28px;
+}@charset "UTF-8";
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)

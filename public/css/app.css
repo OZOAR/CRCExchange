@@ -240,7 +240,7 @@ body {
     line-height: 1.71;
     display: block;
     padding-left: 105px;
-    margin-top: -20px;
+    margin-top: -10px;
 }
 
 @media (max-width: 768px) {
@@ -338,6 +338,7 @@ div.panel {
 
 nav.navbar {
     min-height: 70px;
+    border: none;
 }
 
 ul.navbar-nav > li > a {
@@ -350,6 +351,39 @@ a.navbar-brand {
 
 .navbar-brand img {
     height: 36px;
+}
+
+#transaction-limits {
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 40px;
+    text-align: center;
+}
+
+#transaction-limits h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+
+.transaction-limit-item {
+    text-align: center;
+}
+
+#transaction-limits .transaction-limit-item .highlights,
+#transaction-limits .transaction-limit-item .text {
+    padding-left: 0;
+}
+
+#transaction-limits .transaction-limit-item .highlights {
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+#transaction-limits .transaction-limit-item .text {
+    margin-top: 0;
+    font-family: Tahoma;
 }@charset "UTF-8";
 
 /*!

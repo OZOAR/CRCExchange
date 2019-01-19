@@ -334,6 +334,22 @@ div.panel {
 #reset-password-page {
     padding-top: 70px;
     padding-bottom: 50px;
+}
+
+nav.navbar {
+    min-height: 70px;
+}
+
+ul.navbar-nav > li > a {
+    padding: 24px 14px;
+}
+
+a.navbar-brand {
+    padding-top: 19px;
+}
+
+.navbar-brand img {
+    height: 36px;
 }@charset "UTF-8";
 
 /*!

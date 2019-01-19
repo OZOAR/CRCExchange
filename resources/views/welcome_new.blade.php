@@ -4,10 +4,7 @@
     <section id="payment-process">
         <div class="container">
             <div class="col-sm-6">
-                <div id="logo">
-                    <a href="/">CRCExchange{{--<img src="/images/" alt="Logo"/>--}}</a>
-                </div>
-                <h1>Buy Bitcoin<br/>with credit card</h1>
+                <h1 style="padding-top:60px">Buy Bitcoin<br/>with credit card</h1>
                 <div id="accepted-cards">
                     <span class="visa"></span>
                     <span class="text">accepted here</span>

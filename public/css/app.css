@@ -256,9 +256,9 @@ body {
 }
 
 #process-info .icon {
-    width: 68px;
-    height: 68px;
-    border-radius: 16px;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
     background-color: #ffffff;
     -webkit-box-shadow: 0 6px 12px 0 rgba(15, 194, 112, 0.15);
             box-shadow: 0 6px 12px 0 rgba(15, 194, 112, 0.15);
@@ -267,19 +267,23 @@ body {
 }
 
 #process-info .icon-fees {
-    background: url(/images/icons/icon-fees.svg) 50% 50% no-repeat;
+    background: url(/images/icons/icon-fees.png) center center no-repeat;
+    background-size: 88%;
 }
 
 #process-info .icon-time {
-    background: url(/images/icons/icon-time.svg) 50% 50% no-repeat;
+    background: url(/images/icons/icon-time.png) center center no-repeat;
+    background-size: 88%;
 }
 
 #process-info .icon-processing {
-    background: url(/images/icons/icon-processing.svg) 50% 50% no-repeat;
+    background: url(/images/icons/icon-processing.png) center center no-repeat;
+    background-size: 88%;
 }
 
 #process-info .icon-support {
-    background: url(/images/icons/icon-support.svg) 50% 50% no-repeat;
+    background: url(/images/icons/icon-support.png) center center no-repeat;
+    background-size: 88%;
 }
 
 @media (max-width: 472px) {

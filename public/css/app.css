@@ -36,6 +36,9 @@ body {
     font-weight: normal;
     font-style: normal;
     background-color: #10222e !important;
+    background: #10222e url(/images/background.jpg) center top no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 #logo {
@@ -44,7 +47,6 @@ body {
 }
 
 #payment-process {
-    background-color: #10222e;
     padding-bottom: 60px;
 }
 
@@ -100,7 +102,6 @@ body {
 
 #buy-now {
     width: 100%;
-    background-color: #10222e;
     color: #ffffff;
     text-align: center;
 }

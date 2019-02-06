@@ -205,7 +205,6 @@
             };
 
             let euros = $('#eur-field').val();
-            console.log(currencies.EUR);
             let BTC = (euros / currencies.EUR).toFixed(5);
             $('#btc-field').val(BTC);
 
@@ -217,6 +216,12 @@
                 $('#btc-field').val(BTC);
                 console.log(BTC);
             });
+
+            let lang = $('#language-switcher option:selected').val();
+
+            if(lang === 'ru') {
+                $('#payment-process h1').css('font-size', '28px')
+            }
         });
     </script>
 @endsection

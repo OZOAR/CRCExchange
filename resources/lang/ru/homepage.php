@@ -13,8 +13,8 @@ return [
     ],
 
     'payment' => [
-        'title'       => 'Buy bitcoin<br/>with credit card',
-        'description' => 'accepted here',
+        'title'       => 'Покупка биткоинов<br/>при помощи банковской карты',
+        'description' => '',
         'form'        => [
             'title'                     => 'CRCExchange <b>BUY & SELL</b>',
             'min_transaction'           => 'Минимальная сумма транзакции <b>30 EUR</b>.',

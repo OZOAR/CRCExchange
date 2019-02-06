@@ -4,15 +4,15 @@
     <section id="payment-process">
         <div class="container">
             <div class="col-sm-6">
-                <h1 style="padding-top:60px">Buy Bitcoin<br/>with credit card</h1>
+                <h1 style="padding-top:60px">@lang('homepage.payment.title')</h1>
                 <div id="accepted-cards">
                     <span class="visa"></span>
-                    <span class="text">accepted here</span>
+                    <span class="text">@lang('homepage.payment.description')</span>
                 </div>
             </div>
             <div class="col-sm-6 payment">
                 <div class="payment-form-head">
-                    <span class="text">CRCExchange <b>BUY & SELL</b></span>
+                    <span class="text">@lang('homepage.payment.form.title')</span>
                 </div>
                 <form id="payment-form" action="{{ _route('payment.submit', [], false) }}" method="post">
                     {{ csrf_field() }}
@@ -42,7 +42,7 @@
                                         <small><strong>{{ $errors->first('eur-amount') }}</strong></small>
                                     </span>
                                 @endif
-                                <small>Minimal transaction amount <b>30 EUR</b>.</small>
+                                <small>@lang('homepage.payment.form.min_transaction')</small>
                             </div>
                             <div class="col-sm-6">
                                 <div class="input-group">
@@ -55,19 +55,19 @@
                     </div>
                     <div class="col-md-12 input-row{{ $errors->has('btc-address') ? ' has-error' : '' }}">
                         <input type="text" id="btc-address" name="btc-address" class="form-control"
-                               placeholder="Bitcoin address" required="required"
-                               value="{{ old('btc-address') }}">
+                               placeholder="@lang('homepage.payment.form.bitcoin_field_placeholder')"
+                               required="required" value="{{ old('btc-address') }}">
                         @if ($errors->has('btc-address'))
                             <span class="help-block">
                             <small><strong>{{ $errors->first('btc-address') }}</strong></small>
                         </span>
                         @endif
-                        <small>BTC address must be <b>yours</b> and <b>under your full control</b>.</small>
+                        <small>@lang('homepage.payment.form.bitcoin_field_description')</small>
                     </div>
 
                     <div class="col-md-12" style="text-align: center">
-                        <button type="submit" class="btn btn-success">
-                            Continue &nbsp; &#8594;
+                        <button type="submit" class="btn btn-primary">
+                            @lang('common.buttons.continue') &nbsp; &#8594;
                         </button>
                     </div>
                     <div class="clearfix"></div>
@@ -156,51 +156,37 @@
     <section id="buy-now">
         <h3>Buy Bitcoin with credit card </h3>
         <p>In a few easy steps</p>
-        <a class="btn btn-primary btn-lg" href="#">Buy now!</a>
+        <a class="btn btn-primary btn-lg" href="#">@lang('common.buttons.buy_now')</a>
     </section>
-    {{--<section id="press">
-        <h3>Press about us</h3>
+    <section id="reviews-list">
+        <h3>@lang('homepage.reviews.title')</h3>
         <div class="container">
             <div class="row">
-                <div class="col-sm-3 news-item">
-                    <div class="news-item clearfix">
-                        <a href="/">
-                            CRCExchange Partners with Coinomi Wallet
-                        </a>
-                        <hr>
-                        <span class="date">September 26, 2017</span>
+                <div class="col-xs-6">
+                    <div class="review-item">
+                        <span class="photo"></span>
+                        <span class="name">@lang('homepage.reviews.list.kirillstoks.author')</span>
+                        <p class="review">@lang('homepage.reviews.list.kirillstoks.text')</p>
+                        <p class="date">@lang('homepage.reviews.list.kirillstoks.date')</p>
+                    </div>
+                    <div class="review-item">
+                        <span class="photo"></span>
+                        <span class="name">@lang('homepage.reviews.list.jey_moon.author')</span>
+                        <p class="review">@lang('homepage.reviews.list.jey_moon.text')</p>
+                        <p class="date">@lang('homepage.reviews.list.jey_moon.date')</p>
                     </div>
                 </div>
-                <div class="col-sm-3 news-item">
-                    <div class="news-item clearfix">
-                        <a href="/">
-                            CRCExchange, HitBTC, Bitstamp, BitGo con SegWit
-                        </a>
-                        <hr>
-                        <span class="date">September 29, 2017</span>
-                    </div>
-                </div>
-                <div class="col-sm-3 news-item">
-                    <div class="news-item clearfix">
-                        <a href="/">
-                            Mycelium Wallet Partners with CRCExchange
-                        </a>
-                        <hr>
-                        <span class="date">January 28, 2018</span>
-                    </div>
-                </div>
-                <div class="col-sm-3 news-item">
-                    <div class="news-item clearfix">
-                        <a href="/">
-                            CRCExchange Partners With Binance
-                        </a>
-                        <hr>
-                        <span class="date">January 27, 2018</span>
+                <div class="col-xs-6">
+                    <div class="review-item">
+                        <span class="photo"></span>
+                        <span class="name">@lang('homepage.reviews.list.miner_anarchist.author')</span>
+                        <p class="review">@lang('homepage.reviews.list.miner_anarchist.text')</p>
+                        <p class="date">@lang('homepage.reviews.list.miner_anarchist.date')</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>--}}
+    </section>
 @endsection
 
 @section('scripts')

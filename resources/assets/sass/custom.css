@@ -56,6 +56,7 @@ body {
     border-radius: 0 0 16px 16px;
     padding-top: 32px;
     font-size: 14px;
+    font-family: Arial;
 }
 
 #payment-form .input-row,
@@ -101,7 +102,8 @@ body {
 }
 
 #reviews-list .review-item {
-    min-height: 200px;
+    min-height: 160px;
+    font-family: Arial;
     border-radius: 16px;
     background-color: #ffffff;
     margin-bottom: 30px;
@@ -125,7 +127,7 @@ body {
 #reviews-list .review-item .photo {
     width: 40px;
     height: 40px;
-    background-image: url(/images/default-user-ico.jpg);
+    background-image: url(/images/icons/bitcointalk.png);
     background-size: contain;
     border-radius: 20px;
     display: inline-block;
@@ -139,7 +141,7 @@ body {
 }
 
 #reviews-list .review-item .date {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 2;
     color: #9b9b9b;
     position: absolute;
@@ -355,4 +357,33 @@ a.navbar-brand {
 #transaction-limits .transaction-limit-item .text {
     margin-top: 0;
     font-family: Tahoma;
+}
+
+button.navbar-toggle {
+    margin-top: 18px;
+}
+
+@media (max-width: 476px) {
+    footer {
+        text-align: center;
+    }
+
+    footer .footer-link {
+        margin: 10px;
+    }
+
+    footer #footer-copy {
+        float: none;
+        margin: 0 0 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    ul.navbar-nav > li > a {
+        padding: 10px;
+    }
+}
+
+#language-switcher {
+    height: 32px;
 }

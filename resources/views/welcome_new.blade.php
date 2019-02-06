@@ -80,7 +80,9 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="process-item">
-                        <span class="icon icon-fees"></span>
+                        <div class="process-item-image-wrapper">
+                            <span class="icon icon-fees"></span>
+                        </div>
                         <span class="highlights">REASONABLE FEES</span>
                         <span class="text">
                   All fees below are already included in the current exchange rate<br>
@@ -91,7 +93,9 @@
                 </div>
                 <div class="col-md-6">
                     <div class="process-item">
-                        <span class="icon icon-processing"></span>
+                        <div class="process-item-image-wrapper">
+                            <span class="icon icon-processing"></span>
+                        </div>
                         <span class="highlights">EASY VERIFICATION</span>
                         <span class="text">
                   Payment process is pretty simple and takes just a few steps. No registration is needed.
@@ -102,7 +106,9 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="process-item">
-                        <span class="icon icon-time"></span>
+                        <div class="process-item-image-wrapper">
+                            <span class="icon icon-time"></span>
+                        </div>
                         <span class="highlights">QUICK TRANSACTIONS</span>
                         <span class="text">
                   We offer lightning-fast transactions taking just 10-30 minutes in regular circumstances
@@ -111,7 +117,9 @@
                 </div>
                 <div class="col-md-6">
                     <div class="process-item">
-                        <span class="icon icon-support"></span>
+                        <div class="process-item-image-wrapper">
+                            <span class="icon icon-support"></span>
+                        </div>
                         <span class="highlights">INSTANT SUPPORT</span>
                         <span class="text">
                   Feel free to contact <a href="mailto:support@crcexchange.com"
@@ -154,7 +162,7 @@
         </div>
     </section>
     <section id="buy-now">
-        <h3>Buy Bitcoin with credit card </h3>
+        <h3>Buy Bitcoin with credit card</h3>
         <p>In a few easy steps</p>
         <a class="btn btn-primary btn-lg" href="#">@lang('common.buttons.buy_now')</a>
     </section>

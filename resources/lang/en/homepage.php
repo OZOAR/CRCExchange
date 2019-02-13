@@ -16,8 +16,8 @@ return [
         'title'       => 'Buy bitcoin<br/>with credit card',
         'description' => 'accepted here',
         'form'        => [
-            'title'                     => 'CRCExchange <b>BUY & SELL</b>',
-            'min_transaction'           => 'Minimal transaction amount <b>30 EUR</b>.',
+            'title'                     => 'BUY BITCOIN',
+            'min_transaction'           => 'Minimal amount is <b>30 EUR</b>.',
             'bitcoin_field_placeholder' => 'Bitcoin address',
             'bitcoin_field_description' => 'BTC address must be <b>yours</b> and <b>under your full control</b>.',
         ],
@@ -41,6 +41,22 @@ return [
                 'text'   => 'Thanks for an honest and fast transaction, guys',
                 'date'   => 'July 16, 2018, 11:25 AM',
             ],
+        ],
+    ],
+
+    'limits' => [
+        'title'       => 'Before continuing, please see the existing limits',
+        'transaction' => [
+            'title' => 'TRANSACTION',
+            'text'  => 'from <b>&euro;30</b> to <b>&euro;10000</b>',
+        ],
+        'daily'       => [
+            'title' => 'DAILY LIMIT',
+            'text'  => 'up to <b>&euro;20000</b>',
+        ],
+        'monthly'     => [
+            'title' => 'MONTHLY LIMIT',
+            'text'  => 'up to <b>&euro;50000</b>',
         ],
     ],
 

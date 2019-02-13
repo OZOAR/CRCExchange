@@ -131,33 +131,17 @@
         </div>
     </section>
     <section id="transaction-limits">
-        <h3>Transaction limits</h3>
+        <h3>@lang('homepage.limits.title')</h3>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="transaction-limit-item">
-                        <div class="highlights">TRANSACTION</div>
-                        <div class="text">
-                            from <b>€30</b> to <b>€10000</b>
+                @foreach($limits as $limit)
+                    <div class="col-md-4">
+                        <div class="transaction-limit-item">
+                            <div class="highlights">{{ $limit['title'] }}</div>
+                            <div class="text">{!! $limit['text'] !!}</div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="transaction-limit-item">
-                        <div class="highlights">DAILY LIMIT</div>
-                        <div class="text">
-                            up to <b>€20000</b>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="transaction-limit-item">
-                        <div class="highlights">MONTHLY LIMIT</div>
-                        <div class="text">
-                            up to <b>€50000</b>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -219,7 +203,7 @@
 
             let lang = $('#language-switcher option:selected').val();
 
-            if(lang === 'ru') {
+            if (lang === 'ru') {
                 $('#payment-process h1').css('font-size', '28px')
             }
         });

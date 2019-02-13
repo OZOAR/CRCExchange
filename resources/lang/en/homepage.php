@@ -92,8 +92,8 @@ return [
 
     'footer' => [
         'menu' => [
-            'privacy' => 'AML/KYC',
-            'terms'   => 'Terms of use',
+            'policy' => 'AML Policy',
+            'faq'   => 'FAQ',
         ],
     ],
 ];

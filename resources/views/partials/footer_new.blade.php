@@ -1,8 +1,8 @@
 <footer>
     <div class="container">
-        <a href="/privacy" class="footer-link">@lang('homepage.footer.menu.privacy')</a>
-        <a href="/terms-of-use" class="footer-link">@lang('homepage.footer.menu.terms')</a>
+        <a href="/policy" class="footer-link">@lang('homepage.footer.menu.policy')</a>
+        <a href="/faq" class="footer-link">@lang('homepage.footer.menu.faq')</a>
 
-        <span id="footer-copy">&copy 2019 crcexchange.com</span>
+        <span id="footer-copy">&copy <script>document.write(new Date().getFullYear())</script> extate.cc</span>
     </div>
 </footer>

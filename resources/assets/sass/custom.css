@@ -410,3 +410,7 @@ nav.navbar {
     margin-bottom: 30px;
     margin-top: 0;
 }
+
+#custom-panel {
+    font-family: Arial;
+}

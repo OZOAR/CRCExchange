@@ -7,5 +7,6 @@ return [
         'request'  => 'Request',
         'continue' => 'Continue',
         'buy_now'  => 'Buy now!',
+        'login'    => 'Login',
     ],
 ];

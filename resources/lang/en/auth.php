@@ -22,4 +22,14 @@ return [
         ],
     ],
 
+    'login' => [
+        'title'   => 'Login',
+        'form'    => [
+            'email'       => 'E-Mail Address',
+            'password'    => 'Password',
+            'remember_me' => 'Remember Me',
+        ],
+        'sign_up' => 'Sign Up',
+        'forgot'  => 'Forgot Your Password?',
+    ],
 ];

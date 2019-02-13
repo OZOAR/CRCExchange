@@ -228,6 +228,7 @@ body {
 
 #process-info .process-item {
     margin-bottom: 50px;
+    font-family: Arial;
 }
 
 #process-info .process-item-image-wrapper {
@@ -371,6 +372,7 @@ a.navbar-brand {
     background-color: #f5f5f5;
     padding: 40px;
     text-align: center;
+    font-family: Arial;
 }
 
 #transaction-limits h3 {
@@ -396,7 +398,6 @@ a.navbar-brand {
 
 #transaction-limits .transaction-limit-item .text {
     margin-top: 0;
-    font-family: Tahoma;
 }
 
 button.navbar-toggle {

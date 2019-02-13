@@ -44,6 +44,31 @@ return [
         ],
     ],
 
+    'processes' => [
+        'fees'         => [
+            'title' => 'REASONABLE FEES',
+            'icon'  => 'icon-fees',
+            'text'  => 'All fees below are already included in the current exchange rate'
+                . '<br>- Exrate fee: 2%<br>- Processing fee: 10%',
+        ],
+        'verification' => [
+            'title' => 'EASY VERIFICATION',
+            'icon'  => 'icon-processing',
+            'text'  => 'Payment process is pretty simple and takes just a few steps. No registration is needed.',
+        ],
+        'transactions' => [
+            'title' => 'QUICK TRANSACTIONS',
+            'icon'  => 'icon-time',
+            'text'  => 'Our transactions take from 10 to 30 minutes in regular circumstances.',
+        ],
+        'support'      => [
+            'title' => 'INSTANT SUPPORT',
+            'icon'  => 'icon-support',
+            'text'  => 'Feel free to contact <a href="mailto:support@exrate.cc" class="link">support@exrate.cc</a> '
+                . 'should you have any questions or suggestions.',
+        ],
+    ],
+
     'limits' => [
         'title'       => 'Before continuing, please see the existing limits',
         'transaction' => [
@@ -62,8 +87,8 @@ return [
 
     'footer' => [
         'menu' => [
-            'privacy'  => 'AML/KYC',
-            'terms'    => 'Terms of use',
-        ]
+            'privacy' => 'AML/KYC',
+            'terms'   => 'Terms of use',
+        ],
     ],
 ];

@@ -77,57 +77,21 @@
     </section>
     <section id="process-info">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="process-item">
-                        <div class="process-item-image-wrapper">
-                            <span class="icon icon-fees"></span>
+            @foreach($processes->chunk(2) as $processChunk)
+                <div class="row">
+                    @foreach($processChunk as $process)
+                        <div class="col-md-6">
+                            <div class="process-item">
+                                <div class="process-item-image-wrapper">
+                                    <span class="icon {{ $process['icon-class'] }}"></span>
+                                </div>
+                                <span class="highlights">{{ $process['title'] }}</span>
+                                <span class="text">{!! $process['text'] !!}</span>
+                            </div>
                         </div>
-                        <span class="highlights">REASONABLE FEES</span>
-                        <span class="text">
-                  All fees below are already included in the current exchange rate<br>
-                  - CRCExchange fee 2% <br>
-                  - Processing fee 10%
-                </span>
-                    </div>
+                    @endforeach
                 </div>
-                <div class="col-md-6">
-                    <div class="process-item">
-                        <div class="process-item-image-wrapper">
-                            <span class="icon icon-processing"></span>
-                        </div>
-                        <span class="highlights">EASY VERIFICATION</span>
-                        <span class="text">
-                  Payment process is pretty simple and takes just a few steps. No registration is needed.
-                </span>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="process-item">
-                        <div class="process-item-image-wrapper">
-                            <span class="icon icon-time"></span>
-                        </div>
-                        <span class="highlights">QUICK TRANSACTIONS</span>
-                        <span class="text">
-                  We offer lightning-fast transactions taking just 10-30 minutes in regular circumstances
-                </span>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="process-item">
-                        <div class="process-item-image-wrapper">
-                            <span class="icon icon-support"></span>
-                        </div>
-                        <span class="highlights">INSTANT SUPPORT</span>
-                        <span class="text">
-                  Feel free to contact <a href="mailto:support@crcexchange.com"
-                                          class="link">support@crcexchange.com</a> should you have questions
-                </span>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </section>
     <section id="transaction-limits">

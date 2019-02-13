@@ -9,7 +9,25 @@ class HomeController extends Controller
     public function index(CPRatesContract $ratesService)
     {
         $currencies = $ratesService->getRates();
-        $limits = [
+        $processes = collect($this->getProcesses());
+        $limits = collect($this->getLimits());
+
+        return view('welcome_new')->with(compact(['currencies', 'processes', 'limits']));
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function profile()
+    {
+        return view('home');
+    }
+
+    private function getLimits()
+    {
+        return [
             [
                 'title' => __('homepage.limits.transaction.title'),
                 'text'  => __('homepage.limits.transaction.text'),
@@ -23,17 +41,31 @@ class HomeController extends Controller
                 'text'  => __('homepage.limits.monthly.text'),
             ],
         ];
-
-        return view('welcome_new')->with(compact(['currencies', 'limits']));
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function profile()
+    private function getProcesses()
     {
-        return view('home');
+        return [
+            [
+                'title'      => __('homepage.processes.fees.title'),
+                'icon-class' => __('homepage.processes.fees.icon'),
+                'text'       => __('homepage.processes.fees.text'),
+            ],
+            [
+                'title'      => __('homepage.processes.verification.title'),
+                'icon-class' => __('homepage.processes.verification.icon'),
+                'text'       => __('homepage.processes.verification.text'),
+            ],
+            [
+                'title'      => __('homepage.processes.transactions.title'),
+                'icon-class' => __('homepage.processes.transactions.icon'),
+                'text'       => __('homepage.processes.transactions.text'),
+            ],
+            [
+                'title'      => __('homepage.processes.support.title'),
+                'icon-class' => __('homepage.processes.support.icon'),
+                'text'       => __('homepage.processes.support.text'),
+            ],
+        ];
     }
 }

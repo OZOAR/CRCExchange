@@ -394,3 +394,19 @@ button.navbar-toggle {
 #language-switcher {
     height: 32px;
 }
+
+nav.navbar {
+    margin-bottom: 0;
+}
+
+#page-content {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+    font-family: Arial;
+}
+
+#page-content h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    margin-top: 0;
+}

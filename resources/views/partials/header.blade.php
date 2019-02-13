@@ -23,7 +23,7 @@
                 <!-- Authentication Links -->
                 <li style="padding: 18px 14px;">@include('partials.locale')</li>
                 <li><a href="/faq">@lang('homepage.header.menu.faq')</a></li>
-                <li><a href="/privacy">@lang('homepage.header.menu.privacy')</a></li>
+                <li><a href="{{ route('page.policy') }}">@lang('homepage.header.menu.privacy')</a></li>
                 <li><a href="/terms-of-use">@lang('homepage.header.menu.terms')</a></li>
                 @guest
                     <li><a href="{{ route('login') }}">@lang('homepage.header.menu.login')</a></li>

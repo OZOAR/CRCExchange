@@ -14,6 +14,7 @@
 Route::get('/', 'HomeController@index')->name('index');
 
 $this->get('locale/reset', 'LocalizationController')->name('locale.reset');
+$this->get('policy', 'PageController@showPolicyPage')->name('page.policy');
 
 // dashboard routes
 Route::group(['prefix' => '/dashboard', 'middleware' => ['auth.access:admin']], function () {

@@ -64,6 +64,11 @@ return [
         ],
     ],
 
+    'buy_now' => [
+        'title' => 'Buy Bitcoin with credit card',
+        'text'  => 'In a few easy steps',
+    ],
+
     'reviews' => [
         'title' => 'THOUSANDS OF USERS INTERNATIONALLY',
         'list'  => [

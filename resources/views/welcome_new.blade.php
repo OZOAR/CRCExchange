@@ -110,8 +110,8 @@
         </div>
     </section>
     <section id="buy-now">
-        <h3>Buy Bitcoin with credit card</h3>
-        <p>In a few easy steps</p>
+        <h3>@lang('homepage.buy_now.title')</h3>
+        <p>@lang('homepage.buy_now.text')</p>
         <a class="btn btn-primary btn-lg" href="#">@lang('common.buttons.buy_now')</a>
     </section>
     <section id="reviews-list">

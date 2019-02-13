@@ -23,27 +23,6 @@ return [
         ],
     ],
 
-    'reviews' => [
-        'title' => 'Reviews',
-        'list'  => [
-            'kirillstoks'     => [
-                'author' => 'kirillstoks',
-                'text'   => 'Thank you for a fast transaction.',
-                'date'   => 'May 11, 2018, 09:08 AM',
-            ],
-            'miner_anarchist' => [
-                'author' => 'MinerAnarchist',
-                'text'   => 'Thank you guys, all came through smoothly',
-                'date'   => 'July 10, 2018, 02:48 PM',
-            ],
-            'jey_moon'        => [
-                'author' => 'JeyMoon',
-                'text'   => 'Thanks for an honest and fast transaction, guys',
-                'date'   => 'July 16, 2018, 11:25 AM',
-            ],
-        ],
-    ],
-
     'processes' => [
         'fees'         => [
             'title' => 'REASONABLE FEES',
@@ -82,6 +61,27 @@ return [
         'monthly'     => [
             'title' => 'MONTHLY LIMIT',
             'text'  => 'up to <b>&euro;50000</b>',
+        ],
+    ],
+
+    'reviews' => [
+        'title' => 'THOUSANDS OF USERS INTERNATIONALLY',
+        'list'  => [
+            'kirillstoks'     => [
+                'author' => 'kirillstoks',
+                'text'   => 'Thank you for a fast transaction.',
+                'date'   => 'May 11, 2018, 09:08 AM',
+            ],
+            'miner_anarchist' => [
+                'author' => 'MinerAnarchist',
+                'text'   => 'Thank you guys, all came through smoothly',
+                'date'   => 'July 10, 2018, 02:48 PM',
+            ],
+            'jey_moon'        => [
+                'author' => 'JeyMoon',
+                'text'   => 'Thanks for an honest and fast transaction, guys',
+                'date'   => 'July 16, 2018, 11:25 AM',
+            ],
         ],
     ],
 

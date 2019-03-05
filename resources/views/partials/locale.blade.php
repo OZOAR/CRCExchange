@@ -5,7 +5,7 @@
             <input id="someSwitchOptionDanger" name="lang" type="checkbox" onchange="this.form.submit()"
                    value="{{ \App\Helpers\Locale::isSelected('ru') ? 'en' : 'ru' }}"
                     {{ \App\Helpers\Locale::isSelected('ru') ? ' ' : ' checked' }} />
-            <label for="someSwitchOptionDanger" class="label-primary"></label>
+            <label for="someSwitchOptionDanger" class="label-info"></label>
         </div>
         <div>en</div>
     </div>

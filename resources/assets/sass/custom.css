@@ -202,7 +202,7 @@ body {
     float: left;
     border-radius: 10px;
     background-color: #ffffff;
-    box-shadow: 0 6px 12px 0 rgba(15, 194, 112, 0.15);
+    box-shadow: 0 6px 12px 0 rgba(155, 216, 241, 0.36);
     width: 80px;
     height: 80px;
     text-align: center;
@@ -433,14 +433,13 @@ nav.navbar {
 }
 
 .material-switch label::before {
-    background: rgb(0, 0, 0);
-    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    background: white;
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.3);
     border-radius: 8px;
     content: '';
     height: 10px;
     margin-top: -8px;
     position: absolute;
-    opacity: 0.3;
     transition: all 0.4s ease-in-out;
     width: 28px;
 }
@@ -476,4 +475,17 @@ nav.navbar {
 
 #locale-switcher > div {
     float: left;
+}
+
+nav.navbar-inverse {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+nav.navbar-inverse .navbar-nav > li > a,
+#locale-switcher {
+    color: white;
+}
+
+nav.navbar-inverse .navbar-nav > li:hover > a {
+    color: #f5f5f5;
 }

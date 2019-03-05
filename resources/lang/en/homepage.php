@@ -3,9 +3,9 @@
 return [
     'header' => [
         'menu' => [
-            'faq'      => 'FAQ',
-            'login'    => 'Sign in',
-            'logout'   => 'Logout',
+            'affiliate' => 'Affiliate Program',
+            'login'     => 'Sign In',
+            'logout'    => 'Logout',
         ],
     ],
 

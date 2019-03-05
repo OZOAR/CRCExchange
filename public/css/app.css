@@ -430,10 +430,6 @@ button.navbar-toggle {
     }
 }
 
-#language-switcher {
-    height: 32px;
-}
-
 nav.navbar {
     margin-bottom: 0;
 }
@@ -455,21 +451,22 @@ nav.navbar {
 }
 
 .material-switch {
-    margin: 0 15px;
+    margin: 0 8px;
+    padding-top: 4px;
 }
 
-.material-switch > input[type="checkbox"] {
+.material-switch  input[type="checkbox"] {
     display: none;
 }
 
-.material-switch > label {
+.material-switch  label {
     cursor: pointer;
     height: 0px;
     position: relative;
-    width: 40px;
+    width: 28px;
 }
 
-.material-switch > label::before {
+.material-switch label::before {
     background: rgb(0, 0, 0);
     -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
             box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -484,7 +481,7 @@ nav.navbar {
     width: 28px;
 }
 
-.material-switch > label::after {
+.material-switch label::after {
     background: rgb(255, 255, 255);
     border-radius: 16px;
     -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
@@ -492,7 +489,7 @@ nav.navbar {
     content: '';
     width: 18px;
     height: 18px;
-    left: -4px;
+    left: 0;
     margin-top: -8px;
     position: absolute;
     top: -4px;
@@ -500,14 +497,14 @@ nav.navbar {
     transition: all 0.3s ease-in-out;
 }
 
-.material-switch > input[type="checkbox"]:checked + label::before {
+.material-switch input[type="checkbox"]:checked + label::before {
     background: inherit;
     opacity: 0.5;
 }
 
-.material-switch > input[type="checkbox"]:checked + label::after {
+.material-switch input[type="checkbox"]:checked + label::after {
     background: inherit;
-    left: 17px;
+    left: 11px;
 }
 
 #locale-switcher {

@@ -8,6 +8,6 @@ class Locale
 {
     public static function isSelected($lang = null)
     {
-        return Session::get('locale') === $lang ? 'selected' : '';
+        return Session::get('locale') === $lang;
     }
 }

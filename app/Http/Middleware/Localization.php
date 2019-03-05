@@ -8,7 +8,7 @@ use Session;
 class Localization
 {
     const LOCALE = 'locale';
-    const LANGUAGES = ['ru', 'en', 'kz'];
+    const LANGUAGES = ['ru', 'en'];
 
     /**
      * Handle an incoming request.

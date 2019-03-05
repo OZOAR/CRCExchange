@@ -6,9 +6,11 @@
             <div class="col-sm-6">
                 <h1 style="padding-top:60px">@lang('homepage.payment.title')</h1>
                 <div id="accepted-cards">
-                    <span class="visa"></span>
                     <span class="text">@lang('homepage.payment.description')</span>
                 </div>
+                <a href="{{ url('/affiliate') }}" id="become-affiliate-link" class="btn btn-primary">
+                    @lang('common.buttons.become_affiliate')
+                </a>
             </div>
             <div class="col-sm-6 payment">
                 <div class="payment-form-head">
@@ -96,7 +98,7 @@
     </section>
     <section id="transaction-limits">
         <h3>@lang('homepage.limits.title')</h3>
-        <div class="container">
+        <div class="container" style="padding: 25px 0">
             <div class="row">
                 @foreach($limits as $limit)
                     <div class="col-md-4">
@@ -117,28 +119,30 @@
     <section id="reviews-list">
         <h3>@lang('homepage.reviews.title')</h3>
         <div class="container">
-            <div class="row">
-                <div class="col-xs-6">
-                    <div class="review-item">
-                        <span class="photo"></span>
-                        <span class="name">@lang('homepage.reviews.list.kirillstoks.author')</span>
-                        <p class="review">@lang('homepage.reviews.list.kirillstoks.text')</p>
-                        <p class="date">@lang('homepage.reviews.list.kirillstoks.date')</p>
-                    </div>
-                    <div class="review-item">
-                        <span class="photo"></span>
-                        <span class="name">@lang('homepage.reviews.list.jey_moon.author')</span>
-                        <p class="review">@lang('homepage.reviews.list.jey_moon.text')</p>
-                        <p class="date">@lang('homepage.reviews.list.jey_moon.date')</p>
-                    </div>
+            <div class="owl-carousel owl-theme">
+                <div class="review-item">
+                    <span class="photo"></span>
+                    <span class="name">@lang('homepage.reviews.list.kirillstoks.author')</span>
+                    <p class="review">@lang('homepage.reviews.list.kirillstoks.text')</p>
+                    <p class="date">@lang('homepage.reviews.list.kirillstoks.date')</p>
                 </div>
-                <div class="col-xs-6">
-                    <div class="review-item">
-                        <span class="photo"></span>
-                        <span class="name">@lang('homepage.reviews.list.miner_anarchist.author')</span>
-                        <p class="review">@lang('homepage.reviews.list.miner_anarchist.text')</p>
-                        <p class="date">@lang('homepage.reviews.list.miner_anarchist.date')</p>
-                    </div>
+                <div class="review-item">
+                    <span class="photo"></span>
+                    <span class="name">@lang('homepage.reviews.list.jey_moon.author')</span>
+                    <p class="review">@lang('homepage.reviews.list.jey_moon.text')</p>
+                    <p class="date">@lang('homepage.reviews.list.jey_moon.date')</p>
+                </div>
+                <div class="review-item">
+                    <span class="photo"></span>
+                    <span class="name">@lang('homepage.reviews.list.miner_anarchist.author')</span>
+                    <p class="review">@lang('homepage.reviews.list.miner_anarchist.text')</p>
+                    <p class="date">@lang('homepage.reviews.list.miner_anarchist.date')</p>
+                </div>
+                <div class="review-item">
+                    <span class="photo"></span>
+                    <span class="name">@lang('homepage.reviews.list.jennymitchell.author')</span>
+                    <p class="review">@lang('homepage.reviews.list.jennymitchell.text')</p>
+                    <p class="date">@lang('homepage.reviews.list.jennymitchell.date')</p>
                 </div>
             </div>
         </div>
@@ -148,6 +152,24 @@
 @section('scripts')
     <script type="text/javascript">
         $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+                items: 2,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    768: {
+                        items: 2,
+                    },
+                }
+            });
+
             window.currencies = {
                 EUR: {{ $currencies->EUR->BTC }}
             };
@@ -165,10 +187,10 @@
                 console.log(BTC);
             });
 
-            let lang = $('#language-switcher option:selected').val();
+            let checked = $('#locale-switcher input').prop('checked');
 
-            if (lang === 'ru') {
-                $('#payment-process h1').css('font-size', '28px')
+            if (!checked) {
+                $('#payment-process h1').css('font-size', '36px')
             }
         });
     </script>

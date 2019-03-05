@@ -10,8 +10,8 @@ return [
     ],
 
     'payment' => [
-        'title'       => 'Buy bitcoin<br/>with credit card',
-        'description' => 'accepted here',
+        'title'       => 'Join our Affiliate Program',
+        'description' => 'Place an affiliate link on your website, blog or social media profile. Get 50% of our revenue from every transaction made.',
         'form'        => [
             'title'                     => 'BUY BITCOIN',
             'min_transaction'           => 'Minimal amount is <b>30 EUR</b>.',
@@ -83,6 +83,11 @@ return [
                 'author' => 'JeyMoon',
                 'text'   => 'Thanks for an honest and fast transaction, guys',
                 'date'   => 'July 16, 2018, 11:25 AM',
+            ],
+            'jennymitchell'   => [
+                'author' => 'jennymitchell',
+                'text'   => 'Tried with different cards, everything works great.',
+                'date'   => '--------------', // TODO
             ],
         ],
     ],

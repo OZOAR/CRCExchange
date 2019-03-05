@@ -8,6 +8,8 @@
 require('./bootstrap');
 require('bootstrap-cookie-alert/cookiealert-standalone');
 
+require('owl.carousel');
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

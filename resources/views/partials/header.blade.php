@@ -22,7 +22,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
                 <li style="padding: 20px 22px 0 10px;">@include('partials.locale')</li>
-                <li><a href="{{ url('/affiliate-program')  }}">@lang('homepage.header.menu.affiliate')</a></li>
+                <li><a href="{{ url('/affiliate')  }}">@lang('homepage.header.menu.affiliate')</a></li>
                 @guest
                     <li><a href="{{ route('login') }}">@lang('homepage.header.menu.login')</a></li>
                 @else

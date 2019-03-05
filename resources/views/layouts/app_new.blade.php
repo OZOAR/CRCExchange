@@ -7,20 +7,19 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="icon" type="image/png" href="/images/favicon.png"/>
     <title>{{ config('app.name', 'CRCExchange') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+<div id="global-custom-wrapper">
+    @include('partials.header')
 
-@include('partials.header')
-
-@yield('content')
-
+    @yield('content')
+</div>
 @include('partials.footer_new')
-
 <!-- COOKIES -->
 <div class="alert text-center cookiealert" role="alert">
     <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a

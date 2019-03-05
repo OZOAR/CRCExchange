@@ -4,10 +4,7 @@ return [
     'header' => [
         'menu' => [
             'faq'      => 'FAQ',
-            'privacy'  => 'AML/KYC',
-            'terms'    => 'Terms of use',
             'login'    => 'Sign in',
-            'register' => 'Register',
             'logout'   => 'Logout',
         ],
     ],
@@ -92,8 +89,9 @@ return [
 
     'footer' => [
         'menu' => [
+            'terms'  => 'Terms of use',
             'policy' => 'AML Policy',
-            'faq'   => 'FAQ',
+            'faq'    => 'FAQ',
         ],
     ],
 ];

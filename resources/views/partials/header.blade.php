@@ -21,13 +21,9 @@
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
-                <li style="padding: 18px 14px;">@include('partials.locale')</li>
-                <li><a href="/faq">@lang('homepage.header.menu.faq')</a></li>
-                <li><a href="{{ route('page.policy') }}">@lang('homepage.header.menu.privacy')</a></li>
-                <li><a href="/terms-of-use">@lang('homepage.header.menu.terms')</a></li>
+                <li style="padding: 20px 22px 0 0;">@include('partials.locale')</li>
                 @guest
                     <li><a href="{{ route('login') }}">@lang('homepage.header.menu.login')</a></li>
-                    <li><a href="{{ route('register') }}">@lang('homepage.header.menu.register')</a></li>
                 @else
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"

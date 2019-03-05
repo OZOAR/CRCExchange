@@ -330,7 +330,8 @@ div.panel {
     background-color: #383737;
     color: #fff;
     border-radius: 16px 16px 0 0;
-    font-size: 20px;
+    font-size: 22px;
+    font-family: Arial;
     padding: 28px;
     font-weight: bold;
 }
@@ -348,6 +349,10 @@ div.panel {
 #reset-password-page {
     padding-top: 70px;
     padding-bottom: 50px;
+}
+
+#register-page form label {
+    font-family: Arial;
 }
 
 nav.navbar {
@@ -447,6 +452,71 @@ nav.navbar {
 
 #custom-panel {
     font-family: Arial;
+}
+
+.material-switch {
+    margin: 0 15px;
+}
+
+.material-switch > input[type="checkbox"] {
+    display: none;
+}
+
+.material-switch > label {
+    cursor: pointer;
+    height: 0px;
+    position: relative;
+    width: 40px;
+}
+
+.material-switch > label::before {
+    background: rgb(0, 0, 0);
+    -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    content: '';
+    height: 10px;
+    margin-top: -8px;
+    position: absolute;
+    opacity: 0.3;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    width: 28px;
+}
+
+.material-switch > label::after {
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    content: '';
+    width: 18px;
+    height: 18px;
+    left: -4px;
+    margin-top: -8px;
+    position: absolute;
+    top: -4px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.material-switch > input[type="checkbox"]:checked + label::before {
+    background: inherit;
+    opacity: 0.5;
+}
+
+.material-switch > input[type="checkbox"]:checked + label::after {
+    background: inherit;
+    left: 17px;
+}
+
+#locale-switcher {
+    display: inline-block;
+    padding-top: 4px;
+}
+
+#locale-switcher > div {
+    float: left;
 }@charset "UTF-8";
 
 /*!

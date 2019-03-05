@@ -8,5 +8,6 @@ return [
         'continue' => 'Continue',
         'buy_now'  => 'Buy now!',
         'login'    => 'Login',
+        'sign_up'  => 'Sign Up',
     ],
 ];

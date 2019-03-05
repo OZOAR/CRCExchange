@@ -23,7 +23,7 @@ return [
     ],
 
     'login' => [
-        'title'   => 'Login',
+        'title'   => 'Sign In',
         'form'    => [
             'email'       => 'E-Mail Address',
             'password'    => 'Password',
@@ -31,5 +31,17 @@ return [
         ],
         'sign_up' => 'Sign Up',
         'forgot'  => 'Forgot Your Password?',
+    ],
+
+
+    'registration' => [
+        'title'       => 'Create new account',
+        'description' => 'By clicking on Sign Up, you agree to <b><a href="/terms-and-privacy">terms and privacy policy.</a></b>.',
+        'form'        => [
+            'name'         => 'Name',
+            'email'        => 'Email Address',
+            'password'     => 'Password',
+            'confirmation' => 'Confirm Password',
+        ],
     ],
 ];

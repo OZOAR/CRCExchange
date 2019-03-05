@@ -36,7 +36,7 @@ return [
 
     'registration' => [
         'title'       => 'Create new account',
-        'description' => 'By clicking on Sign Up, you agree to <b><a href="/terms-and-privacy">terms and privacy policy.</a></b>.',
+        'description' => 'By clicking on Sign Up, you agree to <b><a href="/terms-and-privacy">terms and privacy policy</a></b>.',
         'form'        => [
             'name'         => 'Name',
             'email'        => 'Email Address',

@@ -766,24 +766,21 @@ nav.navbar {
 }
 
 .material-switch label::before {
-    background: white;
-    -webkit-box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.3);
-            box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.3);
+    background-color: white;
     border-radius: 8px;
     content: '';
     height: 10px;
     margin-top: -8px;
     position: absolute;
+    opacity: 0.9;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     width: 28px;
 }
 
 .material-switch label::after {
-    background: rgb(255, 255, 255);
+    background-color: white;
     border-radius: 16px;
-    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
     content: '';
     width: 18px;
     height: 18px;
@@ -797,7 +794,7 @@ nav.navbar {
 
 .material-switch input[type="checkbox"]:checked + label::before {
     background: inherit;
-    opacity: 0.5;
+    opacity: 0.9;
 }
 
 .material-switch input[type="checkbox"]:checked + label::after {
@@ -812,6 +809,10 @@ nav.navbar {
 
 #locale-switcher > div {
     float: left;
+}
+
+#locale-switcher .label-default {
+    background-color: white;
 }
 
 nav.navbar-inverse {

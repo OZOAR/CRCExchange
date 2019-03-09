@@ -147,6 +147,7 @@ return [
         'state'       => 'Minsk',
         'state_name'  => '',
         'postal_code' => '',
+        'languages'   => 'be,ru',
         'lat'         => 53.9,
         'lon'         => 30.3333,
         'timezone'    => 'Europe/Minsk',

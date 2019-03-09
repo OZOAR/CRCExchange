@@ -26,7 +26,7 @@ class ChangeLocaleRequest extends FormRequest
     public function rules()
     {
         return [
-            'lang' => Rule::in(Localization::LANGUAGES)
+            'lang' => Rule::in(Localization::SUPPORTED_LANGUAGES)
         ];
     }
 }

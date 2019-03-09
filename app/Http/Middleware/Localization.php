@@ -40,10 +40,10 @@ class Localization
             $languages[$key] = collect(explode('-', $value))->first();
         }
 
-        \Log::debug('GEO languages: ', $languages);
+        \Log::debug('GEO languages: ', $languages->toArray());
 
         $intersectedLanguages = $supportedLanguages->intersect($languages);
-        \Log::debug('GEO intersectedLanguages: ', $intersectedLanguages);
+        \Log::debug('GEO intersectedLanguages: ', $intersectedLanguages->toArray());
 
         return $intersectedLanguages->first(null, config('app.locale'));
     }

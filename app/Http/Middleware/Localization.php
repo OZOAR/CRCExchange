@@ -23,6 +23,8 @@ class Localization
     {
         if (!Session::has(self::LOCALE)) {
             $location = geoip()->getLocation(geoip()->getClientIP());
+            \Log::debug('GeoIP user location: ', $location->toArray());
+
             Session::put(self::LOCALE, $this->getLanguageByGeoIP($location));
         }
 
@@ -44,10 +46,8 @@ class Localization
            return \strlen($value) === 2;
         });
 
-        \Log::debug('GEO languages: ', $languages->toArray());
-
         $intersectedLanguages = $supportedLanguages->intersect($languages);
-        \Log::debug('GEO intersectedLanguages: ', $intersectedLanguages->toArray());
+        \Log::debug('GeoIP intersected languages: ', $intersectedLanguages->toArray());
 
         return $intersectedLanguages->first(null, config('app.locale'));
     }

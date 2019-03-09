@@ -31,13 +31,6 @@
 </div>
 <!-- /COOKIES -->
 
-<!--
-
-ip: {{ geoip()->getClientIP() }}
-
- {!! var_dump(geoip()->getLocation(geoip()->getClientIP()))  !!}
--->
-
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
 

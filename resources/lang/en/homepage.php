@@ -87,7 +87,7 @@ return [
             'jennymitchell'   => [
                 'author' => 'jennymitchell',
                 'text'   => 'Tried with different cards, everything works great.',
-                'date'   => '--------------', // TODO
+                'date'   => 'November 23, 2018, 04:01 PM',
             ],
         ],
     ],

@@ -40,6 +40,10 @@ class Localization
             $languages[$key] = collect(explode('-', $value))->first();
         }
 
+        $languages = $languages->filter(function ($value) {
+           return \strlen($value) === 2;
+        });
+
         \Log::debug('GEO languages: ', $languages->toArray());
 
         $intersectedLanguages = $supportedLanguages->intersect($languages);

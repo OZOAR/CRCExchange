@@ -36,7 +36,14 @@ class Localization
         $supportedLanguages = collect(self::SUPPORTED_LANGUAGES);
         $languages = collect(explode(',', $location->getAttribute('languages')));
 
+        foreach ($languages as $key => $value) {
+            $languages[$key] = collect(explode('-', $value))->first();
+        }
+
+        \Log::debug('GEO languages: ', $languages);
+
         $intersectedLanguages = $supportedLanguages->intersect($languages);
+        \Log::debug('GEO intersectedLanguages: ', $intersectedLanguages);
 
         return $intersectedLanguages->first(null, config('app.locale'));
     }

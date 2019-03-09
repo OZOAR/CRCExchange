@@ -10,8 +10,8 @@ return [
     ],
 
     'payment' => [
-        'title'       => 'Join our Affiliate Program',
-        'description' => 'Place an affiliate link on your website, blog or social media profile. Get 50% of our revenue from every transaction made.',
+        'title'       => 'Buy bitcoin<br/>with credit card',
+        'description' => 'accepted here',
         'form'        => [
             'title'                     => 'BUY BITCOIN',
             'min_transaction'           => 'Minimal amount is <b>30 EUR</b>.',
@@ -62,8 +62,8 @@ return [
     ],
 
     'buy_now' => [
-        'title' => 'Buy Bitcoin with credit card',
-        'text'  => 'In a few easy steps',
+        'title' => 'Join our Affiliate Program',
+        'text'  => 'Place an affiliate link on your website, blog or social media profile. Get 50% of our revenue from every transaction made.',
     ],
 
     'reviews' => [

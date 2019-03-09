@@ -6,11 +6,9 @@
             <div class="col-sm-6">
                 <h1 style="padding-top:60px">@lang('homepage.payment.title')</h1>
                 <div id="accepted-cards">
+                    <span class="visa"></span>
                     <span class="text">@lang('homepage.payment.description')</span>
                 </div>
-                <a href="{{ url('/affiliate') }}" id="become-affiliate-link" class="btn btn-primary">
-                    @lang('common.buttons.become_affiliate')
-                </a>
             </div>
             <div class="col-sm-6 payment">
                 <div class="payment-form-head">
@@ -112,9 +110,13 @@
         </div>
     </section>
     <section id="buy-now">
-        <h3>@lang('homepage.buy_now.title')</h3>
-        <p>@lang('homepage.buy_now.text')</p>
-        <a class="btn btn-primary btn-lg" href="#">@lang('common.buttons.buy_now')</a>
+        <div class="col-md-12">
+            <h3>@lang('homepage.buy_now.title')</h3>
+            <p>@lang('homepage.buy_now.text')</p>
+            <a href="{{ url('/affiliate') }}" id="become-affiliate-link" class="btn btn-primary btn-lg">
+                @lang('common.buttons.become_affiliate')
+            </a>
+        </div>
     </section>
     <section id="reviews-list">
         <h3>@lang('homepage.reviews.title')</h3>

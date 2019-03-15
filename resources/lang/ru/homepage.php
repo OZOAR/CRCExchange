@@ -11,7 +11,6 @@ return [
 
     'payment' => [
         'title'       => 'Покупка биткоинов<br/>при помощи банковской карты',
-        'description' => '',
         'form'        => [
             'title'                     => 'КУПИТЬ BITCOIN',
             'min_transaction'           => 'Минимальный платеж - <b>30 евро</b>.',

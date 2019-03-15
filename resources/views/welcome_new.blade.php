@@ -5,10 +5,6 @@
         <div class="container">
             <div class="col-sm-6">
                 <h1 style="padding-top:60px">@lang('homepage.payment.title')</h1>
-                <div id="accepted-cards">
-                    <span class="visa"></span>
-                    <span class="text">@lang('homepage.payment.description')</span>
-                </div>
             </div>
             <div class="col-sm-6 payment">
                 <div class="payment-form-head">

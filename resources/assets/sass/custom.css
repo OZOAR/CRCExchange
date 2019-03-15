@@ -50,19 +50,6 @@ body {
     font-family: Arial;
 }
 
-#accepted-cards > .visa {
-    display: inline-block;
-    width: 44px;
-    height: 20px;
-    vertical-align: middle;
-    background: url(/images/cards/visa-logo-light.svg);
-}
-
-#accepted-cards > .text {
-    font-size: 14px;
-    color: rgb(179, 180, 180);
-}
-
 .payment-form-head {
     text-align: center;
     background-color: #383737;

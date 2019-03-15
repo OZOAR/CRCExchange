@@ -11,7 +11,6 @@ return [
 
     'payment' => [
         'title'       => 'Buy bitcoin<br/>with credit card',
-        'description' => 'accepted here',
         'form'        => [
             'title'                     => 'BUY BITCOIN',
             'min_transaction'           => 'Minimal amount is <b>30 EUR</b>.',

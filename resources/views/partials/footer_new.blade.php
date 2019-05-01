@@ -1,5 +1,5 @@
 <!--footer start-->
-<footer class="app-footer">
+<footer class="app-footer dark-theme">
     <div class="primary-footer">
         <div class="container">
             <div class="row">

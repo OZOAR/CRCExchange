@@ -222,25 +222,25 @@ dark theme
     color: #fff; 
     background: #323945;
 }
-.gray-txt
+.dark-theme .gray-txt
 {
     color: #fff;
 }
-.gray-txt a
+.dark-theme .gray-txt a
 {
     color: #8969ff;
 }
-.gray-txt a:hover
+.dark-theme .gray-txt a:hover
 {
     color: #4bc3c3;
 }
-.view-link,
-.view-link:after
+.dark-theme .view-link,
+.dark-theme .view-link:after
 {
     color: #fff;
 }
-.view-link:hover,
-.view-link:hover:after
+.dark-theme .view-link:hover,
+.dark-theme .view-link:hover:after
 {
     color: #4bc3c3;
 }
@@ -374,17 +374,17 @@ buttons
 /*-------------------------------
 dark theme
 -------------------------------*/
-.btn-gradient
+.dark-theme .btn-gradient
 {
     box-shadow: none;
 }
 
-.btn-white
+.dark-theme .btn-white
 {
     color: #fff; 
     background: #3c434f;
 }
-.btn-white:hover
+.dark-theme .btn-white:hover
 {
     color: #fff; 
     background: #7e62fd;
@@ -539,7 +539,7 @@ app header
 /*-------------------------------
 dark theme
 -------------------------------*/
-.navbar-sticky
+.dark-theme .navbar-sticky
 {
     -webkit-transition: all .3s ease;
             transition: all .3s ease; 
@@ -547,11 +547,11 @@ dark theme
     background: #000;
     box-shadow: none;
 }
-.navbar-sticky .nav-item .nav-link
+.dark-theme .navbar-sticky .nav-item .nav-link
 {
     color: #fff;
 }
-.navbar-sticky .nav-item .active
+.dark-theme .navbar-sticky .nav-item .active
 {
     color: #4bc3c3;
 }
@@ -697,7 +697,7 @@ hero banner
 /*-------------------------------
 dark theme
 -------------------------------*/
-.hero-banner .here-sub-title
+.dark-theme .hero-banner .here-sub-title
 {
     color: #fff;
 }
@@ -1391,63 +1391,63 @@ count down
 /*-------------------------------
 dark theme
 -------------------------------*/
-.section-gray-bg
+.dark-theme .section-gray-bg
 {
     background: #2a303b;
 }
 
-.section-dark-bg
+.dark-theme .section-dark-bg
 {
     background: #2a303b;
 }
-.section-dark-bg .card-body p
+.dark-theme .section-dark-bg .card-body p
 {
     color: #fff;
 }
 
-.card
+.dark-theme .card
 {
     background: #3c434f;
 }
 
-.accordion .card
+.dark-theme .accordion .card
 {
     border: none; 
     background: #2a303b;
 }
 
-.accordion .card:first-of-type,
-.accordion .card:not(:first-of-type):not(:last-of-type)
+.dark-theme .accordion .card:first-of-type,
+.dark-theme .accordion .card:not(:first-of-type):not(:last-of-type)
 {
     border-bottom: none !important;
 }
 
-.accordion .card-header
+.dark-theme .accordion .card-header
 {
     background: transparent;
 }
-.accordion .card-header a
+.dark-theme .accordion .card-header a
 {
     background: #2a303b;
 }
 
-.accordion .card-body
+.dark-theme .accordion .card-body
 {
     background: #2a303b;
 }
 
-.text-dark
+.dark-theme .text-dark
 {
     color: #fff !important;
 }
 
-.ico-progress .progress-caption-top,
-.ico-progress .progress-caption-bottom
+.dark-theme .ico-progress .progress-caption-top,
+.dark-theme .ico-progress .progress-caption-bottom
 {
     color: #fff;
 }
 
-.signin-row
+.dark-theme .signin-row
 {
     margin-bottom: -5px;
 }
@@ -1609,7 +1609,7 @@ form
 /*-------------------------------
 dark theme
 -------------------------------*/
-.login-form
+.dark-theme .login-form
 {
     color: #3c434f;
 }
@@ -2238,34 +2238,34 @@ ul.comments .comment-block .comment-by .comment-reply
 /*-------------------------------
 dark theme
 -------------------------------*/
-.blog-post h2 a
+.dark-theme .blog-post h2 a
 {
     color: #fff;
 }
-.blog-post h2 a:hover
+.dark-theme .blog-post h2 a:hover
 {
     color: #4bc3c3;
 }
 
-.blog-post .post-meta
+.dark-theme .blog-post .post-meta
 {
     color: #fff;
 }
 
-.blog-post .post-meta a,
-.custom-pagination li a,
-.widget ul li a
+.dark-theme .blog-post .post-meta a,
+.dark-theme .custom-pagination li a,
+.dark-theme .widget ul li a
 {
     color: rgba(255, 255, 255, .6);
 }
-.blog-post .post-meta a:hover,
-.custom-pagination li a:hover,
-.widget ul li a:hover
+.dark-theme .blog-post .post-meta a:hover,
+.dark-theme .custom-pagination li a:hover,
+.dark-theme .widget ul li a:hover
 {
     color: #4bc3c3;
 }
 
-.bg-light
+.dark-theme .bg-light
 {
     background-color: rgba(0, 0, 0, .2) !important;
 }
@@ -2455,19 +2455,19 @@ responsive style
     {
         color: #fff;
     }
-    .app-header
+    .dark-theme .app-header
     {
         background: #000;
     }
-    .app-header .nav-item .nav-link
+    .dark-theme .app-header .nav-item .nav-link
     {
         color: #fff;
     }
-    .app-header.navbar-purple
+    .dark-theme .app-header.navbar-purple
     {
         background: #000;
     }
-    .app-header.navbar-purple .nav-item .nav-link
+    .dark-theme .app-header.navbar-purple .nav-item .nav-link
     {
         color: #fff;
     }
@@ -2670,7 +2670,7 @@ responsive style
 
         margin-top: 10px;
     }
-    .navbar-toggler-icon
+    .dark-theme .navbar-toggler-icon
     {
         color: #fff;
     }

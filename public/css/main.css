@@ -1,28 +1,8 @@
-/*--------------------------------------------------------------------------
-Template  : Kryptix - Bitcoin & Cryptocurrency Landing Page HTML Template
-Author    : Vectorlab
-web       : http://thevectorlab.net/
-Email     : dkmosa@gmail.com
-Version   : 1.0
---------------------------------------------------------------------------*/
-/*-------------------------------
-Table of contents
----------------------------------
+footer {
+    @include 'bootstrap.min.css';
+    @include 'animate.css';
+}
 
-1. typography
-2. buttons
-3. app header
-4. hero banner
-5. sections
-6. forms
-7. road map timeline
-8. app footer
-9. responsive
-
--------------------------------*/
-/*-------------------------------
-typography
--------------------------------*/
 body
 {
     font-family: 'Roboto Slab', serif;

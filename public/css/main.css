@@ -2367,47 +2367,47 @@ app footer
 /*-------------------------------
 dark theme
 -------------------------------*/
-.dark-theme .app-footer
+.app-footer
 {
     background: #2a303b;
 }
-.dark-theme .app-footer a
+.app-footer a
 {
     color: #fff;
 }
-.dark-theme .app-footer a:hover
+.app-footer a:hover
 {
     color: #4bc3c3;
 }
-.dark-theme .app-footer .secondary-footer
+.app-footer .secondary-footer
 {
     border-top: 1px solid #323945;
 }
-.dark-theme .app-footer .social-links a
+.app-footer .social-links a
 {
     color: #fff;
 }
-.dark-theme .app-footer .social-links a:hover
+.app-footer .social-links a:hover
 {
     color: #4bc3c3;
 }
-.dark-theme .app-footer .btn-language
+.app-footer .btn-language
 {
     color: #fff;
 }
-.dark-theme .app-footer .btn-language:focus
+.app-footer .btn-language:focus
 {
     outline: none;
 }
-.dark-theme .app-footer .dropdown-menu
+.app-footer .dropdown-menu
 {
     background-color: #7e62fd;
 }
-.dark-theme .app-footer .dropdown-item
+.app-footer .dropdown-item
 {
     color: #fff;
 }
-.dark-theme .app-footer .dropdown-item:hover
+.app-footer .dropdown-item:hover
 {
     background: #7158e3;
 }

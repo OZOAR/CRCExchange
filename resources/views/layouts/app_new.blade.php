@@ -11,6 +11,7 @@
     <title>{{ config('app.name', 'CRCExchange') }}</title>
 
     <!-- Styles -->
+    <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>

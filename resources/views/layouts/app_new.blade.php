@@ -21,6 +21,7 @@
 
     @yield('content')
 </div>
+@include('partials.faq')
 @include('partials.footer_new')
 <!-- COOKIES -->
 <div class="alert text-center cookiealert" role="alert">

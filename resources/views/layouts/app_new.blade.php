@@ -24,6 +24,7 @@
 </div>
 @include('partials.roadmap')
 @include('partials.faq')
+@include('partials.contact')
 @include('partials.footer_new')
 <!-- COOKIES -->
 <div class="alert text-center cookiealert" role="alert">

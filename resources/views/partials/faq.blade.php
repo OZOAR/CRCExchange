@@ -9,7 +9,7 @@
                     <p class=" wow fadeInUp" data-wow-delay=".3s">When looking at its layout. The point of using Lorem Ipsum <br/>
                         is that it has a more-or-less normal distribution</p>
                 </div>
-            </div>t
+            </div>
         </div><!--section title-->
         <div class="row">
             <div class="col-md-6 col-gap">

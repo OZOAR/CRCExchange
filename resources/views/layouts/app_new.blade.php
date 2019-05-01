@@ -11,7 +11,8 @@
     <title>{{ config('app.name', 'CRCExchange') }}</title>
 
     <!-- Styles -->
-    <!-- <link href="{{ asset('css/animate.css') }}" rel="stylesheet"> -->
+    <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -21,6 +22,7 @@
 
     @yield('content')
 </div>
+@include('partials.roadmap')
 @include('partials.faq')
 @include('partials.footer_new')
 <!-- COOKIES -->
@@ -35,6 +37,7 @@
 <!-- /COOKIES -->
 
 <!-- Scripts -->
+<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('js/app.js') }}"></script>
 
 @yield('scripts')

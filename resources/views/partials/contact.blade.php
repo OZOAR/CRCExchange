@@ -1,5 +1,5 @@
 <!--contact start-->
-<section class="section-gap-sm feature-gradient dark-theme">
+<section class="section-gap-sm feature-gradient dark-theme contact">
     <div class="container">
         <div class="row">
             <div class="col-12">

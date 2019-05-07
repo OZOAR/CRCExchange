@@ -2972,6 +2972,6 @@ responsive style
     font-size: 16px !important;
 }
 
-#roadmap {
+#roadmap * {
     font-size: 14 !important;
 }

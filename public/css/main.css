@@ -2972,6 +2972,6 @@ responsive style
     font-size: 16px !important;
 }
 
-.owl-carousel {
+.owl-carousel * {
     font-size: 14px !important;
 }

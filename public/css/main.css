@@ -2950,3 +2950,7 @@ responsive style
     display: block;
     box-sizing: border-box;
 }
+
+.navbar .container {
+    flex-wrap: unset;
+}

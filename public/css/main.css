@@ -2952,5 +2952,9 @@ responsive style
 }
 
 .navbar .container {
-    flex-wrap: unset;
+    flex-wrap: nowrap;
+}
+
+.navbar .container ul {
+    flex-direction: row;
 }

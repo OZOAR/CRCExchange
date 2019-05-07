@@ -51,7 +51,7 @@
                     </div>
                 </div>
 
-                <form class="subscribe-from form-inline row mt-5 wow fadeInUp" data-wow-delay=".3s">
+                <!-- <form class="subscribe-from form-inline row mt-5 wow fadeInUp" data-wow-delay=".3s">
                     <div class="form-group col-md-4">
                         <h4 class="m-0 text-uppercase">Subscribe</h4>
                         <small>Never miss our any news and updates</small>
@@ -62,7 +62,7 @@
                     <div class="form-group col-sm-3">
                         <button type="submit" class="btn w-100 text-uppercase btn-primary-solid">subscription</button>
                     </div>
-                </form>
+                </form> -->
             </div>
         </div>
     </div>

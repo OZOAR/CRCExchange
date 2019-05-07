@@ -2940,8 +2940,12 @@ responsive style
     }
 }
 
+.faq-section {
+    padding-bottom: 100px;
+}
+
 .contact {
-    margin-top: 500px;
+    margin-top: 200px;
     display: block;
     box-sizing: border-box;
 }

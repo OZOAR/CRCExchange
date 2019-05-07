@@ -40,7 +40,7 @@
                         <img src="assets/img/fc4.png" alt=""/>
                     </div>
                 </div>
-                <div class="col-md-6 text-md-right wow fadeInUp" data-wow-delay=".5s">
+                <!-- <div class="col-md-6 text-md-right wow fadeInUp" data-wow-delay=".5s">
                     <div class="float-md-right  mb-md-0 mb-3">
                         <span class="sm-txt pr-2">Language:</span>
                         <div class="btn-group ">
@@ -63,7 +63,7 @@
                         <a href="javascript:;"><i class="fa fa-linkedin"></i></a>
                         <a href="javascript:;"><i class="fa fa-google-plus"></i></a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

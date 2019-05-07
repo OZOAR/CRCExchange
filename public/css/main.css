@@ -2959,3 +2959,15 @@ responsive style
 .navbar .container ul {
     flex-direction: row;
 }
+
+#process-info .text {
+    font-size: 18px;
+}
+
+.transaction-limit-item .highlights {
+    font-size: 18px;
+}
+
+.transaction-limit-item .text {
+    font-size: 16px;
+}

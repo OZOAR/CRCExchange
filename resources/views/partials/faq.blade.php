@@ -1,5 +1,5 @@
 <!--faq section start-->
-<section class="section-gap pb-0 dark-theme faq-section">
+<section class="section-gap dark-theme faq-section">
     <div class="container">
         <!--section title-->
         <div class="row text-center">

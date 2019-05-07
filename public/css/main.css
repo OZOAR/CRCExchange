@@ -2949,6 +2949,7 @@ responsive style
     margin-bottom: 100px;
     display: block;
     box-sizing: border-box;
+    background: none;
 }
 
 .navbar .container {

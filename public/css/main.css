@@ -2945,7 +2945,8 @@ responsive style
 }
 
 .contact {
-    margin-top: 200px;
+    margin-top: 300px;
+    margin-bottom: 100px;
     display: block;
     box-sizing: border-box;
 }

@@ -23,26 +23,26 @@
 
                                         <div class=" col-md-6">
                                             <div class="form-group ">
-                                                <input type="email" class="email form-control" id="email" placeholder="@lang('email')" required data-error="Please enter your email">
+                                                <input type="email" class="email form-control" id="email" placeholder="@lang('exrate.contact.form.email')" required data-error="Please enter your email">
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="controls">
-                                            <input type="text" id="msg_subject" class="form-control" placeholder="@lang('subject')" required data-error="Please enter your message subject">
+                                            <input type="text" id="msg_subject" class="form-control" placeholder="@lang('exrate.contact.form.subject')" required data-error="Please enter your message subject">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="controls">
-                                            <textarea id="message" rows="4" placeholder="@lang('message')" class="form-control" required data-error="Write your message"></textarea>
+                                            <textarea id="message" rows="4" placeholder="@lang('exrate.contact.form.message')" class="form-control" required data-error="Write your message"></textarea>
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
 
                                     <div class="text-center mt-md-5">
-                                        <button type="submit" id="submit" class="btn btn-purple btn-pill text-uppercase">@lang('submit')</button>
+                                        <button type="submit" id="submit" class="btn btn-purple btn-pill text-uppercase">@lang('exrate.contact.form.submit')</button>
                                         <div id="msgSubmit" class="h5 text-center hidden"></div>
                                     </div>
                                 </form>

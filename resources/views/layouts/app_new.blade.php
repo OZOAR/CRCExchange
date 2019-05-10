@@ -23,7 +23,6 @@
 
     @yield('content')
 </div>
-@include('partials.roadmap')
 @include('partials.faq')
 @include('partials.contact')
 @include('partials.footer_new')

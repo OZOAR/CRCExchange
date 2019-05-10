@@ -8,41 +8,41 @@
                         <div class="row justify-content-md-center text-center">
                             <div class="col-md-8 col-12">
                                 <div class="py-3">
-                                    <h3 class="mb-0">Contact Kryptix</h3>
-                                    <p>This following currenciess right now.</p>
+                                    <h3 class="mb-0">@lang('exrate.contact.title')</h3>
+                                    <!-- <p>This following currenciess right now.</p> -->
                                 </div>
 
                                 <form role="form" id="contactForm" class="contact-form text-left" data-toggle="validator">
                                     <div class="row">
                                         <div class=" col-md-6">
                                             <div class="form-group ">
-                                                <input type="text" id="name" class="form-control" placeholder="Name" required data-error="Please enter your name">
+                                                <input type="text" id="name" class="form-control" placeholder="@lang('exrate.contact.form.name')" required data-error="Please enter your name">
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                         </div>
 
                                         <div class=" col-md-6">
                                             <div class="form-group ">
-                                                <input type="email" class="email form-control" id="email" placeholder="Email" required data-error="Please enter your email">
+                                                <input type="email" class="email form-control" id="email" placeholder="@lang('email')" required data-error="Please enter your email">
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="controls">
-                                            <input type="text" id="msg_subject" class="form-control" placeholder="Subject" required data-error="Please enter your message subject">
+                                            <input type="text" id="msg_subject" class="form-control" placeholder="@lang('subject')" required data-error="Please enter your message subject">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="controls">
-                                            <textarea id="message" rows="4" placeholder="Massage" class="form-control" required data-error="Write your message"></textarea>
+                                            <textarea id="message" rows="4" placeholder="@lang('message')" class="form-control" required data-error="Write your message"></textarea>
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
 
                                     <div class="text-center mt-md-5">
-                                        <button type="submit" id="submit" class="btn btn-purple btn-pill text-uppercase">Submit</button>
+                                        <button type="submit" id="submit" class="btn btn-purple btn-pill text-uppercase">@lang('submit')</button>
                                         <div id="msgSubmit" class="h5 text-center hidden"></div>
                                     </div>
                                 </form>

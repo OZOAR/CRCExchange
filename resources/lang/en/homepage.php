@@ -22,6 +22,7 @@ return [
     ],
 
     'processes' => [
+        'title' => 'Our features',
         'fees'         => [
             'title' => 'REASONABLE FEES',
             'icon'  => 'icon-fees',

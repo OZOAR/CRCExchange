@@ -22,6 +22,7 @@ return [
     ],
 
     'processes' => [
+        'title' => 'Наши преимущества',
         'fees'         => [
             'title' => 'НИЗКИЕ КОМИССИИ',
             'icon'  => 'icon-fees',

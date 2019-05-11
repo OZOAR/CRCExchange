@@ -15,7 +15,9 @@ return [
             'title'                     => 'BUY BITCOIN',
             'min_transaction'           => 'Minimal amount is <b>30 EUR</b>.',
             'bitcoin_field_placeholder' => 'Bitcoin address',
+            'email_field_placeholder' => 'Email',
             'bitcoin_field_description' => 'BTC address must be <b>yours</b> and <b>under your full control</b>.',
+            'email_field_description' => '',
         ],
     ],
 

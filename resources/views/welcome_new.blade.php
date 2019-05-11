@@ -60,6 +60,17 @@
                         @endif
                         <small>@lang('homepage.payment.form.bitcoin_field_description')</small>
                     </div>
+                    <div class="col-md-12 input-row">
+                        <input type="text" id="email-address" name="email-address" class="form-control"
+                               placeholder="@lang('homepage.payment.form.email_field_placeholder')"
+                               required="required" value="">
+                        {{-- @if ($errors->has('btc-address'))
+                            <span class="help-block">
+                            <small><strong>{{ $errors->first('btc-address') }}</strong></small>
+                        </span>
+                        @endif --}}
+                        <small>@lang('homepage.payment.form.email_field_description')</small>
+                    </div>
 
                     <div class="col-md-12" style="text-align: center">
                         <button type="submit" class="btn btn-primary">

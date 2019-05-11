@@ -2974,6 +2974,7 @@ responsive style
 
 .processes-title {
     text-align: center !important;
-    font-size: 20px !important;
+    font-size: 30px !important;
     font-weight: bold !important;
+    margin-bottom: 50px !important;
 }

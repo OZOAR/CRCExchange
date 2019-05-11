@@ -2971,3 +2971,9 @@ responsive style
 .transaction-limit-item .text {
     font-size: 16px !important;
 }
+
+.processes-title {
+    text-align: center;
+    font-size: 20px !important;
+    font-weight: bold;
+}

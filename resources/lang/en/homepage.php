@@ -48,7 +48,7 @@ return [
     ],
 
     'limits' => [
-        'title'       => 'Before continuing, please see the existing limits',
+        'title'       => 'BEFORE CONTINUING, PLEASE SEE EXISTING LIMITS',
         'transaction' => [
             'title' => 'TRANSACTION',
             'text'  => 'from <b>&euro;30</b> to <b>&euro;10000</b>',

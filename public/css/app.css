@@ -525,7 +525,7 @@ body {
 #process-info .highlights {
     display: inline-block;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     padding-left: 25px;
     padding-top: 10px;
 }
@@ -681,7 +681,7 @@ a.navbar-brand {
 
 #transaction-limits h3 {
     margin: 30px 0;
-    font-size: 30px;
+    font-size: 28px;
 }
 
 .transaction-limit-item {

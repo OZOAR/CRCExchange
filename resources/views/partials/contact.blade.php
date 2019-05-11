@@ -8,7 +8,7 @@
                         <div class="row justify-content-md-center text-center">
                             <div class="col-md-8 col-12">
                                 <div class="py-3">
-                                    <h3 class="mb-0">@lang('exrate.contact.title')</h3>
+                                    <h3 class="contactus-title">@lang('exrate.contact.title')</h3>
                                     <!-- <p>This following currenciess right now.</p> -->
                                 </div>
 

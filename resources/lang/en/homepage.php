@@ -17,7 +17,7 @@ return [
             'bitcoin_field_placeholder' => 'Bitcoin address',
             'email_field_placeholder' => 'Email',
             'bitcoin_field_description' => 'BTC address must be <b>yours</b> and <b>under your full control</b>.',
-            'email_field_description' => '',
+            'email_field_description' => 'We need your email address to report the status of the purchase.',
         ],
     ],
 

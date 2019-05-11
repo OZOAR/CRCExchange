@@ -16,9 +16,8 @@ return [
             'min_transaction'           => 'Минимальный платеж - <b>30 евро</b>.',
             'bitcoin_field_placeholder' => 'Bitcoin адрес',
             'email_field_placeholder' => 'Почтовый адрес',
-            'bitcoin_field_description' => 'Данный BTC кошелек должен быть <b>Вашим</b> и находиться <b>под Вашим '
-                . 'полным контролем</b>.',
-            'email_field_description' => 'Нам необходим ваш почтовый адрес, чтобы сообщать о статусе покупки.',
+            'bitcoin_field_description' => 'Данный BTC кошелек должен быть <b>Вашим</b> и находиться <b>под Вашим полным контролем</b>.',
+            'email_field_description' => 'Нам необходим Ваш почтовый адрес, чтобы сообщать о статусе покупки.',
         ],
     ],
 

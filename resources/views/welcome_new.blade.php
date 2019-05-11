@@ -83,7 +83,7 @@
         </div>
     </section>
     <section id="process-info">
-        <h2 class="processes-title">@lang('homepage.processes.title')</h2>
+        <span class="processes-title highlights">@lang('homepage.processes.title')<span>
         <div class="container">
             @foreach($processes->chunk(2) as $processChunk)
                 <div class="row">

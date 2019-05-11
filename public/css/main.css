@@ -2973,7 +2973,7 @@ responsive style
 }
 
 .processes-title {
-    text-align: center;
+    text-align: center !important;
     font-size: 20px !important;
-    font-weight: bold;
+    font-weight: bold !important;
 }

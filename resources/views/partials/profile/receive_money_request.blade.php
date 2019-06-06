@@ -35,7 +35,7 @@
     <div class="ln_solid"></div>
     <div class="form-group">
         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-2">
-            <button type="submit" class="btn btn-success">@lang('common.buttons.request')</button>
+            <button type="submit" class="btn btn-primary">@lang('common.buttons.request')</button>
         </div>
     </div>
 </form>

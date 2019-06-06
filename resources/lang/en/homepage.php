@@ -11,25 +11,27 @@ return [
 
 
     'page' => [
-        'title' => 'Exrate: buy cryptocurrency using bank card',
-        'description' => 'Best exchange rates for bitcoin, litecoin, dash, ethereum, eos, ripple'
+        'title'       => 'Exrate: buy cryptocurrency using bank card',
+        'description' => 'Best exchange rates for bitcoin, litecoin, dash, ethereum, eos, ripple',
     ],
 
 
     'payment' => [
-        'title'       => 'Buy cryptocurrency<br/>with credit card',
-        'form'        => [
+        'title' => 'Buy cryptocurrency<br/>with credit card',
+        'form'  => [
             'title'                     => 'BUY CRYPTOCURRENCIES',
             'min_transaction'           => 'Minimal amount is ',
             'bitcoin_field_placeholder' => 'Wallet Address',
-            'email_field_placeholder' => 'Email',
+            'email_field_placeholder'   => 'Email',
             'bitcoin_field_description' => 'Address must be <b>under your full control</b> and <b>correspond the cryptocurrency you purchase</b>.',
-            'email_field_description' => 'We need your email address to report the status of the purchase.',
+            'email_field_description'   => 'We need your email address to report the status of the purchase.',
+            'loading_text'              => 'Loading rates, please wait. It`s wouldn`t take a lot of time.',
+            'loading_error_text'        => 'Something went wrong. Try again later.',
         ],
     ],
 
     'processes' => [
-        'title' => 'Our features',
+        'title'        => 'Our features',
         'fees'         => [
             'title' => 'REASONABLE FEES',
             'icon'  => 'icon-fees',
@@ -65,15 +67,15 @@ return [
             'text'  => 'up to <b>&dollar;10,000</b>',
         ],
         'monthly'     => [
-            'title' => 'MONTHLY LIMIT', 
+            'title' => 'MONTHLY LIMIT',
             'text'  => 'up to <b>&dollar;30,000</b>',
         ],
     ],
 
     'buy_now' => [
-        'title' => 'Join our Affiliate Program',
-        'text'  => 'Place an affiliate link on your website, blog or social media profile. Get 50% of our revenue from every transaction made.',
-        'contacts' => 'Contact us at '
+        'title'    => 'Join our Affiliate Program',
+        'text'     => 'Place an affiliate link on your website, blog or social media profile. Get 50% of our revenue from every transaction made.',
+        'contacts' => 'Contact us at ',
     ],
 
     'reviews' => [
@@ -105,21 +107,21 @@ return [
     'footer' => [
         'menu' => [
             'information' => 'Information',
-            'contacts' => 'Contacts',
-            'worktime' => 'Office hours',
-            'exchange' => [
+            'contacts'    => 'Contacts',
+            'worktime'    => 'Office hours',
+            'exchange'    => [
                 'title' => 'Exchanges:',
-                'time' => '24-h/7-day'
+                'time'  => '24-h/7-day',
             ],
-            'support' => [
+            'support'     => [
                 'title' => 'Support:',
-                'time' => '9:00 - 22:00'
+                'time'  => '9:00 - 22:00',
             ],
-            'terms'  => 'Terms of use',
-            'policy' => 'AML Policy',
-            'faq'    => 'FAQ',
-            'about' => 'About and Contacts',
-            'address' => 'Platform for quick purchase of cryptocurrency using debit or credit cards (bitcoin, litecoin, eos, bitcoin cash, ethereum, dash, ripple). Fast transfer and great exchange rate. We accept Visa and MC debit/credit cards. Purchase is available in USD, euro, RUB and converted currencies.'
+            'terms'       => 'Terms of use',
+            'policy'      => 'AML Policy',
+            'faq'         => 'FAQ',
+            'about'       => 'About and Contacts',
+            'address'     => 'Platform for quick purchase of cryptocurrency using debit or credit cards (bitcoin, litecoin, eos, bitcoin cash, ethereum, dash, ripple). Fast transfer and great exchange rate. We accept Visa and MC debit/credit cards. Purchase is available in USD, euro, RUB and converted currencies.',
         ],
     ],
 ];

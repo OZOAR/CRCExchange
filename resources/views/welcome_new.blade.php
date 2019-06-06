@@ -315,6 +315,10 @@
                     let _curr = $('#curr-select').val();
 
                     $('#current-curse').text('1 ' + _crypto + ' = ' + currencies[_curr][_crypto].toFixed(5) + ' ' + _curr);
+                },
+                error: function (error) {
+                    console.log(error);
+                    $('#current-curse').text('Произошла ошибка загрузки курсов.');
                 }
             });
 

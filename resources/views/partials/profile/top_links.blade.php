@@ -4,6 +4,7 @@
     <span class="fa fa-angle-down"></span>
 </a>
 <ul class="dropdown-menu dropdown-usermenu pull-right">
+    <li><a href="{{ route('index') }}">@lang('profile.actions.homepage')</a></li>
     <li><a href="{{ route('profile.index') }}">@lang('profile.actions.profile')</a></li>
     <li><a href="{{ route('logout') }}"
            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

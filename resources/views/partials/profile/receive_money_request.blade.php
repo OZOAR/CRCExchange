@@ -22,7 +22,7 @@
         <label class="control-label col-md-2 col-sm-3 col-xs-12"
                for="request-total">@lang('profile.labels.request_total') (BTC) *</label>
         <div class="col-md-9 col-sm-9 col-xs-12">
-            <input type="number" step="0.0001" name="request-total" value="{{ old('request-total', 0.0001) }}"
+            <input type="number" step="0.0001" name="request-total" value="{{ old('request-total', 0.0) }}"
                    id="request-total" class="form-control" required>
             @if ($errors->has('request-total'))
                 <span class="help-block">

@@ -71,7 +71,8 @@ return [
     ],
 
     'actions' => [
-        'profile' => 'Profile',
-        'logout'  => 'Logout',
+        'homepage' => 'Homepage',
+        'profile'  => 'Profile',
+        'logout'   => 'Logout',
     ],
 ];

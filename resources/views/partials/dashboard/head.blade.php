@@ -14,7 +14,7 @@
                     @endif
                 </li>
                 <li role="presentation" class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="padding: 8px 8px 0 8px">
                         @include('partials.locale')
                     </a>
                 </li>

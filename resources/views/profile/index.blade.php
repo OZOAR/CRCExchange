@@ -8,19 +8,10 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>@lang('profile.title')</h2>
+                        <h2>{{ Auth::user()->getName() }} <small>{{ Auth::user()->getEmail() }}</small></h2>
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
-                        <div class="col-md-3 col-sm-3 col-xs-12 profile_left">
-                            <h3>{{ Auth::user()->getName() }}</h3>
-
-                            <ul class="list-unstyled user_data">
-                                <li>
-                                    <i class="fa fa-envelope-o user-profile-icon"></i> {{ Auth::user()->getEmail() }}
-                                </li>
-                            </ul>
-                        </div>
                         <div class="col-md-9 col-sm-9 col-xs-12">
                             <div class="row">
                                 @if (session('success_confirmation'))

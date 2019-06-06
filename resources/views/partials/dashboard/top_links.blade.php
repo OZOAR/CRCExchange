@@ -1,6 +1,6 @@
 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
-   aria-expanded="false">
-    <img src="/images/default-user-ico.jpg" alt="">{{ Auth::user()->getName() }}
+   aria-expanded="false" style="padding-top: 12px; padding-bottom:16px">
+    {{ Auth::user()->getName() }}
     <span class="fa fa-angle-down"></span>
 </a>
 <ul class="dropdown-menu dropdown-usermenu pull-right">

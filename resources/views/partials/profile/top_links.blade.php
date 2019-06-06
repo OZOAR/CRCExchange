@@ -1,5 +1,5 @@
 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
-   aria-expanded="false">
+   aria-expanded="false" style="padding-top: 12px; padding-bottom:16px">
     {{ Auth::user()->getName() }}
     <span class="fa fa-angle-down"></span>
 </a>

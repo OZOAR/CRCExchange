@@ -62,5 +62,22 @@
 
     gtag('config', 'UA-140243200-1');
 </script>
+
+<!-- Begin Verbox {literal} -->
+<script type='text/javascript'>
+    (function(d, w, m) {
+        window.supportAPIMethod = m;
+        var s = d.createElement('script');
+        s.type ='text/javascript'; s.id = 'supportScript'; s.charset = 'utf-8';
+        s.async = true;
+        var id = 'a62647952ae7bb8e74135029b0353fc5';
+        s.src = '//admin.verbox.ru/support/support.js?h='+id;
+        var sc = d.getElementsByTagName('script')[0];
+        w[m] = w[m] || function() { (w[m].q = w[m].q || []).push(arguments); };
+        if (sc) sc.parentNode.insertBefore(s, sc);
+        else d.documentElement.firstChild.appendChild(s);
+    })(document, window, 'Verbox');
+</script>
+<!-- {/literal} End Verbox →
 </body>
 </html>

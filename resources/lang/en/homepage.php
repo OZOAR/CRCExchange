@@ -2,11 +2,12 @@
 
 return [
     'header' => [
-        'menu' => [
+        'menu'         => [
             'affiliate' => 'Affiliate Program',
             'login'     => 'Sign In',
             'logout'    => 'Logout',
         ],
+        'account_link' => 'My Account',
     ],
 
 

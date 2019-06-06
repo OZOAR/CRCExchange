@@ -2,11 +2,12 @@
 
 return [
     'header' => [
-        'menu' => [
+        'menu'         => [
             'affiliate' => 'Реферальная программа',
             'login'     => 'Авторизация',
             'logout'    => 'Выйти',
         ],
+        'account_link' => 'Личный кабинет',
     ],
 
     'page' => [

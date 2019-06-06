@@ -13,12 +13,6 @@
                     </div>
                     <div class="x_content">
                         <div class="col-md-3 col-sm-3 col-xs-12 profile_left">
-                            <div class="profile_img">
-                                <div id="crop-avatar">
-                                    <img class="img-responsive avatar-view"
-                                         src="/images/default-user-image.jpg" alt="Avatar">
-                                </div>
-                            </div>
                             <h3>{{ Auth::user()->getName() }}</h3>
 
                             <ul class="list-unstyled user_data">

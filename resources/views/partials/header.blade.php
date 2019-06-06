@@ -34,12 +34,7 @@
 
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="{{ route('profile.index') }}"
-                                  >
-                                   Личный кабинет
-                                </a>
-
-
+                                <a href="{{ route('profile.index') }}">@lang('homepage.header.account_link')</a>
                             </li>
                             <li>
                                 <a href="{{ route('logout') }}"

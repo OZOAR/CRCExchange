@@ -26,6 +26,9 @@
                             {{ $errors->first('referral-id') }}
                         </ul>
                     @endif
+                    <ul class="alert alert-danger" id="courses-loading-bar">
+                        @lang('homepage.payment.form.loading_text')
+                    </ul>
                     <div class="col-sm-12 input-row">
                         <div class="row">
                             <div class="col-sm-6 {{ $errors->has('eur-amount') ? ' has-error' : '' }}">
@@ -63,7 +66,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <small id="current-curse">Идет обновление курса...</small>
+                                <small id="current-curse"></small>
                             </div>
                         </div>
                     </div>
@@ -269,6 +272,7 @@
                 success: function (response) {
                     window.currencies = response.currencies;
                     console.log(currencies);
+                    $('#courses-loading-bar').slideUp();
 
                     let euros = $('#eur-field').val();
                     let BTC = (euros / currencies['EUR']['BTC']).toFixed(5);
@@ -318,7 +322,7 @@
                 },
                 error: function (error) {
                     console.log(error);
-                    $('#current-curse').text('Произошла ошибка загрузки курсов.');
+                    $('#courses-loading-bar').text("{{ __('homepage.payment.form.loading_error_text') }}");
                 }
             });
 

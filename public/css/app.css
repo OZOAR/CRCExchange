@@ -340,6 +340,10 @@ body {
     text-align: center;
 }
 
+#courses-loading-bar {
+    text-align: center;
+}
+
 #become-affiliate-link {
     margin-top: 20px;
     /*font-family: Arial;*/

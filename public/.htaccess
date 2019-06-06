@@ -1,10 +1,30 @@
+
+
+# BEGIN Expires-Headers
+<IfModule mod_expires.c>
+  <FilesMatch "\.(js|css)$">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 weeks"
+  </FilesMatch>
+</IfModule>
+# END Expires-Headers
+
+# BEGIN Cache-Control-Headers
+<ifmodule mod_headers.c>
+  <filesmatch "(gif|ico|jpeg|jpe|jpg|svg|png|css|js)$">
+    Header set Cache-Control "max-age=604800, public"
+  </filesmatch>
+</ifmodule>
+# END Cache-Control-Headers
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
 
-    RewriteEngine On
 
+    RewriteEngine On
+RewriteCond %{HTTPS} =off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [QSA,L]
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
@@ -19,3 +39,4 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+

@@ -336,6 +336,10 @@ body {
     /*font-family: Arial;*/
 }
 
+#register-page .alert {
+    text-align: center;
+}
+
 #become-affiliate-link {
     margin-top: 20px;
     /*font-family: Arial;*/

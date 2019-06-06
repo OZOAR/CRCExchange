@@ -36,7 +36,7 @@ return [
 
     'registration' => [
         'title'       => 'Регистрация',
-        'description' => 'Нажимая кнопку \'Зарегистрироваться\' Вы соглашаетесь с <b><a href="/terms-and-privacy">Правилами пользования и Политикой конфиденциальности</a></b>.',
+        'description' => 'Нажимая кнопку \'Зарегистрироваться\' Вы соглашаетесь с <b><a target="_blank" href="https://drive.google.com/open?id=1GNc24fEUQlnPk9iWPht_nIOFk_WzmuYt">Правилами пользования и Политикой конфиденциальности</a></b>.',
         'form'        => [
             'name'         => 'Имя',
             'email'        => 'Email',

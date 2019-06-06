@@ -7,6 +7,7 @@ use App\Http\Requests\SendReceiveMoneyRequest;
 use App\Http\Requests\UpdateProfileBtcAddressRequest;
 use App\Models\ReceiveMoneyRequest;
 
+use Auth;
 class ProfileController extends Controller
 {
     /**
@@ -16,6 +17,18 @@ class ProfileController extends Controller
      */
     public function showProfile()
     {
+
+
+        $transactions = Auth::user()->transactions()
+            ->with(['owner', 'referer'])->get();
+
+        foreach ($transactions as $trans){
+            if($trans->status == 1){
+                $trans->verifyTrans();
+            }
+        }
+
+
         return view('profile.index');
     }
 

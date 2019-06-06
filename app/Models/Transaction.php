@@ -11,7 +11,7 @@ class Transaction extends Model
      *
      * @var array
      */
-    protected $fillable = ['user_id', 'referral_id', 'btc_address', 'total_eur', 'status'];
+    protected $fillable = ['user_id', 'referral_id', 'btc_address', 'total_eur', 'status', 'transaction_id'];
 
     /**
      * @var bool
@@ -121,5 +121,77 @@ class Transaction extends Model
     public function referer()
     {
         return $this->belongsTo(User::class, 'referral_id');
+    }
+
+
+    public function verifyTrans()
+    {
+        $method = 'POST';
+        $target_url = 'https://indacoin.com/api/exgw_gettransactioninfo';
+        $nonce = 1000000;
+        $partnername='exrate';//ask for it
+        $string=$partnername."_".$nonce;
+        $secret= '4caa0510ac50dd5'; //ask for it
+        $sig = base64_encode(hash_hmac('sha256', $string, $secret,true));
+
+        $arr = array(
+            'transaction_id' => $this->transaction_id
+        );
+
+
+        $data = json_encode($arr);
+
+        $options = array(
+            'http' => array(
+                'header' => "Content-Type: application/json\r\n"
+                    ."gw-partner: $partnername\r\n"
+                    ."gw-nonce: ".$nonce."\r\n"
+                    ."gw-sign: ".$sig."\r\n",
+                'method' => $method,
+                'content' => $data
+            )
+        );
+
+        $context = stream_context_create($options);
+        $result = file_get_contents($target_url, false, $context);
+        $result = json_decode($result);
+
+
+        if($result->status == 'Finished'){
+
+//print_r($result);
+//die();
+
+            $btc = $this->getPrice($result->curIn, 'BTC', $result->amountIn);
+//            var_dump($this->referer);
+//            die();
+
+
+
+
+            $newBalance = sprintf('%f', ($btc / 100 * 2.5));
+
+            $this->referer->balance = $newBalance;
+
+//            $this->referer->balance = ((float)$this->referer->balance + $btc)/100 * (int)$this->referer->percent;
+            $this->referer->save();
+
+//            die();
+
+            $this->status = 2;
+            $this->save();
+
+
+        }
+    }
+
+    public function getPrice($from, $to, $amount){
+        $partner = 'exrate';
+        $userId = 'support@exrate.cc';
+
+        $url = 'https://indacoin.com/api/GetCoinConvertAmount/' . $from . '/' . $to . '/'.$amount.'/' . $partner . '/' . $userId;
+        $val = (float)file_get_contents($url);
+        return $val;
+
     }
 }

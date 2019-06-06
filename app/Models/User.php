@@ -279,7 +279,7 @@ class User extends Authenticatable
      */
     public function transactions()
     {
-        return $this->hasMany(Transaction::class, 'user_id');
+        return $this->hasMany(Transaction::class, 'referral_id');
     }
 
     /**

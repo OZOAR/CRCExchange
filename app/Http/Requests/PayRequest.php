@@ -24,10 +24,18 @@ class PayRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'btc-address' => ['required', 'string', new BtcAddressRule],
+        $array = [
+//            'btc-address' => ['required_if:crypt,BTC', 'string', new BtcAddressRule],
             'eur-amount'  => 'integer|min:30|max:10000',
             'referral-id' => 'integer|exists:users,id',
         ];
+
+        $crypt = $this->request->get('crypt');//Get the input value
+        if($crypt == 'BTC'){
+            $array['btc-address'] = ['required', 'string', new BtcAddressRule];
+        }
+
+        return $array;
+
     }
 }

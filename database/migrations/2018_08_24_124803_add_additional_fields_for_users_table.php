@@ -17,7 +17,7 @@ class AddAdditionalFieldsForUsersTable extends Migration
             $table->string('btc', 50)->after('role_id')->nullable();
             $table->unsignedDecimal('percentage', 8, 4)->after('btc')->default(0);
         });
-    }
+    } 
 
     /**
      * Reverse the migrations.

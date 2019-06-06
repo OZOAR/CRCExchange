@@ -2,15 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\TemporaryIntegrationHelper;
+
 use App\Services\CryptoProcessing\Contracts\CPRatesContract;
 
 class HomeController extends Controller
 {
+
+    use TemporaryIntegrationHelper;
     public function index(CPRatesContract $ratesService)
     {
-        $currencies = $ratesService->getRates();
         $processes = collect($this->getProcesses());
         $limits = collect($this->getLimits());
+
+        $currs = ['EUR', 'USD', 'RUB'];
+        $crypts = ['BTC', 'ETH', 'BCH', 'LTC', 'EOS', 'DASH', 'XRP'];
+
+
+        $currencies = $this->getRatesNew($currs, $crypts);
+
 
         return view('welcome_new')->with(compact(['currencies', 'processes', 'limits']));
     }

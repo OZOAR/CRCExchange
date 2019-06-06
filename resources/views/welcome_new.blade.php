@@ -1,10 +1,11 @@
 @extends('layouts.app_new')
 
 @section('content')
+
     <section id="payment-process">
         <div class="container">
-            <div class="col-sm-6">
-                <h1 style="padding-top:60px">@lang('homepage.payment.title')</h1>
+            <div class="hidden-xs col-sm-6">
+                <h1 style="padding-top:60px">@lang('homepage.payment.title')<img src="/images/pay.png" class="pay-icons"> </h1>
             </div>
             <div class="col-sm-6 payment">
                 <div class="payment-form-head">
@@ -28,24 +29,40 @@
                         <div class="row">
                             <div class="col-sm-6 {{ $errors->has('eur-amount') ? ' has-error' : '' }}">
                                 <div class="input-group">
-                                    <input type="number" id="eur-field" class="form-control"
+                                    <input type="text" id="eur-field" class="form-control"
                                            required="required" name="eur-amount"
                                            min="30" max="10000" value="{{ old('eur-amount', 30) }}">
-                                    <span class="input-group-addon">EUR</span>
+                                    <div class="table-cell input-group-addon">
+                                        <select class="" id="curr-select" name="currency">
+                                            <option selected>EUR</option>
+                                            <option {{(old('currency') == 'USD') ? 'selected' : '' }}>USD</option>
+                                            <option {{( old('currency') == 'RUB') ? 'selected' : '' }}>RUB</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 @if ($errors->has('eur-amount'))
                                     <span class="help-block">
                                         <small><strong>{{ $errors->first('eur-amount') }}</strong></small>
                                     </span>
                                 @endif
-                                <small>@lang('homepage.payment.form.min_transaction')</small>
+                                <small>@lang('homepage.payment.form.min_transaction')<span id="min-amount">30 EUR.</span></small>
                             </div>
                             <div class="col-sm-6">
                                 <div class="input-group">
-                                    <input id="btc-field" type="number" class="form-control" readonly>
-                                    <span class="input-group-addon">BTC</span>
+                                    <input id="btc-field" type="text" class="form-control">
+                                    <div class="table-cell input-group-addon">
+                                        <select class="" id="crypto-select" name="crypt">
+                                            <option selected>BTC</option>
+                                            <option {{( old('crypt') == 'ETH') ? 'selected' : '' }}>ETH</option>
+                                            <option {{( old('crypt') == 'BCH') ? 'selected' : '' }}>BCH</option>
+                                            <option {{( old('crypt') == 'LTC') ? 'selected' : '' }}>LTC</option>
+                                            <option {{( old('crypt') == 'EOS') ? 'selected' : '' }}>EOS</option>
+                                            <option {{( old('crypt') == 'DASH') ? 'selected' : '' }}>DASH</option>
+                                            <option {{( old('crypt') == 'XRP') ? 'selected' : '' }}>XRP</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <small>1 BTC = {{ $currencies->EUR->BTC }} EUR</small>
+                                <small id="current-curse">1 BTC = {{ $currencies['EUR']['BTC'] }} EUR</small>
                             </div>
                         </div>
                     </div>
@@ -79,6 +96,10 @@
                     </div>
                     <div class="clearfix"></div>
                 </form>
+            </div>
+
+            <div class="visible-xs-block col-sm-6">
+                <h1 style="padding-top:60px">@lang('homepage.payment.title')<img src="/images/pay.png" class="pay-icons"> </h1>
             </div>
         </div>
     </section>
@@ -121,9 +142,10 @@
         <div class="col-md-12">
             <h3>@lang('homepage.buy_now.title')</h3>
             <p>@lang('homepage.buy_now.text')</p>
-            <a href="{{ url('/affiliate') }}" id="become-affiliate-link" class="btn btn-primary btn-lg">
-                @lang('common.buttons.become_affiliate')
-            </a>
+ <a href="{{ url('/register') }}" id="become-affiliate-link" class="btn btn-primary btn-lg">
+               @lang('common.buttons.become_affiliate')
+           </a>
+            {{--<a href="mailto:support@exrate.net">@lang('homepage.buy_now.contacts') support@exrate.net</a>--}}
         </div>
     </section>
     <section id="reviews-list">
@@ -157,10 +179,61 @@
             </div>
         </div>
     </section>
+
+    <style>
+        .table-cell {
+            display: table-cell;
+            padding-top: 0;
+            vertical-align: middle;
+        }
+        .input-group-addon select {
+            /* width: 100%; */
+            /* height: 100%; */
+            display: block;
+            /* padding: 0; */
+            padding: 7px;
+            border: none;
+            background: url('/images/dropdown.svg') right 10px top 12px no-repeat, #eeeeee;
+            min-width: 75px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        *:focus, *:target {
+            outline: none;
+        }
+        .input-group-addon {
+            padding: 0;
+        }
+        #buy-now a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            /*display: block;*/
+            margin-top: 55px;
+            font-weight: bold;
+        }
+    </style>
 @endsection
 
 @section('scripts')
     <script type="text/javascript">
+
+        function calcCurse(update = 'btc'){
+            let currency = $('#curr-select').val();
+            let crypto = $('#crypto-select').val();
+            let euros = $('#eur-field').val();
+            let btc = $('#btc-field').val();
+
+            if(update == 'btc') {
+                let BTC = (euros / currencies[currency][crypto]).toFixed(5);
+                $('#btc-field').val(BTC);
+            } else {
+                let euros = (currencies[currency][crypto] * btc).toFixed(5);
+                $('#eur-field').val(Math.ceil(euros));
+            }
+        }
+
         $(document).ready(function () {
             $('.owl-carousel').owlCarousel({
                 loop: true,
@@ -181,18 +254,50 @@
             });
 
             window.currencies = {
-                EUR: {{ $currencies->EUR->BTC }}
+                @foreach ($currencies as $currency => $arr)
+                '{{$currency}}': {
+                    @foreach($arr as $n => $v)
+                    '{{$n}}': {{$v}},
+                    @endforeach
+                },
+                @endforeach
             };
+            console.log(currencies);
 
             let euros = $('#eur-field').val();
-            let BTC = (euros / currencies.EUR).toFixed(5);
+            let BTC = (euros / currencies['EUR']['BTC']).toFixed(5);
+
+            window.minAmount = {
+                'EUR': '30 EUR.',
+                'USD': '30 USD.',
+                'RUB': '2000 RUB.'
+            };
             $('#btc-field').val(BTC);
+            $('#payment-form').on('change', '#curr-select', function () {
+                let crypto = $('#crypto-select').val(),
+                    currency = $(this).val();
+                $('#current-curse').text('1 ' + crypto + ' = ' + currencies[currency][crypto].toFixed(5) + ' ' + currency);
+                $('#min-amount').text(minAmount[currency]);
+                calcCurse('euro');
+            });
+            $('#payment-form').on('change', '#btc-field', function () {
+                calcCurse('euro');
+            });
+
+            $('#payment-form').on('change', '#crypto-select', function () {
+                let crypto = $(this).val(),
+                    currency = $('#curr-select').val();
+                $('#current-curse').text('1 ' + crypto + ' = ' + currencies[currency][crypto].toFixed(5) + ' ' + currency);
+                calcCurse('btc');
+            });
 
             $('#payment-form').on('change', '#eur-field', function () {
-                let euros = $(this).val();
-                console.log(euros);
+                let money = $(this).val(),
+                    currency = $('#curr-select').val(),
+                    crypto = $('#crypto-select').val();
+                console.log(money);
 
-                let BTC = (euros / currencies.EUR).toFixed(5);
+                let BTC = (money / currencies[currency][crypto]).toFixed(5);
                 $('#btc-field').val(BTC);
                 console.log(BTC);
             });

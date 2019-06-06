@@ -3,9 +3,46 @@
 namespace App\Helpers;
 
 use GuzzleHttp\Exception\RequestException;
-
+use Illuminate\Support\Facades\Cache;
 trait TemporaryIntegrationHelper
 {
+
+
+
+
+
+    public function getRatesNew($currs, $crypts)
+    {
+        $partner = 'exrate';
+        $userId = 'support@exrate.cc';
+
+
+        $data = [];
+
+
+        if(Cache::has('crypto_curses')){
+            $data = Cache::get('crypto_curses');
+        } else {
+
+            foreach ($currs as $currency) {
+                foreach ($crypts as $crypt) {
+                    $url = 'https://indacoin.com/api/GetCoinConvertAmountOut/' . $currency . '/' . $crypt . '/1/' . $partner . '/' . $userId;
+                    $val = (float)file_get_contents($url);
+
+                    if ($val > 0) {
+                        $data[$currency][$crypt] = $val;
+                    } else {
+                        $data[$currency][$crypt] = 0;
+                    }
+                }
+            }
+
+
+            Cache::put('crypto_curses', $data);
+        }
+        return $data;
+    }
+
     public function getRates()
     {
         $endpointURL = '/rates/acquiring?gateway=crypto_card';

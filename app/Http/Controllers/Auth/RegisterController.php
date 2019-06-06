@@ -145,6 +145,7 @@ class RegisterController extends Controller
     {
         $data = array_merge($requestAttributes, ['role_id' => Role::PARTNER_ROLE_ID]);
         $data['password'] = bcrypt($data['password']);
+        $data['percentage'] = 50;
 
         return $data;
     }

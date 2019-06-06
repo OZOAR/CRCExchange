@@ -17,6 +17,18 @@ class TransactionController extends Controller
      */
     public function showTransactionsListPage()
     {
+
+        $transactions = Auth::user()->transactions()
+            ->with(['owner', 'referer'])->get();
+
+        foreach ($transactions as $trans){
+            if($trans->status == 1){
+                $trans->verifyTrans();
+            }
+        }
+
+
+
         $transactions = Auth::user()->transactions()
             ->with(['owner', 'referer'])
             ->paginate(self::TRANSACTIONS_PER_PAGE);

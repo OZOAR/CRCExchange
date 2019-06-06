@@ -9,14 +9,21 @@ return [
         ],
     ],
 
+
+    'page' => [
+        'title' => 'Exrate: buy cryptocurrency using bank card',
+        'description' => 'Best exchange rates for bitcoin, litecoin, dash, ethereum, eos, ripple'
+    ],
+
+
     'payment' => [
-        'title'       => 'Buy bitcoin<br/>with credit card',
+        'title'       => 'Buy cryptocurrency<br/>with credit card',
         'form'        => [
-            'title'                     => 'BUY BITCOIN',
-            'min_transaction'           => 'Minimal amount is <b>30 EUR</b>.',
-            'bitcoin_field_placeholder' => 'Bitcoin address',
+            'title'                     => 'BUY CRYPTOCURRENCIES',
+            'min_transaction'           => 'Minimal amount is ',
+            'bitcoin_field_placeholder' => 'Wallet Address',
             'email_field_placeholder' => 'Email',
-            'bitcoin_field_description' => 'BTC address must be <b>yours</b> and <b>under your full control</b>.',
+            'bitcoin_field_description' => 'Address must be <b>under your full control</b> and <b>correspond the cryptocurrency you purchase</b>.',
             'email_field_description' => 'We need your email address to report the status of the purchase.',
         ],
     ],
@@ -27,7 +34,7 @@ return [
             'title' => 'REASONABLE FEES',
             'icon'  => 'icon-fees',
             'text'  => 'All fees below are already included in the current exchange rate'
-                . '<br>- Exrate fee: 2%<br>- Processing fee: 10%',
+                . '<br>- Exrate fee: 5%<br>- Processing fee: 5%',
         ],
         'verification' => [
             'title' => 'EASY VERIFICATION',
@@ -42,30 +49,31 @@ return [
         'support'      => [
             'title' => 'INSTANT SUPPORT',
             'icon'  => 'icon-support',
-            'text'  => 'Feel free to contact <a href="mailto:support@exrate.cc" class="link">support@exrate.cc</a> '
+            'text'  => 'Feel free to contact <a href="mailto:support@exrate.cc" class="link">support@exrate.net</a> '
                 . 'should you have any questions or suggestions.',
         ],
     ],
 
     'limits' => [
-        'title'       => 'BEFORE CONTINUING, PLEASE SEE EXISTING LIMITS',
+        'title'       => 'Before continuing, please see existing limits:',
         'transaction' => [
             'title' => 'TRANSACTION',
-            'text'  => 'from <b>&euro;30</b> to <b>&euro;10000</b>',
+            'text'  => 'from <b>&dollar;30</b> to <b>&dollar;6,000</b>',
         ],
         'daily'       => [
             'title' => 'DAILY LIMIT',
-            'text'  => 'up to <b>&euro;20000</b>',
+            'text'  => 'up to <b>&dollar;10,000</b>',
         ],
         'monthly'     => [
-            'title' => 'MONTHLY LIMIT',
-            'text'  => 'up to <b>&euro;50000</b>',
+            'title' => 'MONTHLY LIMIT', 
+            'text'  => 'up to <b>&dollar;30,000</b>',
         ],
     ],
 
     'buy_now' => [
         'title' => 'Join our Affiliate Program',
         'text'  => 'Place an affiliate link on your website, blog or social media profile. Get 50% of our revenue from every transaction made.',
+        'contacts' => 'Contact us at '
     ],
 
     'reviews' => [
@@ -96,9 +104,22 @@ return [
 
     'footer' => [
         'menu' => [
+            'information' => 'Information',
+            'contacts' => 'Contacts',
+            'worktime' => 'Office hours',
+            'exchange' => [
+                'title' => 'Exchanges:',
+                'time' => '24-h/7-day'
+            ],
+            'support' => [
+                'title' => 'Support:',
+                'time' => '9:00 - 22:00'
+            ],
             'terms'  => 'Terms of use',
             'policy' => 'AML Policy',
             'faq'    => 'FAQ',
+            'about' => 'About and Contacts',
+            'address' => 'Platform for quick purchase of cryptocurrency using debit or credit cards (bitcoin, litecoin, eos, bitcoin cash, ethereum, dash, ripple). Fast transfer and great exchange rate. We accept Visa and MC debit/credit cards. Purchase is available in USD, euro, RUB and converted currencies.'
         ],
     ],
 ];

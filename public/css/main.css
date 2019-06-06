@@ -97,6 +97,9 @@ a.text-primary:hover
     color: #0e86c2 !important;
 }
 
+.primary-footer.a:link, .primary-footer.a:visited { 
+    font-size: 30px;
+}   
 .sm-txt
 {
     font-size: 14px;
@@ -308,7 +311,18 @@ buttons
     color: #fff; 
     background: #7e62fd;
 }
-
+.padding-right30
+{
+    padding-right: 30px;
+}
+.padding-left30
+{
+    padding-left: 30px;
+}
+.footer_link
+{
+ font-size: 18;
+} 
 .btn-purple-shadow
 {
     box-shadow: 5px 5px 40px 0 rgba(121, 84, 255, .72);
@@ -2965,11 +2979,11 @@ responsive style
 }
 
 .transaction-limit-item .highlights {
-    font-size: 18px !important;
+    font-size: 20px !important;
 }
 
 .transaction-limit-item .text {
-    font-size: 16px !important;
+    font-size: 18px !important;
 }
 
 .processes-title {

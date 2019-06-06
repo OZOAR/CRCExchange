@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'HomeController@index')->name('index');
+Route::get('/currencies', 'HomeController@getCurrencies')->name('currencies');
 
 $this->get('locale/reset', 'LocalizationController')->name('locale.reset');
 $this->get('policy', 'PageController@showPolicyPage')->name('page.policy');

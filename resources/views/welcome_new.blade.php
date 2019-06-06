@@ -5,7 +5,8 @@
     <section id="payment-process">
         <div class="container">
             <div class="hidden-xs col-sm-6">
-                <h1 style="padding-top:60px">@lang('homepage.payment.title')<img src="/images/pay.png" class="pay-icons"> </h1>
+                <h1 style="padding-top:60px">@lang('homepage.payment.title')<img src="/images/pay.png"
+                                                                                 class="pay-icons"></h1>
             </div>
             <div class="col-sm-6 payment">
                 <div class="payment-form-head">
@@ -62,7 +63,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <small id="current-curse">1 BTC = {{ $currencies['EUR']['BTC'] }} EUR</small>
+                                <small id="current-curse">Идет обновление курса...</small>
                             </div>
                         </div>
                     </div>
@@ -99,7 +100,8 @@
             </div>
 
             <div class="visible-xs-block col-sm-6">
-                <h1 style="padding-top:60px">@lang('homepage.payment.title')<img src="/images/pay.png" class="pay-icons"> </h1>
+                <h1 style="padding-top:60px">@lang('homepage.payment.title')<img src="/images/pay.png"
+                                                                                 class="pay-icons"></h1>
             </div>
         </div>
     </section>
@@ -142,9 +144,9 @@
         <div class="col-md-12">
             <h3>@lang('homepage.buy_now.title')</h3>
             <p>@lang('homepage.buy_now.text')</p>
- <a href="{{ url('/register') }}" id="become-affiliate-link" class="btn btn-primary btn-lg">
-               @lang('common.buttons.become_affiliate')
-           </a>
+            <a href="{{ url('/register') }}" id="become-affiliate-link" class="btn btn-primary btn-lg">
+                @lang('common.buttons.become_affiliate')
+            </a>
             {{--<a href="mailto:support@exrate.net">@lang('homepage.buy_now.contacts') support@exrate.net</a>--}}
         </div>
     </section>
@@ -179,13 +181,16 @@
             </div>
         </div>
     </section>
+@endsection
 
+@section('styles')
     <style>
         .table-cell {
             display: table-cell;
             padding-top: 0;
             vertical-align: middle;
         }
+
         .input-group-addon select {
             /* width: 100%; */
             /* height: 100%; */
@@ -199,12 +204,15 @@
             -moz-appearance: none;
             appearance: none;
         }
+
         *:focus, *:target {
             outline: none;
         }
+
         .input-group-addon {
             padding: 0;
         }
+
         #buy-now a {
             color: #fff;
             text-decoration: none;
@@ -218,14 +226,16 @@
 
 @section('scripts')
     <script type="text/javascript">
+        $('#payment-form input').attr('disabled', true);
+        $('#payment-form select').attr('disabled', true);
 
-        function calcCurse(update = 'btc'){
+        function calcCurse(update = 'btc') {
             let currency = $('#curr-select').val();
             let crypto = $('#crypto-select').val();
             let euros = $('#eur-field').val();
             let btc = $('#btc-field').val();
 
-            if(update == 'btc') {
+            if (update == 'btc') {
                 let BTC = (euros / currencies[currency][crypto]).toFixed(5);
                 $('#btc-field').val(BTC);
             } else {
@@ -253,53 +263,63 @@
                 }
             });
 
-            window.currencies = {
-                @foreach ($currencies as $currency => $arr)
-                '{{$currency}}': {
-                    @foreach($arr as $n => $v)
-                    '{{$n}}': {{$v}},
-                    @endforeach
+            $.ajax({
+                url: '/currencies',
+                dataType: 'json',
+                success: function (response) {
+                    window.currencies = response.currencies;
+                    console.log(currencies);
+
+                    let euros = $('#eur-field').val();
+                    let BTC = (euros / currencies['EUR']['BTC']).toFixed(5);
+
+                    window.minAmount = {
+                        'EUR': '30 EUR.',
+                        'USD': '30 USD.',
+                        'RUB': '2000 RUB.'
+                    };
+                    $('#btc-field').val(BTC);
+                    $('#payment-form').on('change', '#curr-select', function () {
+                        let crypto = $('#crypto-select').val(),
+                            currency = $(this).val();
+                        $('#current-curse').text('1 ' + crypto + ' = ' + currencies[currency][crypto].toFixed(5) + ' ' + currency);
+                        $('#min-amount').text(minAmount[currency]);
+                        calcCurse('euro');
+                    });
+                    $('#payment-form').on('change', '#btc-field', function () {
+                        calcCurse('euro');
+                    });
+
+                    $('#payment-form').on('change', '#crypto-select', function () {
+                        let crypto = $(this).val(),
+                            currency = $('#curr-select').val();
+                        $('#current-curse').text('1 ' + crypto + ' = ' + currencies[currency][crypto].toFixed(5) + ' ' + currency);
+                        calcCurse('btc');
+                    });
+
+                    $('#payment-form').on('change', '#eur-field', function () {
+                        let money = $(this).val(),
+                            currency = $('#curr-select').val(),
+                            crypto = $('#crypto-select').val();
+                        console.log(money);
+
+                        let BTC = (money / currencies[currency][crypto]).toFixed(5);
+                        $('#btc-field').val(BTC);
+                        console.log(BTC);
+                    });
+
+                    $('#payment-form input').attr('disabled', false);
+                    $('#payment-form select').attr('disabled', false);
+
+                    let _crypto = $('#crypto-select').val();
+                    let _curr = $('#curr-select').val();
+
+                    $('#current-curse').text('1 ' + _crypto + ' = ' + currencies[_curr][_crypto].toFixed(5) + ' ' + _curr);
                 },
-                @endforeach
-            };
-            console.log(currencies);
-
-            let euros = $('#eur-field').val();
-            let BTC = (euros / currencies['EUR']['BTC']).toFixed(5);
-
-            window.minAmount = {
-                'EUR': '30 EUR.',
-                'USD': '30 USD.',
-                'RUB': '2000 RUB.'
-            };
-            $('#btc-field').val(BTC);
-            $('#payment-form').on('change', '#curr-select', function () {
-                let crypto = $('#crypto-select').val(),
-                    currency = $(this).val();
-                $('#current-curse').text('1 ' + crypto + ' = ' + currencies[currency][crypto].toFixed(5) + ' ' + currency);
-                $('#min-amount').text(minAmount[currency]);
-                calcCurse('euro');
-            });
-            $('#payment-form').on('change', '#btc-field', function () {
-                calcCurse('euro');
-            });
-
-            $('#payment-form').on('change', '#crypto-select', function () {
-                let crypto = $(this).val(),
-                    currency = $('#curr-select').val();
-                $('#current-curse').text('1 ' + crypto + ' = ' + currencies[currency][crypto].toFixed(5) + ' ' + currency);
-                calcCurse('btc');
-            });
-
-            $('#payment-form').on('change', '#eur-field', function () {
-                let money = $(this).val(),
-                    currency = $('#curr-select').val(),
-                    crypto = $('#crypto-select').val();
-                console.log(money);
-
-                let BTC = (money / currencies[currency][crypto]).toFixed(5);
-                $('#btc-field').val(BTC);
-                console.log(BTC);
+                error: function (error) {
+                    console.log(error);
+                    $('#current-curse').text('Произошла ошибка загрузки курсов.');
+                }
             });
 
             let checked = $('#locale-switcher input').prop('checked');

@@ -4,23 +4,17 @@ namespace App\Helpers;
 
 use GuzzleHttp\Exception\RequestException;
 use Illuminate\Support\Facades\Cache;
+
 trait TemporaryIntegrationHelper
 {
-
-
-
-
-
     public function getRatesNew($currs, $crypts)
     {
         $partner = 'exrate';
         $userId = 'support@exrate.cc';
 
-
         $data = [];
 
-
-        if(Cache::has('crypto_curses')){
+        if (Cache::has('crypto_curses')) {
             $data = Cache::get('crypto_curses');
         } else {
 
@@ -36,7 +30,6 @@ trait TemporaryIntegrationHelper
                     }
                 }
             }
-
 
             Cache::put('crypto_curses', $data);
         }
@@ -74,9 +67,8 @@ trait TemporaryIntegrationHelper
 
         $client = new \GuzzleHttp\Client();
 
-
         try {
-            \Log::debug('request: amount='.$amount.', btcAddress='.$btcAddress);
+            \Log::debug('request: amount=' . $amount . ', btcAddress=' . $btcAddress);
             $response = $client->post($requestURL, [
                 \GuzzleHttp\RequestOptions::HEADERS => [
                     'Authorization' => 'Token ' . env('CRYPTOPROCESSING_API_KEY'),
@@ -89,7 +81,7 @@ trait TemporaryIntegrationHelper
                 ],
             ]);
 
-            \Log::debug((string) $response->getBody());
+            \Log::debug((string)$response->getBody());
 
             return \GuzzleHttp\json_decode($response->getBody())->data;
         } catch (RequestException $e) {

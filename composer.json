@@ -11,6 +11,8 @@
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
+        "nathanmac/parser": "^4.3",
+        "spatie/array-to-xml": "^2.9",
         "torann/geoip": "^1.0"
     },
     "require-dev": {

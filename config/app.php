@@ -196,6 +196,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\CryptoProcessingProvider::class,
         \Torann\GeoIP\GeoIPServiceProvider::class,
+        Nathanmac\Utilities\Parser\ParserServiceProvider::class,
     ],
 
     /*
@@ -246,6 +247,7 @@ return [
         'View'         => Illuminate\Support\Facades\View::class,
         'Locale'       => App\Helpers\Locale::class,
         'GeoIP'        => \Torann\GeoIP\Facades\GeoIP::class,
+        'Parser'       => Nathanmac\Utilities\Parser\Facades\Parser::class,
     ],
 
 ];

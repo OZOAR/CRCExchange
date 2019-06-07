@@ -13,6 +13,7 @@
 
 Route::get('/', 'HomeController@index')->name('index');
 Route::get('/currencies', 'HomeController@getCurrencies')->name('currencies');
+Route::get('/courses', 'CourseController@getCourses')->name('courses');
 
 $this->get('locale/reset', 'LocalizationController')->name('locale.reset');
 $this->get('policy', 'PageController@showPolicyPage')->name('page.policy');

@@ -26,7 +26,7 @@ return [
             'email_field_placeholder'   => 'Email',
             'bitcoin_field_description' => 'Address must be <b>under your full control</b> and <b>correspond the cryptocurrency you purchase</b>.',
             'email_field_description'   => 'We need your email address to report the status of the purchase.',
-            'loading_text'              => 'Loading rates, please wait. It`s wouldn`t take a lot of time.',
+            'loading_text'              => 'Loading rates. Please wait, it won\'t take long.',
             'loading_error_text'        => 'Something went wrong. Try again later.',
         ],
     ],

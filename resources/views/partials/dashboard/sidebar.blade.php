@@ -1,6 +1,6 @@
 <div class="navbar nav_title" style="border: 0;">
     <a href="{{ route('dashboard.index') }}" class="site_title">
-        <i class="fa fa-bitcoin"></i> <span>@lang('dashboard.sidebar.title')</span>
+        <img src="{{ asset('images/logo.png') }}" alt="{{ config('app.name') }}" height="40">
     </a>
 </div>
 

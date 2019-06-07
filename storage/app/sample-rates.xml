@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rates>
+    <item>
+        <from>CARDUSD</from>
+        <to>BTC</to>
+        <in>1</in>
+        <out>https://indacoin.com/api/getcoinConvertAmountOut/usd/btc/1/exrate</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDUSD</from>
+        <to>ETH</to>
+        <in>1</in>
+        <out>https://indacoin.com/api/getcoinConvertAmountOut/usd/eth/1/exrate</out>
+        <amount>700</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDUSD</from>
+        <to>BCH</to>
+        <in>1</in>
+        <out>https://indacoin.com/api/getcoinConvertAmountOut/usd/bch/1/exrate</out>
+        <amount>300</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDUSD</from>
+        <to>LTC</to>
+        <in>1</in>
+        <out>https://indacoin.com/api/getcoinConvertAmountOut/usd/ltc/1/exrate</out>
+        <amount>400</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDUSD</from>
+        <to>EOS</to>
+        <in>1</in>
+        <out>https://indacoin.com/api/getcoinConvertAmountOut/usd/eos/1/exrate</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDUSD</from>
+        <to>DASH</to>
+        <in>1</in>
+        <out>https://indacoin.com/api/getcoinConvertAmountOut/usd/dash/1/exrate</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDUSD</from>
+        <to>XRP</to>
+        <in>1</in>
+        <out>https://indacoin.com/api/getcoinConvertAmountOut/usd/xrp/1/exrate</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDEUR</from>
+        <to>BTC</to>
+        <in>1</in>
+        <out>https://indacoin.com/api/getcoinConvertAmountOut/eur/btc/1/exrate</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDEUR</from>
+        <to>ETH</to>
+        <in>1</in>
+        <out>https://indacoin.com/api/getcoinConvertAmountOut/eur/eth/1/exrate</out>
+        <amount>700</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDEUR</from>
+        <to>BCH</to>
+        <in>1</in>
+        <out>https://indacoin.com/api/getcoinConvertAmountOut/eur/bch/1/exrate</out>
+        <amount>300</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDEUR</from>
+        <to>LTC</to>
+        <in>1</in>
+        <out>https://indacoin.com/api/getcoinConvertAmountOut/eur/ltc/1/exrate</out>
+        <amount>400</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDEUR</from>
+        <to>EOS</to>
+        <in>1</in>
+        <out>https://indacoin.com/api/getcoinConvertAmountOut/eur/eos/1/exrate</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDEUR</from>
+        <to>DASH</to>
+        <in>1</in>
+        <out>https://indacoin.com/api/getcoinConvertAmountOut/eur/dash/1/exrate</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDEUR</from>
+        <to>XRP</to>
+        <in>1</in>
+        <out>https://indacoin.com/api/getcoinConvertAmountOut/eur/xrp/1/exrate</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDRUB</from>
+        <to>BTC</to>
+        <in>1</in>
+        <out>https://indacoin.com/api/getcoinConvertAmountOut/rub/btc/1/exrate</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDRUB</from>
+        <to>ETH</to>
+        <in>1</in>
+        <out>https://indacoin.com/api/getcoinConvertAmountOut/rub/eth/1/exrate</out>
+        <amount>700</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDRUB</from>
+        <to>BCH</to>
+        <in>1</in>
+        <out>https://indacoin.com/api/getcoinConvertAmountOut/rub/bch/1/exrate</out>
+        <amount>300</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDRUB</from>
+        <to>LTC</to>
+        <in>1</in>
+        <out>https://indacoin.com/api/getcoinConvertAmountOut/rub/ltc/1/exrate</out>
+        <amount>400</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDRUB</from>
+        <to>EOS</to>
+        <in>1</in>
+        <out>https://indacoin.com/api/getcoinConvertAmountOut/rub/eos/1/exrate</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDRUB</from>
+        <to>DASH</to>
+        <in>1</in>
+        <out>https://indacoin.com/api/getcoinConvertAmountOut/rub/dash/1/exrate</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDRUB</from>
+        <to>XRP</to>
+        <in>1</in>
+        <out>https://indacoin.com/api/getcoinConvertAmountOut/rub/xrp/1/exrate</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+</rates>

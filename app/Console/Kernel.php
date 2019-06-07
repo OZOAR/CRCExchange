@@ -27,6 +27,8 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('courses:update')
+            ->runInBackground()
+            ->withoutOverlapping()
             ->appendOutputTo(storage_path() . '/logs/scheduler.log');
     }
 

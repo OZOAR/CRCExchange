@@ -47,10 +47,10 @@ class UpdateCoursesCommand extends Command
             $xml = $parser->xml(\Storage::get('sample-rates.xml'));
 
             foreach ($xml['item'] as $key => $item) {
-                $url = $item['out'];
+                $url = $item['in'];
                 $val = (float)file_get_contents($url);
 
-                $xml['item'][$key]['out'] = $val > 0 ? $val : 0;
+                $xml['item'][$key]['in'] = $val > 0 ? $val : 0;
             }
 
             \Storage::put('rates.xml', ArrayToXml::convert($xml, 'rates'));

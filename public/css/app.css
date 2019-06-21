@@ -7,7 +7,7 @@
 #how-to-buy-section {
     background-color: #fff;
     width: 100%;
-    padding: 40px;
+    padding: 40px 0;
     text-align: center;
 }
 
@@ -58,9 +58,52 @@
     padding-top: 15px;
     background: #fff;
     position: relative;
+    -webkit-transition: top 1s ease-out 0.5s;
+    -moz-transition: top 1s ease-out 0.5s;
+    -o-transition: top 1s ease-out 0.5s;
+    transition: top 1s ease-out 0.5s;
+}
+
+.how-to-buy-item .how-to-buy-counter .counter:hover {
+    background: #9bd8f1;
+    color: #fff;
+    cursor: default;
 }
 
 .how-to-buy-item .title {
     font-weight: bold;
     margin-top: 50px;
+}
+
+@media (max-width: 810px) {
+    #how-to-buy-steps-line {
+        display: none;
+    }
+
+    .how-to-buy-section-description {
+        margin-bottom: 10px;
+    }
+
+    #how-to-buy-steps {
+        display: block;
+        margin-top: 15px;
+    }
+
+    .how-to-buy-item {
+        width: 30%;
+        display: inline-table;
+        margin: 25px 0;
+    }
+
+    .how-to-buy-item .title {
+        margin-top: 20px;
+    }
+
+
+    @media (max-width: 510px) {
+        .how-to-buy-item {
+            width: 40%;
+            margin: 15px 0;
+        }
+    }
 }

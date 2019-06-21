@@ -107,6 +107,21 @@
             </div>
         </div>
     </section>
+    <section id="transaction-limits">
+        <h3>@lang('homepage.limits.title')</h3>
+        <div class="container" style="padding: 25px 0">
+            <div class="row">
+                @foreach($limits as $limit)
+                    <div class="col-md-4">
+                        <div class="transaction-limit-item">
+                            <div class="highlights">{{ $limit['title'] }}</div>
+                            <div class="text">{!! $limit['text'] !!}</div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
     <section id="process-info">
         <h2 class="processes-title">@lang('homepage.processes.title')</h2>
         <div class="container">
@@ -125,21 +140,6 @@
                     @endforeach
                 </div>
             @endforeach
-        </div>
-    </section>
-    <section id="transaction-limits">
-        <h3>@lang('homepage.limits.title')</h3>
-        <div class="container" style="padding: 25px 0">
-            <div class="row">
-                @foreach($limits as $limit)
-                    <div class="col-md-4">
-                        <div class="transaction-limit-item">
-                            <div class="highlights">{{ $limit['title'] }}</div>
-                            <div class="text">{!! $limit['text'] !!}</div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
         </div>
     </section>
     <section id="buy-now">

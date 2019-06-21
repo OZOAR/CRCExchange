@@ -48,7 +48,8 @@
                                         <small><strong>{{ $errors->first('eur-amount') }}</strong></small>
                                     </span>
                                 @endif
-                                <small>@lang('homepage.payment.form.min_transaction')<span id="min-amount">30 EUR.</span></small>
+                                <small>@lang('homepage.payment.form.min_transaction')<span
+                                            id="min-amount">30 EUR.</span></small>
                             </div>
                             <div class="col-sm-6">
                                 <div class="input-group">
@@ -94,7 +95,7 @@
 
                     <div class="col-md-12" style="text-align: center">
                         <button type="submit" class="btn btn-primary">
-                            @lang('common.buttons.continue') &nbsp; &#8594;
+                            @lang('common.buttons.buy') &nbsp; &#8594;
                         </button>
                     </div>
                     <div class="clearfix"></div>
@@ -104,6 +105,26 @@
             <div class="visible-xs-block col-sm-6">
                 <h1 style="padding-top:60px">@lang('homepage.payment.title')<img src="/images/pay.png"
                                                                                  class="pay-icons"></h1>
+            </div>
+        </div>
+    </section>
+    <section id="how-to-buy-section">
+        <h2 class="how-to-buy-section-title">@lang('homepage.how_to_buy.title')</h2>
+        <p class="how-to-buy-section-description">@lang('homepage.how_to_buy.description')</p>
+        <div class="container">
+            <div class="row">
+                <div id="how-to-buy-steps">
+                    <div id="how-to-buy-steps-line"></div>
+                    @foreach($howToBuySteps as $step)
+                        <div class="how-to-buy-item">
+                            <div class="how-to-buy-counter">
+                                <span class="counter">{{ $loop->iteration }}</span>
+                            </div>
+                            <p class="title">{{ $step['title'] }}</p>
+                            <p class="description">{!! $step['description'] !!}</p>
+                        </div>
+                    @endforeach
+                </div>
             </div>
         </div>
     </section>

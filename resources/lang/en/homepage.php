@@ -31,6 +31,33 @@ return [
         ],
     ],
 
+    'how_to_buy' => [
+        'title'       => 'Purchase: Step-by-step',
+        'description' => '5 simple steps for a fast and secure transaction',
+        'steps'       => [
+            [
+                'title'       => 'Starting a purchase',
+                'description' => 'Select the required currencies and specify the amount',
+            ],
+            [
+                'title'       => 'Enter wallet address',
+                'description' => 'Enter the address of the cryptocurrency wallet',
+            ],
+            [
+                'title'       => 'Phone number verification',
+                'description' => 'Verify your phone number (via a phone call or a text message)',
+            ],
+            [
+                'title'       => 'Bank card details',
+                'description' => 'Enter your bank card details and confirm purchase',
+            ],
+            [
+                'title'       => 'User verification',
+                'description' => 'Confirm your identity according to the requirements of KYC and AML policies',
+            ],
+        ],
+    ],
+
     'processes' => [
         'title'        => 'Our features',
         'fees'         => [

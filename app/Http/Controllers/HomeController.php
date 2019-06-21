@@ -13,9 +13,10 @@ class HomeController extends Controller
     public function index()
     {
         $processes = collect($this->getProcesses());
+        $howToBuySteps = collect($this->getHowToBuySteps());
         $limits = collect($this->getLimits());
 
-        return view('welcome_new')->with(compact(['processes', 'limits']));
+        return view('welcome_new')->with(compact(['processes', 'limits', 'howToBuySteps']));
     }
 
     public function getCurrencies()
@@ -79,5 +80,10 @@ class HomeController extends Controller
                 'text'       => __('homepage.processes.support.text'),
             ],
         ];
+    }
+
+    private function getHowToBuySteps()
+    {
+        return __('homepage.how_to_buy.steps');
     }
 }

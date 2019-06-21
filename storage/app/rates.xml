@@ -1,2 +1,234 @@
 <?xml version="1.0"?>
-<rates><item><from>CARDUSD</from><to>BTC</to><in>1</in><out>8810.3964061378</out><amount>100</amount><minamount>30 USD</minamount><maxamount>6000 USD</maxamount><minfee>3 USD</minfee><param>verifying</param></item><item><from>CARDUSD</from><to>ETH</to><in>1</in><out>278.31921090037</out><amount>700</amount><minamount>30 USD</minamount><maxamount>6000 USD</maxamount><minfee>3 USD</minfee><param>verifying</param></item><item><from>CARDUSD</from><to>BCH</to><in>1</in><out>441.07583907602</out><amount>300</amount><minamount>30 USD</minamount><maxamount>6000 USD</maxamount><minfee>3 USD</minfee><param>verifying</param></item><item><from>CARDUSD</from><to>LTC</to><in>1</in><out>127.65616580874</out><amount>400</amount><minamount>30 USD</minamount><maxamount>6000 USD</maxamount><minfee>3 USD</minfee><param>verifying</param></item><item><from>CARDUSD</from><to>EOS</to><in>1</in><out>8.6159008960765</out><amount>100</amount><minamount>30 USD</minamount><maxamount>6000 USD</maxamount><minfee>3 USD</minfee><param>verifying</param></item><item><from>CARDUSD</from><to>DASH</to><in>1</in><out>171.58507377413</out><amount>100</amount><minamount>30 USD</minamount><maxamount>6000 USD</maxamount><minfee>3 USD</minfee><param>verifying</param></item><item><from>CARDUSD</from><to>XRP</to><in>1</in><out>1.6599205500409</out><amount>100</amount><minamount>30 USD</minamount><maxamount>6000 USD</maxamount><minfee>3 USD</minfee><param>verifying</param></item><item><from>CARDEUR</from><to>BTC</to><in>1</in><out>7810.3340814289</out><amount>100</amount><minamount>30 USD</minamount><maxamount>6000 USD</maxamount><minfee>3 USD</minfee><param>verifying</param></item><item><from>CARDEUR</from><to>ETH</to><in>1</in><out>246.36821999305</out><amount>700</amount><minamount>30 USD</minamount><maxamount>6000 USD</maxamount><minfee>3 USD</minfee><param>verifying</param></item><item><from>CARDEUR</from><to>BCH</to><in>1</in><out>390.66358371351</out><amount>300</amount><minamount>30 USD</minamount><maxamount>6000 USD</maxamount><minfee>3 USD</minfee><param>verifying</param></item><item><from>CARDEUR</from><to>LTC</to><in>1</in><out>112.78815822731</out><amount>400</amount><minamount>30 USD</minamount><maxamount>6000 USD</maxamount><minfee>3 USD</minfee><param>verifying</param></item><item><from>CARDEUR</from><to>EOS</to><in>1</in><out>7.1990757836321</out><amount>100</amount><minamount>30 USD</minamount><maxamount>6000 USD</maxamount><minfee>3 USD</minfee><param>verifying</param></item><item><from>CARDEUR</from><to>DASH</to><in>1</in><out>151.63960615577</out><amount>100</amount><minamount>30 USD</minamount><maxamount>6000 USD</maxamount><minfee>3 USD</minfee><param>verifying</param></item><item><from>CARDEUR</from><to>XRP</to><in>1</in><out>1.0860597728657</out><amount>100</amount><minamount>30 USD</minamount><maxamount>6000 USD</maxamount><minfee>3 USD</minfee><param>verifying</param></item><item><from>CARDRUB</from><to>BTC</to><in>1</in><out>572973.85451647</out><amount>100</amount><minamount>30 USD</minamount><maxamount>6000 USD</maxamount><minfee>3 USD</minfee><param>verifying</param></item><item><from>CARDRUB</from><to>ETH</to><in>1</in><out>17975.357882215</out><amount>700</amount><minamount>30 USD</minamount><maxamount>6000 USD</maxamount><minfee>3 USD</minfee><param>verifying</param></item><item><from>CARDRUB</from><to>BCH</to><in>1</in><out>28639.685935747</out><amount>300</amount><minamount>30 USD</minamount><maxamount>6000 USD</maxamount><minfee>3 USD</minfee><param>verifying</param></item><item><from>CARDRUB</from><to>LTC</to><in>1</in><out>8254.5888738719</out><amount>400</amount><minamount>30 USD</minamount><maxamount>6000 USD</maxamount><minfee>3 USD</minfee><param>verifying</param></item><item><from>CARDRUB</from><to>EOS</to><in>1</in><out>509.52974628713</out><amount>100</amount><minamount>30 USD</minamount><maxamount>6000 USD</maxamount><minfee>3 USD</minfee><param>verifying</param></item><item><from>CARDRUB</from><to>DASH</to><in>1</in><out>11107.134017933</out><amount>100</amount><minamount>30 USD</minamount><maxamount>6000 USD</maxamount><minfee>3 USD</minfee><param>verifying</param></item><item><from>CARDRUB</from><to>XRP</to><in>1</in><out>59.274217894875</out><amount>100</amount><minamount>30 USD</minamount><maxamount>6000 USD</maxamount><minfee>3 USD</minfee><param>verifying</param></item></rates>
+<rates>
+    <item>
+        <from>CARDUSD</from>
+        <to>BTC</to>
+        <in>8944.9700820427</in>
+        <out>1</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDUSD</from>
+        <to>ETH</to>
+        <in>287.2414244253</in>
+        <out>1</out>
+        <amount>700</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDUSD</from>
+        <to>BCH</to>
+        <in>442.94271404205</in>
+        <out>1</out>
+        <amount>300</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDUSD</from>
+        <to>LTC</to>
+        <in>151.98853725392</in>
+        <out>1</out>
+        <amount>400</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDUSD</from>
+        <to>EOS</to>
+        <in>8.684229572266</in>
+        <out>1</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDUSD</from>
+        <to>DASH</to>
+        <in>181.50992844146</in>
+        <out>1</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDUSD</from>
+        <to>XRP</to>
+        <in>4.069239093393</in>
+        <out>1</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDEUR</from>
+        <to>BTC</to>
+        <in>7988.788558514</in>
+        <out>1</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDEUR</from>
+        <to>ETH</to>
+        <in>255.94526338086</in>
+        <out>1</out>
+        <amount>700</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDEUR</from>
+        <to>BCH</to>
+        <in>394.88620120377</in>
+        <out>1</out>
+        <amount>300</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDEUR</from>
+        <to>LTC</to>
+        <in>134.96995326063</in>
+        <out>1</out>
+        <amount>400</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDEUR</from>
+        <to>EOS</to>
+        <in>7.3590760213756</in>
+        <out>1</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDEUR</from>
+        <to>DASH</to>
+        <in>161.65855875414</in>
+        <out>1</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDEUR</from>
+        <to>XRP</to>
+        <in>3.2121157910336</in>
+        <out>1</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDRUB</from>
+        <to>BTC</to>
+        <in>577042.2754269</in>
+        <out>1</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDRUB</from>
+        <to>ETH</to>
+        <in>18486.482450712</in>
+        <out>1</out>
+        <amount>700</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDRUB</from>
+        <to>BCH</to>
+        <in>28555.243162844</in>
+        <out>1</out>
+        <amount>300</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDRUB</from>
+        <to>LTC</to>
+        <in>9703.8767405378</in>
+        <out>1</out>
+        <amount>400</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDRUB</from>
+        <to>EOS</to>
+        <in>467.17371751194</in>
+        <out>1</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDRUB</from>
+        <to>DASH</to>
+        <in>11666.095490915</in>
+        <out>1</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+    <item>
+        <from>CARDRUB</from>
+        <to>XRP</to>
+        <in>213.63550135339</in>
+        <out>1</out>
+        <amount>100</amount>
+        <minamount>30 USD</minamount>
+        <maxamount>6000 USD</maxamount>
+        <minfee>3 USD</minfee>
+        <param>verifying</param>
+    </item>
+</rates>

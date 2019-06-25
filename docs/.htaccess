@@ -1,0 +1,39 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    RewriteCond %{HTTP_HOST} !^exrate\.net$ [NC]
+    RewriteRule ^(.*)$ https://exrate.net/$1 [L,R=301]
+    Redirect 301 /page.html https://exrate.net/index.html
+    
+    RewriteCond %{ENV:HTTPS} !on
+    RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    #404 Страница не найдена
+    ErrorDocument 404 https://exrate.net/errors/404.html
+
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+
+# Your document html
+  ExpiresByType text/html "access plus 0 seconds"
+
+# Media: images, video, audio
+  ExpiresByType audio/ogg "access plus 1 month"
+  ExpiresByType image/gif "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType video/mp4 "access plus 1 month"
+  ExpiresByType video/ogg "access plus 1 month"
+  ExpiresByType video/webm "access plus 1 month"
+
+# CSS and JavaScript
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/css "access plus 1 month"
+</IfModule>

@@ -33,7 +33,7 @@
                         <div class="icon">
                             <img src="/images/telegram.svg" class="svg" alt="">
                         </div>
-                        <a href="t.me/exrateby" target="_blank">t.me/exrateby</a></h4>
+                        <a href="https://t.me/exrateby" target="_blank">t.me/exrateby</a></h4>
                 </div>
                 <div class="col-md-3 wow fadeInUp" data-wow-delay=".2s">
                     <h3>@lang('homepage.footer.menu.worktime')</h3>
@@ -49,13 +49,39 @@
         </div>
     </div>
     </div>
+
     <div class="secondary-footer text-md-center">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 partners text-center">
+                <div class="col-md-2 partners text-center">
                     <a href="https://www.bestchange.ru" target="_blank">
                         <img src="/images/bestchange-logo.png">
                     </a>
+                </div>
+                <div class="col-md-2 partners text-center">
+                    <a href="https://glazok.org/" target="_blank" title="Мониторинг обменных пунктов GLAZOK">
+                        <img src="https://glazok.org/88x31.gif" width="88" height="31" border="0">
+                    </a>
+                </div>
+                <div class="col-md-2 partners text-center">
+                   <a href="https://cryptobrokers.ru/?id=12">
+                    <img src="https://cryptobrokers.ru/wp-content/plugins/exchangers-monitor/images/banners/88x31.png" alt="Лучший курс валюты" title="Мониторинг обменников" border="0" />
+                   </a>
+                </div>
+                <div class="col-md-2 partners text-center">
+                    <a href=http://wt-change.com>
+                    <img src="http://wt-change.com/wp-content/uploads/2016/02/wt-change88x31.gif" alt="Лучший курс валюты" title="Мониторинг обменников"/>
+                    </a>
+                </div>
+                <div class="col-md-2 partners text-center">
+                <a href="//superobmen.org/">
+                    <img src="//superobmen.org/images/88x31_2.gif" alt="Мониторинг обменников" title="Мониторинг обменников" width="88" height="31" border="0" />
+                </a>
+                </div>
+                <div class="col-md-2 partners text-center">
+                <a target="_blank" href="https://www.okchanger.com/?a=166164">
+                    <img src="https://www.okchanger.com/images/banners/90x32-tr.png" />
+                </a>
                 </div>
             </div>
         </div>
